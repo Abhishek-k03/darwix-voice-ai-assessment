@@ -1,0 +1,64 @@
+[
+  {
+    "t": 1.4,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 18.53,
+    "role": "customer",
+    "text": "yes"
+  },
+  {
+    "t": 18.54,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 25.54,
+    "role": "customer",
+    "text": "Abhishek"
+  },
+  {
+    "t": 25.54,
+    "role": "agent",
+    "text": "Nice to meet you, Abhishek. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 32.56,
+    "role": "customer",
+    "text": "I am 38"
+  },
+  {
+    "t": 32.56,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 39.57,
+    "role": "customer",
+    "text": "Pune"
+  },
+  {
+    "t": 39.58,
+    "role": "agent",
+    "text": "Thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 46.58,
+    "role": "customer",
+    "text": "Actually I am also worried about my parents, they are 64 and 67 and have no insurance at all"
+  },
+  {
+    "t": 48.11,
+    "role": "agent",
+    "text": "I understand, Abhishek ji, you’re looking to cover your parents who are 64 and 67 years old. Do any of them have pre‑existing conditions such as diabetes, blood pressure or heart problems?",
+    "citations": [],
+    "kind": "llm"
+  }
+]

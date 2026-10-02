@@ -1,0 +1,21 @@
+id: clean_compliant
+pack: in_health
+description: Well-run call (disclosures made, family mentioned and immediately addressed). Measures false positives.
+voices:
+  agent: [{provider: azure, voice: en-IN-NeerjaNeural, language: en-IN}, {provider: deepgram, voice: aura-2-thalia-en}]
+  customer: [{provider: azure, voice: en-IN-AaravNeural, language: en-IN}, {provider: deepgram, voice: aura-2-arcas-en}]
+lines:
+  - [agent, "Good morning, this is Priya, an AI assistant from Prithvi Health Insurance. This call is recorded. Is now a good time?"]
+  - [customer, "Yes, sure."]
+  - [agent, "Who would you like to cover, just yourself or your family too?"]
+  - [customer, "Me, my wife and our two kids."]
+  - [agent, "Then our family floater, FamilyShield, fits well: one sum insured for all four of you. May I know your age and your wife's age?"]
+  - [customer, "I'm thirty six and she is thirty three."]
+  - [agent, "Thank you. Any pre-existing conditions in the family?"]
+  - [customer, "No, everyone is healthy."]
+  - [agent, "Great. There is a thirty day initial waiting period, and pre-existing conditions would be covered after twenty four months. For ten lakh cover the premium is about twenty two thousand rupees a year, indicative and subject to underwriting."]
+  - [customer, "That works. How do I pay?"]
+  - [agent, "I'll send the official payment link to your registered email now."]
+  - [customer, "Perfect, thank you."]
+expected:
+  - {nudge: buying_signal, line: 10, optional: true}

@@ -1,0 +1,94 @@
+product,age_band,members,sum_insured,annual_premium_inr,zone
+Prithvi Secure,18-25,1 adult,3 lakh,3740,A
+Prithvi Secure,18-25,1 adult,5 lakh,5200,A
+Prithvi Secure,18-25,1 adult,10 lakh,7540,A
+Prithvi Secure,18-25,1 adult,25 lakh,10920,A
+Prithvi Secure,26-35,1 adult,3 lakh,4610,A
+Prithvi Secure,26-35,1 adult,5 lakh,6400,A
+Prithvi Secure,26-35,1 adult,10 lakh,9280,A
+Prithvi Secure,26-35,1 adult,25 lakh,13440,A
+Prithvi Secure,36-45,1 adult,3 lakh,6410,A
+Prithvi Secure,36-45,1 adult,5 lakh,8900,A
+Prithvi Secure,36-45,1 adult,10 lakh,12900,A
+Prithvi Secure,36-45,1 adult,25 lakh,18690,A
+Prithvi Secure,46-55,1 adult,3 lakh,9940,A
+Prithvi Secure,46-55,1 adult,5 lakh,13800,A
+Prithvi Secure,46-55,1 adult,10 lakh,200100,A
+Prithvi Secure,46-55,1 adult,25 lakh,28980,A
+Prithvi Secure,56-60,1 adult,3 lakh,14040,A
+Prithvi Secure,56-60,1 adult,5 lakh,19500,A
+Prithvi Secure,56-60,1 adult,10 lakh,28280,A
+Prithvi Secure,56-60,1 adult,25 lakh,40950,A
+Prithvi Secure,61-65,1 adult,3 lakh,18720,A
+Prithvi Secure,61-65,1 adult,5 lakh,26000,A
+Prithvi Secure,61-65,1 adult,10 lakh,37700,A
+Prithvi Secure,61-65,1 adult,25 lakh,54600,A
+Prithvi FamilyShield,18-25,2 adults,5 lakh,7490,A
+Prithvi FamilyShield,18-25,2 adults,10 lakh,10480,A
+Prithvi FamilyShield,18-25,2 adults,25 lakh,14980,A
+Prithvi FamilyShield,18-25,2 adults,50 lakh,19470,A
+Prithvi FamilyShield,18-25,2 adults + 1 child,5 lakh,8660,A
+Prithvi FamilyShield,18-25,2 adults + 1 child,10 lakh,12120,A
+Prithvi FamilyShield,18-25,2 adults + 1 child,25 lakh,17320,A
+Prithvi FamilyShield,18-25,2 adults + 1 child,50 lakh,22510,A
+Prithvi FamilyShield,18-25,2 adults + 2 children,5 lakh,9590,A
+Prithvi FamilyShield,18-25,2 adults + 2 children,10 lakh,13430,A
+Prithvi FamilyShield,18-25,2 adults + 2 children,25 lakh,19190,A
+Prithvi FamilyShield,18-25,2 adults + 2 children,50 lakh,24940,A
+Prithvi FamilyShield,26-35,2 adults,5 lakh,9220,A
+Prithvi FamilyShield,26-35,2 adults,10 lakh,12900,A
+Prithvi FamilyShield,26-35,2 adults,25 lakh,18430,A
+Prithvi FamilyShield,26-35,2 adults,50 lakh,23960,A
+Prithvi FamilyShield,26-35,2 adults + 1 child,5 lakh,10660,A
+Prithvi FamilyShield,26-35,2 adults + 1 child,10 lakh,14920,A
+Prithvi FamilyShield,26-35,2 adults + 1 child,25 lakh,21310,A
+Prithvi FamilyShield,26-35,2 adults + 1 child,50 lakh,27710,A
+Prithvi FamilyShield,26-35,2 adults + 2 children,5 lakh,11810,A
+Prithvi FamilyShield,26-35,2 adults + 2 children,10 lakh,16530,A
+Prithvi FamilyShield,26-35,2 adults + 2 children,25 lakh,23620,A
+Prithvi FamilyShield,26-35,2 adults + 2 children,50 lakh,30700,A
+Prithvi FamilyShield,36-45,2 adults,5 lakh,12820,A
+Prithvi FamilyShield,36-45,2 adults,10 lakh,17940,A
+Prithvi FamilyShield,36-45,2 adults,25 lakh,25630,A
+Prithvi FamilyShield,36-45,2 adults,50 lakh,33320,A
+Prithvi FamilyShield,36-45,2 adults + 1 child,5 lakh,14820,A
+Prithvi FamilyShield,36-45,2 adults + 1 child,10 lakh,,A
+Prithvi FamilyShield,36-45,2 adults + 1 child,25 lakh,29640,A
+Prithvi FamilyShield,36-45,2 adults + 1 child,50 lakh,38530,A
+Prithvi FamilyShield,36-45,2 adults + 2 children,5 lakh,16420,A
+Prithvi FamilyShield,36-45,2 adults + 2 children,10 lakh,22990,A
+Prithvi FamilyShield,36-45,2 adults + 2 children,25 lakh,32840,A
+Prithvi FamilyShield,36-45,2 adults + 2 children,50 lakh,42690,A
+Prithvi FamilyShield,46-55,2 adults,5 lakh,19870,A
+Prithvi FamilyShield,46-55,2 adults,10 lakh,27820,A
+Prithvi FamilyShield,46-55,2 adults,25 lakh,39740,A
+Prithvi FamilyShield,46-55,2 adults,50 lakh,51670,A
+Prithvi FamilyShield,46-55,2 adults + 1 child,5 lakh,22980,A
+Prithvi FamilyShield,46-55,2 adults + 1 child,10 lakh,32170,A
+Prithvi FamilyShield,46-55,2 adults + 1 child,25 lakh,45950,A
+Prithvi FamilyShield,46-55,2 adults + 1 child,50 lakh,59740,A
+Prithvi FamilyShield,46-55,2 adults + 2 children,5 lakh,25460,A
+Prithvi FamilyShield,46-55,2 adults + 2 children,10 lakh,35650,A
+Prithvi FamilyShield,46-55,2 adults + 2 children,25 lakh,50920,A
+Prithvi FamilyShield,46-55,2 adults + 2 children,50 lakh,66200,A
+Prithvi FamilyShield,56-60,2 adults,5 lakh,28080,A
+Prithvi FamilyShield,56-60,2 adults,10 lakh,39310,A
+Prithvi FamilyShield,56-60,2 adults,25 lakh,56160,A
+Prithvi FamilyShield,56-60,2 adults,50 lakh,73010,A
+Prithvi FamilyShield,56-60,2 adults + 1 child,5 lakh,32470,A
+Prithvi FamilyShield,56-60,2 adults + 1 child,10 lakh,45450,A
+Prithvi FamilyShield,56-60,2 adults + 1 child,25 lakh,64940,A
+Prithvi FamilyShield,56-60,2 adults + 1 child,50 lakh,84420,A
+Prithvi FamilyShield,56-60,2 adults + 2 children,5 lakh,35980,A
+Prithvi FamilyShield,56-60,2 adults + 2 children,10 lakh,50370,A
+Prithvi FamilyShield,56-60,2 adults + 2 children,25 lakh,71960,A
+Prithvi FamilyShield,56-60,2 adults + 2 children,50 lakh,93540,A
+Prithvi Silver,60-65,1 adult,3 lakh,21380,A
+Prithvi Silver,60-65,1 adult,5 lakh,28500,A
+Prithvi Silver,60-65,1 adult,10 lakh,42750,A
+Prithvi Silver,66-70,1 adult,3 lakh,27680,A
+Prithvi Silver,66-70,1 adult,5 lakh,36900,A
+Prithvi Silver,66-70,1 adult,10 lakh,55350,A
+Prithvi Silver,71-75,1 adult,3 lakh,35400,A
+Prithvi Silver,71-75,1 adult,5 lakh,47200,A
+Prithvi Silver,71-75,1 adult,10 lakh,70800,A

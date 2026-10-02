@@ -1,0 +1,137 @@
+# Q4 live copilot config: rule signals + nudge templates for health-insurance sales calls.
+# Patterns are case-insensitive regexes matched on final transcript segments.
+
+signals:
+  # compliance: agent must disclose before quoting a premium
+  # a quote names an amount: "spend per year on premium?" (the budget question) is not a quote
+  quote: {speaker: agent, patterns: ["(?:rupees|thousand|lakh|\\d)\\s*(?:a|per) (?:year|annum)|premium (?:is|would be|comes to|of) (?:about |around |roughly |only )?(?:rs\\.? ?|₹ ?)?(?:\\d|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|twenty|thirty|forty|fifty)|lakh cover for|costs? (?:you )?(?:about|around) (?:rs|₹|\\d)"]}
+  waiting_disclosed: {speaker: agent, patterns: ["waiting period|initial waiting|covered after (?:24|twenty[- ]four|two years|thirty)"]}
+  recording_disclosed: {speaker: agent, patterns: ["record"]}
+  risky_guaranteed: {speaker: agent, nudge: guaranteed_claim, confidence: 0.9,
+    patterns: ["guarantee[ds]?\\b.{0,30}(?:claim|approv|pay)|claims? (?:are|is|will be) (?:always|100%|definitely) (?:paid|approved|settled)|never (?:reject|deny)|no questions asked"]}
+  risky_no_waiting: {speaker: agent, nudge: no_waiting_claim, confidence: 0.9,
+    patterns: ["no waiting period|covered from (?:day one|the first day) for (?:diabetes|bp|blood pressure|pre-existing)",
+               "(?:diabetes|sugar|\\bbp\\b|blood pressure|pre-existing\\w*)\\W+(?:\\w+\\W+){0,3}covered (?:from|on) (?:day one|the first day|day 1)"]}
+  risky_otp: {speaker: agent, nudge: credentials_request, confidence: 0.95,
+    patterns: ["\\botp\\b|card number|cvv|\\bpin\\b|net ?banking password"]}
+  # opportunities (customer)
+  cross_sell_parents: {speaker: customer, nudge: cross_sell_parents, confidence: 0.8, opportunity: true,
+    patterns: ["(?:my|our) (?:parents|mother|father|mom|dad|in-laws)|mother-in-law|father-in-law"],
+    resolve_patterns: ["silver|senior|parents|mother|father"]}
+  cross_sell_family: {speaker: customer, nudge: cross_sell_family, confidence: 0.75, opportunity: true,
+    patterns: ["(?:my|our) (?:wife|husband|spouse|kids|children|son|daughter)|getting married|expecting a baby|pregnant"],
+    resolve_patterns: ["family ?shield|floater|family|spouse|wife|husband|children|maternity"]}
+  buying: {speaker: customer, nudge: buying_signal, confidence: 0.8,
+    patterns: ["how (?:do|can) i (?:pay|buy|sign up|apply)|can i (?:buy|start|pay) (?:it )?(?:today|now)|send (?:me )?(?:the )?(?:payment )?link|what documents|let'?s do it|i'?ll take it"]}
+  payment_difficulty: {speaker: customer, nudge: payment_difficulty, confidence: 0.8,
+    patterns: ["can'?t afford|too expensive|out of my budget|lost my job|salary (?:is )?(?:late|delayed)|tight on money|money is tight|can'?t pay"]}
+  callback: {speaker: customer, nudge: callback_need, confidence: 0.8,
+    patterns: ["call (?:me )?(?:back|later|tomorrow)|i'?m (?:busy|driving|in a meeting)|not a good time|after (?:\\d|six|seven|eight)"]}
+  human: {speaker: customer, nudge: human_request, confidence: 0.85,
+    patterns: ["(?:talk|speak) to (?:a |an )?(?:real )?(?:person|human|manager|supervisor|agent)|real person|your manager"]}
+  pre_existing: {speaker: customer, nudge: pre_existing_declare, confidence: 0.7,
+    patterns: ["diabet|sugar|blood pressure|\\bbp\\b|thyroid|heart (?:problem|condition|surgery)|asthma|cholesterol"],
+    resolve_patterns: ["declare|waiting period|24 months|covered after"]}
+
+frustration:
+  lexicon: ["already told you", "how many times", "i said", "not listening", "waste of (?:my )?time", "ridiculous",
+            "annoying", "stop asking", "just tell me", "this is useless", "frustrat", "fed up", "come on"]
+  threshold: 0.45
+  ema_alpha: 0.5
+
+missed_opportunity: {agent_turns: 2, seconds: 25}
+compliance:
+  recording_deadline_s: 30
+
+nudges:
+  waiting_period_before_quote:
+    priority: 1
+    title: "Disclose waiting periods before quoting"
+    text: "You quoted a premium without the disclosure: 30-day initial waiting period; pre-existing conditions covered after 24 months."
+    ttl_s: 45
+    topic: compliance
+    kb_query: "waiting period for pre-existing diseases"
+  recording_missing:
+    priority: 1
+    title: "Recording disclosure missing"
+    text: "Tell the customer the call is recorded (and that you are an AI assistant, if applicable)."
+    ttl_s: 40
+    topic: compliance
+  guaranteed_claim:
+    priority: 1
+    title: "Correct the risky statement"
+    text: "Claims are subject to policy terms, waiting periods and exclusions. Do not promise guaranteed approval."
+    ttl_s: 45
+    topic: compliance
+    kb_query: "insurance companies reject claims objection"
+  no_waiting_claim:
+    priority: 1
+    title: "Incorrect: waiting period applies"
+    text: "Pre-existing conditions are covered only after 24 months. Correct this now."
+    ttl_s: 45
+    topic: compliance
+    kb_query: "waiting period for pre-existing diseases"
+  credentials_request:
+    priority: 1
+    title: "Never ask for OTP / card details"
+    text: "Stop: we never collect OTPs, card numbers or PINs on calls. Use the official payment link."
+    ttl_s: 45
+    topic: compliance
+  cross_sell_parents:
+    priority: 3
+    title: "Cross-sell: parents' cover"
+    text: "Customer mentioned parents. Offer Prithvi Silver (entry age 60-75) as a separate policy."
+    ttl_s: 60
+    topic: cross_sell
+    kb_query: "senior citizen plan for parents"
+  cross_sell_family:
+    priority: 3
+    title: "Upsell: family floater"
+    text: "Customer mentioned family. Suggest Prithvi FamilyShield, one sum insured for the whole family."
+    ttl_s: 60
+    topic: cross_sell
+    kb_query: "family floater plan"
+  missed_opportunity:
+    priority: 2
+    title: "Missed opportunity"
+    text: "Customer mentioned {what} earlier and it hasn't been addressed. Bring it up before closing."
+    ttl_s: 60
+    topic: cross_sell
+  frustration:
+    priority: 2
+    title: "Rising frustration"
+    text: "Acknowledge the concern before continuing. Don't repeat questions already answered."
+    ttl_s: 30
+    topic: sentiment
+  payment_difficulty:
+    priority: 2
+    title: "Budget concern"
+    text: "Acknowledge it. Offer a lower sum insured or monthly mode (2% loading); premiums qualify for Section 80D."
+    ttl_s: 45
+    topic: objection
+    kb_query: "customer says it is too expensive"
+  buying_signal:
+    priority: 3
+    title: "Buying signal"
+    text: "Customer sounds ready. Offer to start the application now or send the official payment link."
+    ttl_s: 45
+    topic: closing
+  callback_need:
+    priority: 3
+    title: "Offer a callback"
+    text: "Propose a specific callback slot and log it before ending."
+    ttl_s: 45
+    topic: closing
+  human_request:
+    priority: 2
+    title: "Customer wants a person"
+    text: "Offer a transfer to a licensed advisor now."
+    ttl_s: 30
+    topic: escalation
+  pre_existing_declare:
+    priority: 3
+    title: "Pre-existing condition mentioned"
+    text: "Ask them to declare it in the proposal; covered after the 24-month waiting period."
+    ttl_s: 45
+    topic: underwriting
+    kb_query: "pre-existing condition rejection objection"

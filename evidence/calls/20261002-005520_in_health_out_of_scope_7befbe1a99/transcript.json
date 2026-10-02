@@ -1,0 +1,118 @@
+[
+  {
+    "t": 1.57,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 19.84,
+    "role": "customer",
+    "text": "Oh, hello, Asha."
+  },
+  {
+    "t": 20.96,
+    "role": "agent",
+    "text": "Sure, may I have your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 22.1,
+    "role": "customer",
+    "text": "Yes. I'm Kieran."
+  },
+  {
+    "t": 22.11,
+    "role": "agent",
+    "text": "Nice to meet you, Kieran. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 28.5,
+    "role": "customer",
+    "text": "Yes. Sure. I have a few minutes."
+  },
+  {
+    "t": 29.84,
+    "role": "agent",
+    "text": "Sure, no problem. May I know how old you are, Kiran ji?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 53.62,
+    "role": "customer",
+    "text": "I'm 41. By the way, do you also do car insurance? My car policy is due."
+  },
+  {
+    "t": 55.36,
+    "role": "agent",
+    "text": "I’m sorry, I don’t have the exact details on that right now. I’ll note it so the licensed advisor covers it with you. Could you tell me which city you live in?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 77.21,
+    "role": "customer",
+    "text": "That's fine. I'll wait for the adviser. I live in Hyderabad."
+  },
+  {
+    "t": 78.28,
+    "role": "agent",
+    "text": "Thank you, Kieran ji. Who would you like the health cover for – just yourself, yourself and your spouse, your whole family with children, or also your parents?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 98.78,
+    "role": "customer",
+    "text": "Just myself, please. Also, which mutual fund should I invest in? For my retirement?"
+  },
+  {
+    "t": 101.19,
+    "role": "agent",
+    "text": "I’m sorry, I don’t have information on mutual funds. I’ll make sure an advisor can help you with that. \n\nNow, do you have any pre‑existing medical conditions, and do you currently have any other health‑insurance cover?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 125.93,
+    "role": "customer",
+    "text": "I have high blood pressure. And no I don't have any other health insurance right now."
+  },
+  {
+    "t": 127.79,
+    "role": "agent",
+    "text": "Got it – you have high blood pressure and no existing health cover. Could you let me know roughly how much you’d like to spend on a yearly premium?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 149.95,
+    "role": "customer",
+    "text": "I was thinking around 15,000 rupees a year. And does the policy cover treatment if I go to The US for surgery?"
+  },
+  {
+    "t": 151.32,
+    "role": "agent",
+    "text": "Our plans have a thirty‑day initial waiting period, and pre‑existing conditions like high blood pressure are covered after twenty‑four months. Based on your budget, Prithvi Secure with a ten lakh sum insured has an indicative premium of about twelve thousand nine hundred rupees per year, subject to underwriting. Would you like a licensed advisor to call you back to complete the application?",
+    "citations": [
+      "kb_in_policy_002",
+      "kb_in_product_011",
+      "kb_in_policy_003"
+    ],
+    "kind": "llm"
+  },
+  {
+    "t": 184.16,
+    "role": "customer",
+    "text": "Yes. Please schedule a callback for Saturday at 11AM."
+  },
+  {
+    "t": 185.19,
+    "role": "agent",
+    "text": "Done, a licensed advisor will call you Saturday 11AM. Thank you for your time, and take care.",
+    "kind": "script"
+  }
+]

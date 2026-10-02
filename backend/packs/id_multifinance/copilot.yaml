@@ -1,0 +1,47 @@
+# Q4 copilot config for Indonesian installment-reminder / collection calls.
+signals:
+  quote: {speaker: agent, patterns: ["rupiah|angsuran (?:bapak|ibu)? ?(?:sebesar|adalah)"]}
+  waiting_disclosed: {speaker: agent, patterns: ["jatuh tempo|denda"]}
+  recording_disclosed: {speaker: agent, patterns: ["rekam|record"]}
+  risky_threat: {speaker: agent, nudge: collection_ethics, confidence: 0.95,
+    patterns: ["(?:motor|kendaraan|unit)(?:nya)?\\W+(?:\\w+\\W+){0,3}(?:tarik|sita|ambil)\\b|ditarik|disita|(?:lapor|laporkan) (?:ke )?polisi|debt ?collector (?:akan |bakal )?datang|kami datangi rumah|kasih tahu (?:keluarga|kantor|atasan)"]}
+  risky_personal_account: {speaker: agent, nudge: personal_account, confidence: 0.9,
+    patterns: ["transfer (?:ke )?rekening (?:saya|pribadi)|bayar (?:lewat|ke) saya (?:aja|saja)"]}
+  risky_otp: {speaker: agent, nudge: credentials_request, confidence: 0.95, patterns: ["\\botp\\b|kode (?:verifikasi|otp)|\\bpin\\b"]}
+  third_party: {speaker: customer, nudge: third_party_caution, confidence: 0.8,
+    patterns: ["(?:saya|aku) (?:istri|suami|anak|adik|kakak|ibu|bapak)(?:nya)?|bukan (?:saya|aku)(?:,| )|(?:beliau|dia) (?:lagi )?(?:nggak|tidak|gak) (?:ada|di rumah)"]}
+  buying: {speaker: customer, nudge: buying_signal, confidence: 0.8,
+    patterns: ["(?:bisa )?bayar (?:hari ini|sekarang)|(?:minta|kirim) (?:nomor )?(?:va|virtual account)|gimana cara bayar|bayarnya (?:lewat|di) mana"]}
+  payment_difficulty: {speaker: customer, nudge: payment_difficulty, confidence: 0.8,
+    patterns: ["belum gajian|(?:lagi )?(?:susah|sepi|seret)|kena phk|di-?phk|nggak ada (?:uang|duit)|gak ada (?:uang|duit)|(?:lagi )?bokek|usaha (?:lagi )?(?:sepi|turun)|sakit|dirawat"]}
+  callback: {speaker: customer, nudge: callback_need, confidence: 0.8,
+    patterns: ["(?:telepon|telpon|hubungi) (?:lagi )?(?:nanti|besok)|lagi (?:sibuk|nyetir|rapat|di jalan)|nanti aja"]}
+  human: {speaker: customer, nudge: human_request, confidence: 0.85,
+    patterns: ["(?:bicara|ngomong) (?:dengan|sama) (?:orang|petugas|manusia|atasan)|sambungkan (?:ke|dengan) (?:petugas|cs|orang)|minta (?:petugas|cs)"]}
+  restructuring_hint: {speaker: customer, nudge: restructuring_offer, confidence: 0.75, opportunity: true,
+    patterns: ["kena phk|di-?phk|usaha (?:lagi )?(?:sepi|bangkrut|turun)|dirawat|sakit (?:keras|parah)|kena musibah|banjir"],
+    resolve_patterns: ["restrukturisasi|keringanan|perpanjangan tenor"]}
+
+frustration:
+  lexicon: ["dari tadi", "berkali-kali", "udah (?:saya|aku) bilang", "capek deh", "ribet", "kok ditelpon terus", "ganggu (?:banget|terus)",
+            "males", "nggak sopan", "bikin kesel", "kesel"]
+  threshold: 0.45
+  ema_alpha: 0.5
+
+missed_opportunity: {agent_turns: 2, seconds: 30}
+compliance: {recording_deadline_s: 30}
+
+nudges:
+  waiting_period_before_quote: {priority: 1, title: "Sebutkan jatuh tempo & denda", text: "State the due date and that late fees (0.2%/day) apply from the day after it.", ttl_s: 40, topic: compliance, kb_query: "berapa denda keterlambatan"}
+  recording_missing: {priority: 1, title: "Identitas & rekaman", text: "State your name, the company and that the call is recorded.", ttl_s: 40, topic: compliance}
+  collection_ethics: {priority: 1, title: "Collection ethics: no threats", text: "Stop: no repossession, police or third-party threats (POJK 22/2023). Apologise and offer options.", ttl_s: 60, topic: compliance, kb_query: "larangan petugas penagihan"}
+  personal_account: {priority: 1, title: "Official channels only", text: "Never take payment to a personal account. Give VA / Indomaret / Alfamart / MajuKu.", ttl_s: 45, topic: compliance}
+  credentials_request: {priority: 1, title: "Never ask for OTP/PIN", text: "Stop: never ask for OTP or PIN.", ttl_s: 45, topic: compliance}
+  third_party_caution: {priority: 1, title: "Not the account holder", text: "Do not disclose contract details to a third party. Ask when the holder can be reached.", ttl_s: 45, topic: compliance}
+  restructuring_offer: {priority: 3, title: "Offer restructuring", text: "Customer has a hardship. Offer a callback from the restructuring team (free; tenor extension or deferral).", ttl_s: 60, topic: retention, kb_query: "keringanan angsuran restrukturisasi"}
+  missed_opportunity: {priority: 2, title: "Missed: hardship not addressed", text: "Customer mentioned {what}. Offer the restructuring program before closing.", ttl_s: 60, topic: retention}
+  frustration: {priority: 2, title: "Pelanggan mulai kesal", text: "Apologise first (\"Mohon maaf, Pak/Bu...\"), keep it short, confirm a convenient time.", ttl_s: 30, topic: sentiment}
+  payment_difficulty: {priority: 2, title: "Kesulitan bayar", text: "Empathise; ask for a realistic date (e.g. payday); late fee is 0.2%/day; mention restructuring if hardship.", ttl_s: 45, topic: objection, kb_query: "belum gajian keberatan"}
+  buying_signal: {priority: 3, title: "Siap bayar", text: "Give official channels: virtual account BCA/BRI/Mandiri/BNI, Indomaret, Alfamart, MajuKu.", ttl_s: 45, topic: closing, kb_query: "di mana bisa membayar angsuran"}
+  callback_need: {priority: 3, title: "Tawarkan telepon ulang", text: "Agree on a specific time to call back and log it.", ttl_s: 45, topic: closing}
+  human_request: {priority: 2, title: "Minta petugas", text: "Offer transfer to an officer now.", ttl_s: 30, topic: escalation}

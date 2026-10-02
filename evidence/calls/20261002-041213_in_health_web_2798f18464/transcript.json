@@ -1,0 +1,44 @@
+[
+  {
+    "t": 1.16,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 19.85,
+    "role": "customer",
+    "text": "Thirty eight."
+  },
+  {
+    "t": 21.44,
+    "role": "agent",
+    "text": "Got it, you're 38 years old. May I have your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 30.0,
+    "role": "customer",
+    "text": "Actually, I'm also worried about my parents. They were 64 and 67. They have no insurance at all."
+  },
+  {
+    "t": 30.88,
+    "role": "agent",
+    "text": "I understand you’re looking to cover your parents who are 64 and 67 years old. May I have your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 39.81,
+    "role": "customer",
+    "text": "Only the company policy. 3 lakh."
+  },
+  {
+    "t": 41.05,
+    "role": "agent",
+    "text": "Thank you for confirming the sum insured of three lakh. Could you tell me which city you live in?",
+    "citations": [],
+    "kind": "llm"
+  }
+]

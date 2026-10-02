@@ -1,0 +1,77 @@
+[
+  {
+    "t": 1.28,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 25.29,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 30.31,
+    "role": "customer",
+    "text": "Yes. Speaking."
+  },
+  {
+    "t": 31.46,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 35.14,
+    "role": "customer",
+    "text": "Thirty eight."
+  },
+  {
+    "t": 35.14,
+    "role": "agent",
+    "text": "Sorry, did I get your name right, Thirty Eight?",
+    "kind": "script"
+  },
+  {
+    "t": 47.01,
+    "role": "customer",
+    "text": "Actually, I'm also worried about my parents. They are 64 and 67. They have no insurance at all."
+  },
+  {
+    "t": 48.45,
+    "role": "agent",
+    "text": "I understand you want coverage for your parents, who are 64 and 67 years old. May I know your own age, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 52.67,
+    "role": "customer",
+    "text": "Only the company policy. 3 lakh."
+  },
+  {
+    "t": 53.87,
+    "role": "agent",
+    "text": "Thank you for letting me know. Could you please share your own age, sir/ma'am?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 61.39,
+    "role": "customer",
+    "text": "No. Nothing like that."
+  },
+  {
+    "t": 63.49,
+    "role": "agent",
+    "text": "I understand you’re looking for coverage for your parents. Could you tell me which city you live in?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 79.92,
+    "role": "customer",
+    "text": "Okay. That sounds reasonable."
+  }
+]

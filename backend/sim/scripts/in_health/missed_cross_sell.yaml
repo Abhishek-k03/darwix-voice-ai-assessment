@@ -1,0 +1,25 @@
+id: missed_cross_sell
+pack: in_health
+description: Customer mentions uninsured parents; the agent ignores it twice (missed cross-sell).
+voices:
+  agent: [{provider: azure, voice: en-IN-AaravNeural, language: en-IN}, {provider: deepgram, voice: aura-2-orion-en}]
+  customer: [{provider: azure, voice: en-IN-PrabhatNeural, language: en-IN}, {provider: deepgram, voice: aura-2-arcas-en}]
+lines:
+  - [agent, "Good afternoon, this is Rohan calling from Prithvi Health Insurance. This call is being recorded for quality purposes. Am I speaking with Mister Verma?"]
+  - [customer, "Yes, speaking."]
+  - [agent, "Thank you. You had enquired about health insurance. May I know your age, sir?"]
+  - [customer, "I'm thirty eight."]
+  - [agent, "And which city are you based in?"]
+  - [customer, "Pune. Actually I'm also worried about my parents, they are sixty four and sixty seven and they have no insurance at all."]
+  - [agent, "Okay, noted. Do you have any existing health cover for yourself?"]
+  - [customer, "Only the company policy, three lakh."]
+  - [agent, "Alright. Any pre-existing conditions for you, like diabetes or high B P?"]
+  - [customer, "No, nothing like that."]
+  - [agent, "Great. For you I would suggest ten lakh sum insured. There is a thirty day initial waiting period and pre-existing conditions are covered after twenty four months. The premium would be around eight thousand nine hundred rupees a year."]
+  - [customer, "Okay, that sounds reasonable."]
+  - [agent, "Shall I send you the proposal link on WhatsApp?"]
+  - [customer, "Sure, please send it."]
+  - [agent, "Done. Thank you for your time, have a good day."]
+expected:
+  - {nudge: cross_sell_parents, line: 6}
+  - {nudge: missed_opportunity, line: 9, within_s: 15}

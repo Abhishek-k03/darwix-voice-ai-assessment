@@ -1,0 +1,102 @@
+[
+  {
+    "t": 1.38,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 21.81,
+    "role": "customer",
+    "text": "Yes. I have a few minutes."
+  },
+  {
+    "t": 21.82,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 27.38,
+    "role": "customer",
+    "text": "I need to ensure my parents are"
+  },
+  {
+    "t": 29.34,
+    "role": "agent",
+    "text": "I understand you’re looking to cover your parents. May I know your first name, please?",
+    "citations": [
+      "kb_in_product_008",
+      "kb_in_faq_004",
+      "kb_in_objection_003"
+    ],
+    "kind": "llm"
+  },
+  {
+    "t": 34.28,
+    "role": "customer",
+    "text": "Mira."
+  },
+  {
+    "t": 34.29,
+    "role": "agent",
+    "text": "Thank you, Mira. May I know your age?",
+    "kind": "quick"
+  },
+  {
+    "t": 47.43,
+    "role": "customer",
+    "text": "I am 52."
+  },
+  {
+    "t": 47.43,
+    "role": "agent",
+    "text": "Thank you. Which city do you live in?",
+    "kind": "quick"
+  },
+  {
+    "t": 58.83,
+    "role": "customer",
+    "text": "Kochi."
+  },
+  {
+    "t": 58.84,
+    "role": "agent",
+    "text": "Got it, thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 75.43,
+    "role": "customer",
+    "text": "My parents,"
+  },
+  {
+    "t": 77.54,
+    "role": "agent",
+    "text": "Got it, Mira ji. You’d like coverage for your parents. Do you have any pre‑existing medical conditions for them that we should note?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 96.68,
+    "role": "customer",
+    "text": "Look. I'd rather speak to a real person. Can you connect me to an agent?"
+  },
+  {
+    "t": 97.3,
+    "role": "agent",
+    "text": "Sure, I'm connecting you to a licensed advisor now. Please stay on the line, they will have all the details we discussed.",
+    "kind": "script"
+  },
+  {
+    "t": 112.28,
+    "role": "customer",
+    "text": "Okay. I'll wait."
+  },
+  {
+    "t": 112.85,
+    "role": "agent",
+    "text": "Thank you, please stay on the line. The advisor will join you shortly.",
+    "kind": "script"
+  }
+]

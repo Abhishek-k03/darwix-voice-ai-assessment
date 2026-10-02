@@ -1,0 +1,12 @@
+**/.venv
+**/__pycache__
+**/node_modules
+frontend/.next
+data/models
+data/tts_cache
+data/kb/index
+evidence
+_reference
+*.zip
+.env
+.git

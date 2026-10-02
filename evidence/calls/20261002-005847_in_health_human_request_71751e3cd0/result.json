@@ -1,0 +1,258 @@
+{
+  "call_id": "71751e3cd0",
+  "room": "sim-in-health-human-request-390f",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 122.4,
+  "stage": "QUALIFICATION",
+  "outcome": "escalated",
+  "grade": null,
+  "product": null,
+  "premium_inr": null,
+  "fields": {
+    "name": "Mira",
+    "age": 52,
+    "city": "Kochi",
+    "cover_for": "parents",
+    "parents_ages": [
+      74,
+      78
+    ]
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {},
+  "callback": null,
+  "escalated": true,
+  "dnc": false,
+  "disclosed_waiting_period": false,
+  "customer": {},
+  "lead_id": "lead-e02335df",
+  "end_reason": "customer_hung_up",
+  "mode": "sim",
+  "scenario": "human_request",
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 22.83,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 22.83,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 764.5,
+      "kb_ms": 245.6,
+      "kb_status": "no_match",
+      "pre_llm_ms": 764.8,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 23.41,
+      "turn": 1,
+      "kind": "llm_metrics",
+      "ttft_ms": 535.2,
+      "duration_ms": 572.2
+    },
+    {
+      "t": 32.33,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 32.33,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 44.63,
+      "turn": 3,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 44.63,
+      "turn": 3,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.1,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 55.14,
+      "turn": 4,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "city": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 55.14,
+      "turn": 4,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.1,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 75.01,
+      "turn": 5,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "cover_for": "set",
+        "parents_ages": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 75.01,
+      "turn": 5,
+      "kind": "trace",
+      "extract_ms": 696.0,
+      "kb_ms": 14.8,
+      "kb_status": "no_match",
+      "pre_llm_ms": 696.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 75.73,
+      "turn": 5,
+      "kind": "llm_metrics",
+      "ttft_ms": 542.0,
+      "duration_ms": 612.7
+    },
+    {
+      "t": 95.92,
+      "turn": 6,
+      "kind": "turn",
+      "intents": [
+        "human_request"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 95.92,
+      "turn": 6,
+      "kind": "escalate",
+      "reason": "customer requested a human"
+    },
+    {
+      "t": 95.92,
+      "turn": 6,
+      "kind": "trace",
+      "extract_ms": 604.1,
+      "kb_ms": 28.4,
+      "kb_status": "no_match",
+      "pre_llm_ms": 604.2,
+      "intents": [
+        "human_request"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 112.5,
+      "turn": 7,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 112.5,
+      "turn": 7,
+      "kind": "trace",
+      "extract_ms": 817.4,
+      "kb_ms": 14.3,
+      "kb_status": "ok",
+      "pre_llm_ms": 817.5,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 113.11,
+      "turn": 7,
+      "kind": "llm_metrics",
+      "ttft_ms": 592.7,
+      "duration_ms": 598.1
+    },
+    {
+      "t": 113.65,
+      "turn": 7,
+      "kind": "llm_metrics",
+      "ttft_ms": 476.3,
+      "duration_ms": 533.7
+    }
+  ],
+  "started_at": "2026-10-02T00:58:47",
+  "audio_seconds": 121.3
+}

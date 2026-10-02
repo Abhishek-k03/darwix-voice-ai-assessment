@@ -1,0 +1,160 @@
+# Source manifest. authority: 5 legal/policy wording, 4 approved internal (rules, rates, playbooks),
+# 3 forms/servicing guides, 2 website, 1 marketing. Higher authority wins duplicates and conflicts.
+kb_name: darwix-multimarket-kb
+
+markets:
+  in_health:
+    language: en
+    sources:
+      - id: in_site
+        type: web
+        seeds: [/in_health/site/index.html]
+        allow_prefix: /in_health/site/
+        max_pages: 40
+        authority: 2
+        doc_group: in_website
+        doc_type_rules:          # first matching URL substring wins
+          /faq: faq
+          /products/: product_info
+          /claims: process
+          /network-hospitals: product_info
+          /partners: product_info
+          /blog/: marketing
+          /testimonials: testimonial
+          /contact: contact
+          /index: product_info
+        authority_overrides: {/blog/: 1, /testimonials: 1}
+      - id: in_policy_wording_2025
+        type: pdf
+        path: in_health/docs/policy_wording_2025.pdf
+        authority: 5
+        doc_type: policy_rule
+        doc_group: in_policy_wording
+        effective_date: "2025-04-01"
+      - id: in_brochure_2024
+        type: pdf
+        path: in_health/docs/brochure_familyshield_2024.pdf
+        authority: 1
+        doc_type: marketing
+        doc_group: in_brochure_familyshield
+        effective_date: "2024-04-01"
+      - id: in_brochure_2025
+        type: pdf
+        path: in_health/docs/brochure_familyshield_2025.pdf
+        authority: 1
+        doc_type: marketing
+        doc_group: in_brochure_familyshield
+        effective_date: "2025-04-01"
+      - id: in_proposal_form
+        type: pdf
+        path: in_health/docs/proposal_form.pdf
+        authority: 3
+        doc_type: form_field
+        doc_group: in_proposal_form
+      - id: in_proposal_form_filled
+        type: pdf
+        path: in_health/docs/proposal_form_filled_sample.pdf
+        authority: 3
+        doc_type: form_field
+        doc_group: in_proposal_form_filled
+      - id: in_scanned_endorsement
+        type: pdf
+        path: in_health/docs/scanned_endorsement.pdf
+        authority: 3
+        doc_type: policy_rule
+        doc_group: in_endorsements
+      - id: in_premium_rates_2025
+        type: csv
+        path: in_health/tables/premium_rates_2025.csv
+        authority: 4
+        doc_type: premium_table
+        doc_group: in_rates
+        effective_date: "2025-04-01"
+        title: Indicative annual premium rates 2025 (Zone A)
+        group_by: [product, age_band]
+        value_column: annual_premium_inr
+        series_by: [product, members, sum_insured]
+        order_column: age_band
+      - id: in_eligibility_rules
+        type: xlsx
+        path: in_health/tables/eligibility_rules.xlsx
+        authority: 4
+        doc_type: qualification_rule
+        doc_group: in_rules
+        title: Eligibility and lead qualification rules
+      - id: in_objection_playbook
+        type: markdown
+        path: in_health/internal/objection_playbook.md
+        authority: 4
+        doc_type: objection
+        doc_group: in_objections
+
+  ph_life:
+    language: en-tl
+    sources:
+      - id: ph_site
+        type: web
+        seeds: [/ph_life/site/index.html]
+        allow_prefix: /ph_life/site/
+        max_pages: 20
+        authority: 2
+        doc_group: ph_website
+        doc_type_rules: {/premium-payments: faq, /servicing: faq, /familycare: product_info, /contact: contact, /index: product_info}
+      - id: ph_servicing_guide_2025
+        type: pdf
+        path: ph_life/docs/policy_servicing_guide_2025.pdf
+        authority: 3
+        doc_type: policy_rule
+        doc_group: ph_servicing_guide
+        effective_date: "2025-01-01"
+      - id: ph_objection_playbook
+        type: markdown
+        path: ph_life/internal/objection_playbook_ph.md
+        authority: 4
+        doc_type: objection
+        doc_group: ph_objections
+        language: tl
+
+  id_multifinance:
+    language: id
+    sources:
+      - id: id_site
+        type: web
+        seeds: [/id_multifinance/site/index.html]
+        allow_prefix: /id_multifinance/site/
+        max_pages: 20
+        authority: 2
+        doc_group: id_website
+        doc_type_rules: {/pembayaran: faq, /pembiayaan-motor: product_info, /kontak: contact, /index: product_info}
+      - id: id_restructuring_policy_2025
+        type: pdf
+        path: id_multifinance/docs/kebijakan_restrukturisasi_2025.pdf
+        authority: 5
+        doc_type: policy_rule
+        doc_group: id_restructuring
+        effective_date: "2025-01-01"
+      - id: id_collection_ethics
+        type: markdown
+        path: id_multifinance/internal/etika_penagihan.md
+        authority: 4
+        doc_type: compliance
+        doc_group: id_ethics
+      - id: id_objection_playbook
+        type: markdown
+        path: id_multifinance/internal/objection_playbook_id.md
+        authority: 4
+        doc_type: objection
+        doc_group: id_objections
+
+# Optional real-website extraction demo (python -m kb.build --include-external). Low authority, reference only.
+external:
+  - id: ext_wikipedia_health_insurance_india
+    market: in_health
+    type: web
+    seeds: [https://en.wikipedia.org/wiki/Health_insurance_in_India]
+    allow_prefix: /wiki/Health_insurance_in_India
+    max_pages: 1
+    authority: 1
+    doc_type: reference
+    doc_group: ext_reference
+    license: CC BY-SA 4.0 (attribution kept in source.uri)

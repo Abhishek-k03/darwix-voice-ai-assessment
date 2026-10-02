@@ -1,0 +1,137 @@
+{
+  "id": "missed_cross_sell",
+  "pack": "in_health",
+  "description": "Customer mentions uninsured parents; the agent ignores it twice (missed cross-sell).",
+  "voices": {
+    "agent": "deepgram:aura-2-orion-en",
+    "customer": "deepgram:aura-2-arcas-en"
+  },
+  "noise": null,
+  "duration_s": 75.04,
+  "lines": [
+    {
+      "line": 1,
+      "speaker": "agent",
+      "text": "Good afternoon, this is Rohan calling from Prithvi Health Insurance. This call is being recorded for quality purposes. Am I speaking with Mister Verma?",
+      "start_s": 0.5,
+      "end_s": 10.42
+    },
+    {
+      "line": 2,
+      "speaker": "customer",
+      "text": "Yes, speaking.",
+      "start_s": 11.15,
+      "end_s": 11.99
+    },
+    {
+      "line": 3,
+      "speaker": "agent",
+      "text": "Thank you. You had enquired about health insurance. May I know your age, sir?",
+      "start_s": 12.85,
+      "end_s": 17.65
+    },
+    {
+      "line": 4,
+      "speaker": "customer",
+      "text": "I'm thirty eight.",
+      "start_s": 18.44,
+      "end_s": 19.72
+    },
+    {
+      "line": 5,
+      "speaker": "agent",
+      "text": "And which city are you based in?",
+      "start_s": 20.28,
+      "end_s": 22.36
+    },
+    {
+      "line": 6,
+      "speaker": "customer",
+      "text": "Pune. Actually I'm also worried about my parents, they are sixty four and sixty seven and they have no insurance at all.",
+      "start_s": 22.94,
+      "end_s": 28.7
+    },
+    {
+      "line": 7,
+      "speaker": "agent",
+      "text": "Okay, noted. Do you have any existing health cover for yourself?",
+      "start_s": 29.54,
+      "end_s": 33.9
+    },
+    {
+      "line": 8,
+      "speaker": "customer",
+      "text": "Only the company policy, three lakh.",
+      "start_s": 34.36,
+      "end_s": 37.16
+    },
+    {
+      "line": 9,
+      "speaker": "agent",
+      "text": "Alright. Any pre-existing conditions for you, like diabetes or high B P?",
+      "start_s": 37.98,
+      "end_s": 43.86
+    },
+    {
+      "line": 10,
+      "speaker": "customer",
+      "text": "No, nothing like that.",
+      "start_s": 44.66,
+      "end_s": 46.02
+    },
+    {
+      "line": 11,
+      "speaker": "agent",
+      "text": "Great. For you I would suggest ten lakh sum insured. There is a thirty day initial waiting period and pre-existing conditions are covered after twenty four months. The premium would be around eight thousand nine hundred rupees a year.",
+      "start_s": 46.68,
+      "end_s": 61.88
+    },
+    {
+      "line": 12,
+      "speaker": "customer",
+      "text": "Okay, that sounds reasonable.",
+      "start_s": 62.47,
+      "end_s": 64.35
+    },
+    {
+      "line": 13,
+      "speaker": "agent",
+      "text": "Shall I send you the proposal link on WhatsApp?",
+      "start_s": 64.93,
+      "end_s": 67.49
+    },
+    {
+      "line": 14,
+      "speaker": "customer",
+      "text": "Sure, please send it.",
+      "start_s": 68.05,
+      "end_s": 69.65
+    },
+    {
+      "line": 15,
+      "speaker": "agent",
+      "text": "Done. Thank you for your time, have a good day.",
+      "start_s": 70.3,
+      "end_s": 73.86
+    }
+  ],
+  "expected": [
+    {
+      "nudge": "cross_sell_parents",
+      "line": 6,
+      "window_s": [
+        28.7,
+        38.7
+      ]
+    },
+    {
+      "nudge": "missed_opportunity",
+      "line": 9,
+      "within_s": 15,
+      "window_s": [
+        43.86,
+        58.86
+      ]
+    }
+  ]
+}

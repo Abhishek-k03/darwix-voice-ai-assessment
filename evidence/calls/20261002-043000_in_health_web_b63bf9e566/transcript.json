@@ -1,0 +1,8 @@
+[
+  {
+    "t": 1.23,
+    "role": "agent",
+    "text": "Hello, this is Mira, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  }
+]

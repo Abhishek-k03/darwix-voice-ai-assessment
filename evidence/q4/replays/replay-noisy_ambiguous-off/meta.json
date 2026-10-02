@@ -1,0 +1,10 @@
+{
+  "room": "replay-noisy_ambiguous-off",
+  "pack": "in_health",
+  "source": "..\\evidence\\q4\\scripted\\noisy_ambiguous\\stereo.wav",
+  "start_ms": 1790889150749.236,
+  "controls": false,
+  "llm": true,
+  "chunk_ms": 100,
+  "labels": "..\\evidence\\q4\\scripted\\noisy_ambiguous\\labels.json"
+}

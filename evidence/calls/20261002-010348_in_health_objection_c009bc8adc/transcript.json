@@ -1,0 +1,120 @@
+[
+  {
+    "t": 1.28,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 21.53,
+    "role": "customer",
+    "text": "Hi. Yes. I have a few minutes. What is this about?"
+  },
+  {
+    "t": 23.12,
+    "role": "agent",
+    "text": "Sure, happy to help. May I have your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 35.25,
+    "role": "customer",
+    "text": "Yes. My name is Sunita."
+  },
+  {
+    "t": 35.25,
+    "role": "agent",
+    "text": "Nice to meet you, Sunita. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 45.68,
+    "role": "customer",
+    "text": "I am 29 years old."
+  },
+  {
+    "t": 45.68,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 55.0,
+    "role": "customer",
+    "text": "I am based in Chennai."
+  },
+  {
+    "t": 55.0,
+    "role": "agent",
+    "text": "Thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 68.9,
+    "role": "customer",
+    "text": "Just for myself."
+  },
+  {
+    "t": 70.63,
+    "role": "agent",
+    "text": "Understood, Sunita ji. Do you have any pre‑existing condition such as diabetes, blood pressure or heart problems?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 85.68,
+    "role": "customer",
+    "text": "No. I don't have any preexisting conditions."
+  },
+  {
+    "t": 85.68,
+    "role": "agent",
+    "text": "Thank you for sharing that. Do you already have any health insurance, either personal or through your employer?",
+    "kind": "quick"
+  },
+  {
+    "t": 102.14,
+    "role": "customer",
+    "text": "I already have insurance from my company, so why would I need another one?"
+  },
+  {
+    "t": 103.68,
+    "role": "agent",
+    "text": "Employer group plans often end when you change jobs and usually offer a sum insured of around three lakh rupees, which may be low. A personal policy gives you continuous coverage and lets you complete waiting periods while you’re still healthy, plus you can keep both and claim from either. \n\nNow, could you tell me roughly how much you would like to spend per year on premium?",
+    "citations": [
+      "kb_in_objection_001",
+      "kb_in_objection_002",
+      "kb_in_marketing_006"
+    ],
+    "kind": "llm"
+  },
+  {
+    "t": 133.64,
+    "role": "customer",
+    "text": "Maybe 5 or 6,000."
+  },
+  {
+    "t": 135.14,
+    "role": "agent",
+    "text": "Our plans have a 30‑day initial waiting period, though accidents are covered from day one, and pre‑existing conditions are covered after 24 months. Based on your details, you qualify for Prithvi Secure with ten lakh cover and an indicative premium of about nine thousand three hundred rupees per year, subject to underwriting. Would you like a licensed advisor to call you back to complete the application?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 168.13,
+    "role": "customer",
+    "text": "That sounds too expensive for me. No callback for now. I'll think about it."
+  },
+  {
+    "t": 169.65,
+    "role": "agent",
+    "text": "I understand the cost is a concern. You could consider a lower sum‑insured option or a shorter‑term plan, and premiums can be paid monthly or quarterly with a small loading, plus they qualify for tax deduction under Section 80D. \n\nThank you for your time. Have a good day.",
+    "citations": [
+      "kb_in_objection_008",
+      "kb_in_objection_004",
+      "kb_in_objection_007"
+    ],
+    "kind": "llm"
+  }
+]

@@ -1,0 +1,44 @@
+extends: in_health
+display_name: "Prithvi Health — health-insurance lead qualification (India, Hindi/Hinglish)"
+language: hi
+locale: hi-IN
+turn_lexicon: hi
+
+# Hindi words come back in Devanagari, English words in Latin. Names are written in Latin by the extractor.
+stt:
+  provider: deepgram
+  model: nova-3
+  language: hi
+  keyterms: [Prithvi, FamilyShield, sum insured, premium, Silver, Pune, Mumbai, Delhi, Bengaluru, Hyderabad, Chennai,
+             Kolkata, Ahmedabad, Jaipur, Lucknow, Kochi, Nagpur, Abhishek, Rahul, Priya, Amit, Neha, Rohit, Pooja, Sanjay,
+             Anita, Vikas, Sunita, Rajesh, Kavita]
+
+# Sarvam Bulbul reads Hindi (Devanagari) with code-mixed English. Credits are limited: nothing calls it until asked.
+tts:
+  - {provider: sarvam, model: "bulbul:v3", voice: ritu, language: hi-IN}
+
+# Question words a short answer is matched against when the LLM (not a script line) asked the question.
+cues:
+  good_time: [समय, बात]
+  name: [नाम]
+  age: [उम्र, आयु]
+  city: [शहर, रहते, रहती, कहाँ]
+  spouse_age: [उम्र, आयु]
+  children_count: [बच्चे, बच्चों]
+  pre_existing: [बीमारी, डायबिटीज़, शुगर, ब्लड प्रेशर, मेडिकल]
+  tobacco: [तंबाकू, सिगरेट, धूम्रपान, गुटखा, आदत]
+  existing_cover: [इंश्योरेंस, बीमा, पॉलिसी, कवर]
+  budget_annual_inr: [ख़र्च, खर्च, बजट, प्रीमियम]
+  callback_consent: [कॉल, सलाहकार, एडवाइज़र]
+
+extraction_hints: >
+  The customer speaks Hindi or Hinglish. Hindi words arrive in Devanagari, English words in Latin script.
+  Always return names and cities in Latin script (अभिषेक -> Abhishek, दिल्ली -> Delhi, पुणे -> Pune).
+  हाँ/जी/बिल्कुल/ठीक है = yes, नहीं/नही/ना = no. Numbers can be digits or Hindi words
+  (इक्कीस = 21, तीस हज़ार = 30000, डेढ़ लाख = 150000, ढाई लाख = 250000, "पंद्रह हज़ार महीना" is monthly: x12).
+  cover_for: "सिर्फ़ मैं / अपने लिए" = self, "मैं और पत्नी/पति" = self_spouse, "पूरा परिवार / बच्चों के साथ" = family,
+  "माता-पिता / मम्मी पापा" = parents. pre_existing: "डायबिटीज़/शुगर/बीपी/दिल की बीमारी" is true.
+  कुल बजट और सालाना रकम दोनों बताई जाएँ ("कुल पाँच लाख, वैसे पंद्रह हज़ार") तो सालाना प्रीमियम वाली रकम लें: 15000।
+  children_count counts only people called बेटा, बेटी, बच्चा or बच्चे; a name after "मेरी पत्नी" is the spouse's name.
+  Adding members widens cover_for (e.g. self_spouse -> family) and is not a correction.
+  callback_time stays as said ("कल शाम", "tomorrow evening").

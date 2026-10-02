@@ -1,0 +1,39 @@
+# Native Taglish lines (written for the market, not translated). {salutation} is time-of-day aware.
+greeting: >-
+  Hello po, {salutation}! Si {persona} po ito, AI assistant ng {company}, partner ng Kalayaan Savings Bank.
+  Naka-record po ang tawag na ito para sa quality. Pwede ko po bang makausap si {title} {name}?
+verify_ask: >-
+  Salamat po. Para po sa inyong privacy, pwede ko po bang makumpirma ang inyong date of birth?
+verify_fail: >-
+  Pasensya na po, hindi ko po ma-verify ang detalye. Para sa inyong seguridad, tatawag na lang po ulit ang aming advisor. Salamat po.
+third_party: >-
+  Ay, salamat po. Para sa privacy ng aming kliyente, hindi ko po maibabahagi ang detalye ng account. Kailan po kaya siya pwedeng makausap?
+fallback: >-
+  Pasensya na po, wala po akong eksaktong impormasyon tungkol diyan ngayon. Itatala ko po ito para masagot ng inyong licensed advisor.
+out_of_scope: >-
+  Pasensya na po, hindi ko po iyan matutulungan sa tawag na ito. Tungkol po ito sa premium ng inyong Bayanihan policy.
+escalation: >-
+  Sige po, ikokonekta ko na po kayo sa aming licensed advisor. Sandali lang po, nandiyan na rin po ang detalye ng ating usapan.
+escalation_unavailable: >-
+  Pasensya na po, busy po ang aming mga advisor ngayon. Nag-schedule na po ako ng priority callback within two hours. Salamat po sa pasensya.
+dnc: >-
+  Naiintindihan ko po. Nai-note ko na po na ayaw ninyo nang tawagan. Pasensya na po sa abala, at ingat po kayo.
+callback_confirm: >-
+  Sige po, tatawag po ang aming advisor {when}. Maraming salamat po, ingat po kayo!
+promise_confirm: >-
+  Salamat po, {title}! Noted po na magbabayad kayo ng premium {date} via {channel}. May matatanggap po kayong SMS pagka-post ng bayad. Ingat po!
+paid_confirm: >-
+  Salamat po sa pagbayad! Kung via GCash o Maya po, napo-post po ito within one banking day. Kung may concern, tawagan lang po ang aming hotline. Ingat po!
+refused_close: >-
+  Naiintindihan ko po. Paalala lang po, kapag hindi nabayaran bago matapos ang grace period, mag-la-lapse po ang policy at titigil ang coverage. Nandito lang po kami kung kailangan ninyo. Salamat po.
+not_interested_close: >-
+  Naiintindihan ko po. Salamat po sa oras ninyo, at ingat po kayo.
+closing: >-
+  Maraming salamat po sa oras ninyo. Ingat po kayo!
+reconfirm: >-
+  Pasensya na po, para lang po sigurado: kanina po {old} ang narinig ko, ngayon po {new}. Alin po ang tama?
+reprompt: >-
+  Hello po? Nandiyan pa po ba kayo?
+# While waiting for the human advisor after an escalation (said once, then the bot stays quiet).
+escalation_hold: >-
+  Salamat po sa paghihintay. Sandali na lang po, makakausap na ninyo ang ating advisor.

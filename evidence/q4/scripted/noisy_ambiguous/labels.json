@@ -1,0 +1,101 @@
+{
+  "id": "noisy_ambiguous",
+  "pack": "in_health",
+  "description": "Benign, compliant call full of hesitations and backchannels, under heavy babble noise. Expect no nudges.",
+  "voices": {
+    "agent": "deepgram:aura-2-hermes-en",
+    "customer": "deepgram:aura-2-luna-en"
+  },
+  "noise": {
+    "type": "babble",
+    "snr_db": 5
+  },
+  "duration_s": 52.59,
+  "lines": [
+    {
+      "line": 1,
+      "speaker": "agent",
+      "text": "Hello, this is Amit from Prithvi Health, this call is recorded. Is this a good time?",
+      "start_s": 0.5,
+      "end_s": 6.62
+    },
+    {
+      "line": 2,
+      "speaker": "customer",
+      "text": "Hmm... yeah, okay, go on.",
+      "start_s": 7.35,
+      "end_s": 9.51
+    },
+    {
+      "line": 3,
+      "speaker": "agent",
+      "text": "You asked about health insurance for yourself?",
+      "start_s": 10.37,
+      "end_s": 12.81
+    },
+    {
+      "line": 4,
+      "speaker": "customer",
+      "text": "Uh, yes, yes. Just for me.",
+      "start_s": 13.6,
+      "end_s": 16.12
+    },
+    {
+      "line": 5,
+      "speaker": "agent",
+      "text": "May I know your age?",
+      "start_s": 16.68,
+      "end_s": 18.16
+    },
+    {
+      "line": 6,
+      "speaker": "customer",
+      "text": "Thirty... thirty one.",
+      "start_s": 18.74,
+      "end_s": 20.5
+    },
+    {
+      "line": 7,
+      "speaker": "agent",
+      "text": "Thanks. Any existing cover?",
+      "start_s": 21.34,
+      "end_s": 23.7
+    },
+    {
+      "line": 8,
+      "speaker": "customer",
+      "text": "No... no, nothing like that. Mm-hmm.",
+      "start_s": 24.16,
+      "end_s": 26.88
+    },
+    {
+      "line": 9,
+      "speaker": "agent",
+      "text": "Okay. There's a thirty day initial waiting period, and pre-existing conditions are covered after twenty four months. For five lakh the premium is around six thousand four hundred rupees a year.",
+      "start_s": 27.7,
+      "end_s": 41.38
+    },
+    {
+      "line": 10,
+      "speaker": "customer",
+      "text": "Okay... okay. Hmm. Let me see.",
+      "start_s": 42.18,
+      "end_s": 45.42
+    },
+    {
+      "line": 11,
+      "speaker": "agent",
+      "text": "No problem, I'll email you the details.",
+      "start_s": 46.08,
+      "end_s": 48.92
+    },
+    {
+      "line": 12,
+      "speaker": "customer",
+      "text": "Yeah, fine. Thanks.",
+      "start_s": 49.51,
+      "end_s": 51.51
+    }
+  ],
+  "expected": []
+}

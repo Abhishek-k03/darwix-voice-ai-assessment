@@ -1,0 +1,76 @@
+{"at": 1790894643063.52, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 502, "confidence": 0.606, "words": 1, "end_s": 1.92}
+{"at": 1790894643413.3682, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 612, "confidence": 0.886, "words": 1, "end_s": 2.16}
+{"at": 1790894644371.9414, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 531, "confidence": 1.0, "words": 4, "end_s": 3.2}
+{"at": 1790894645415.8103, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 455, "confidence": 0.998, "words": 6, "end_s": 4.32}
+{"at": 1790894645923.0796, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 2001, "confidence": 1.0, "words": 4, "end_s": 3.28}
+{"at": 1790894645925.7566, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 506, "confidence": 1.0, "words": 3, "end_s": 4.78}
+{"at": 1790894646931.8552, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 391, "confidence": 0.998, "words": 7, "end_s": 5.9}
+{"at": 1790894647778.9407, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 838, "confidence": 0.998, "words": 7, "end_s": 6.3}
+{"at": 1790894648771.0544, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 391, "confidence": 1.0, "words": 11, "end_s": 7.74}
+{"at": 1790894649435.718, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 2495, "confidence": 0.998, "words": 7, "end_s": 6.3}
+{"at": 1790894649436.0933, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 395, "confidence": 1.0, "words": 6, "end_s": 8.4}
+{"at": 1790894650341.639, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 661, "confidence": 1.0, "words": 8, "end_s": 9.04}
+{"at": 1790894651333.7053, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 532, "confidence": 1.0, "words": 11, "end_s": 10.16}
+{"at": 1790894652335.556, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 489, "confidence": 1.0, "words": 14, "end_s": 11.2}
+{"at": 1790894652575.8516, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 655, "confidence": 1.0, "words": 14, "end_s": 11.28}
+{"at": 1790894653573.796, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 443, "confidence": 1.0, "words": 5, "end_s": 12.49}
+{"at": 1790894654574.521, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 323, "confidence": 1.0, "words": 11, "end_s": 13.61}
+{"at": 1790894655525.5625, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1125, "confidence": 1.0, "words": 11, "end_s": 13.77}
+{"at": 1790894666319.8364, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 419, "confidence": 0.837, "words": 1, "end_s": 26.47}
+{"at": 1790894666825.1309, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 754, "confidence": 0.981, "words": 1, "end_s": 25.44}
+{"at": 1790894667357.278, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 896, "confidence": 1.0, "words": 2, "end_s": 27.03}
+{"at": 1790894667874.7566, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 514, "confidence": 1.0, "words": 5, "end_s": 26.72}
+{"at": 1790894668117.8713, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 677, "confidence": 1.0, "words": 5, "end_s": 26.8}
+{"at": 1790894668209.1677, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 2138, "confidence": 0.985, "words": 1, "end_s": 25.44}
+{"at": 1790894668209.9648, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 389, "confidence": 1.0, "words": 5, "end_s": 27.18}
+{"at": 1790894668869.3835, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 887, "confidence": 1.0, "words": 5, "end_s": 27.34}
+{"at": 1790894672874.9976, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 373, "confidence": 0.958, "words": 3, "end_s": 31.86}
+{"at": 1790894673900.2424, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 2039, "confidence": 0.949, "words": 1, "end_s": 31.22}
+{"at": 1790894673900.7812, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 280, "confidence": 1.0, "words": 6, "end_s": 32.99}
+{"at": 1790894674871.2776, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 520, "confidence": 1.0, "words": 9, "end_s": 33.71}
+{"at": 1790894674902.1116, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 862, "confidence": 0.954, "words": 2, "end_s": 34.61}
+{"at": 1790894675565.3235, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1055, "confidence": 1.0, "words": 9, "end_s": 33.87}
+{"at": 1790894676572.2554, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 571, "confidence": 0.974, "words": 1, "end_s": 35.36}
+{"at": 1790894677574.3635, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 384, "confidence": 1.0, "words": 7, "end_s": 36.56}
+{"at": 1790894678921.2585, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 420, "confidence": 0.999, "words": 3, "end_s": 39.08}
+{"at": 1790894678976.1448, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1135, "confidence": 1.0, "words": 8, "end_s": 37.2}
+{"at": 1790894679933.4387, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 483, "confidence": 1.0, "words": 7, "end_s": 40.02}
+{"at": 1790894680211.6216, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 360, "confidence": 1.0, "words": 8, "end_s": 40.42}
+{"at": 1790894681231.7612, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 501, "confidence": 1.0, "words": 11, "end_s": 41.3}
+{"at": 1790894682032.946, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 662, "confidence": 1.0, "words": 12, "end_s": 41.94}
+{"at": 1790894682933.3757, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 1562, "confidence": 1.0, "words": 12, "end_s": 41.94}
+{"at": 1790894682938.822, "kind": "nudge", "id": "034648c21a", "key": "cross_sell_parents", "priority": 3, "confidence": 0.8, "timeline": {"audio_received_at": 1790894681370.379, "asr_at": 1790894682933.3418, "signal_at": 1790894682938.707, "source": "rules", "signal_ms": 5.26, "asr_confidence": 1.0, "nudge_at": 1790894682938.7441}, "evidence": "my parents"}
+{"at": 1790894682940.1545, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 469, "confidence": 1.0, "words": 5, "end_s": 43.04}
+{"at": 1790894683133.905, "kind": "llm", "llm_ms": 195, "dropped_unverified": 0, "dropped_gate": 0, "topic": "family"}
+{"at": 1790894683916.1587, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 966, "confidence": 1.0, "words": 7, "end_s": 43.52}
+{"at": 1790894689337.3193, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 416, "confidence": 0.93, "words": 1, "end_s": 48.28}
+{"at": 1790894689916.2666, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 416, "confidence": 0.98, "words": 2, "end_s": 50.07}
+{"at": 1790894690383.564, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 512, "confidence": 0.999, "words": 4, "end_s": 49.24}
+{"at": 1790894690762.5698, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 411, "confidence": 1.0, "words": 6, "end_s": 49.71}
+{"at": 1790894691221.558, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 851, "confidence": 1.0, "words": 4, "end_s": 50.95}
+{"at": 1790894691872.6487, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 881, "confidence": 1.0, "words": 8, "end_s": 50.35}
+{"at": 1790894692404.886, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 994, "confidence": 0.999, "words": 6, "end_s": 51.99}
+{"at": 1790894692949.0176, "kind": "llm", "llm_ms": 544, "dropped_unverified": 0, "dropped_gate": 0, "topic": "family_insurance"}
+{"at": 1790894693112.594, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 921, "confidence": 1.0, "words": 10, "end_s": 51.55}
+{"at": 1790894695122.3684, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 382, "confidence": 0.999, "words": 3, "end_s": 54.1}
+{"at": 1790894696139.886, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 758, "confidence": 1.0, "words": 6, "end_s": 54.74}
+{"at": 1790894697137.7407, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 476, "confidence": 1.0, "words": 11, "end_s": 56.02}
+{"at": 1790894698147.8474, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 926, "confidence": 1.0, "words": 13, "end_s": 56.58}
+{"at": 1790894699022.8767, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1172, "confidence": 0.993, "words": 2, "end_s": 57.21}
+{"at": 1790894700150.9294, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 421, "confidence": 0.996, "words": 2, "end_s": 60.31}
+{"at": 1790894700278.4128, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 488, "confidence": 0.998, "words": 2, "end_s": 60.36}
+{"at": 1790894701212.088, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 941, "confidence": 0.998, "words": 4, "end_s": 60.84}
+{"at": 1790894701455.176, "kind": "llm", "llm_ms": 243, "dropped_unverified": 0, "dropped_gate": 0, "topic": "coverage"}
+{"at": 1790894704032.6372, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 1, "confidence": 0.533, "words": 1, "end_s": 65.27}
+{"at": 1790894705011.7778, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 301, "confidence": 0.999, "words": 4, "end_s": 64.07}
+{"at": 1790894706015.5898, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 345, "confidence": 1.0, "words": 8, "end_s": 65.03}
+{"at": 1790894707072.2231, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 361, "confidence": 1.0, "words": 11, "end_s": 66.07}
+{"at": 1790894707631.7356, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1641, "confidence": 1.0, "words": 9, "end_s": 65.35}
+{"at": 1790894707632.0522, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 360, "confidence": 1.0, "words": 5, "end_s": 66.63}
+{"at": 1790894708848.6824, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 708, "confidence": 1.0, "words": 9, "end_s": 67.51}
+{"at": 1790894709423.094, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1282, "confidence": 1.0, "words": 9, "end_s": 67.51}
+{"at": 1790894717867.5742, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 356, "confidence": 0.77, "words": 1, "end_s": 78.08}
+{"at": 1790894718856.0598, "kind": "asr", "speaker": "customer", "final": false, "asr_latency_ms": 385, "confidence": 0.997, "words": 4, "end_s": 79.04}
+{"at": 1790894719551.1133, "kind": "asr", "speaker": "customer", "final": true, "asr_latency_ms": 1001, "confidence": 0.997, "words": 4, "end_s": 79.12}
+{"at": 1790894720063.4802, "kind": "llm", "llm_ms": 512, "dropped_unverified": 0, "dropped_gate": 0, "topic": "coverage"}
+{"at": 1790894742994.3093, "kind": "summary", "decisions": 1, "emitted": 1}

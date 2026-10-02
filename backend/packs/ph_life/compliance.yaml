@@ -1,0 +1,5 @@
+required_disclosures:
+  - {id: identify_and_record, description: "Identify self, company and that the call is recorded", patterns: ["record"], deadline_s: 30}
+  - {id: verify_before_details, description: "Verify identity (DOB) before discussing account details (Data Privacy Act 2012)"}
+  - {id: not_a_deposit, description: "Clarify insurance is not a bank deposit / not PDIC-insured when savings are compared"}
+call_window: "Monday to Saturday, 8:00 AM to 8:00 PM"

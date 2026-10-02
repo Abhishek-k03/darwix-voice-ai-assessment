@@ -1,0 +1,28 @@
+market: ph_life
+display_name: "Bayanihan Life — premium due reminder (Philippines, Taglish/Filipino/English)"
+language: fil
+locale: fil-PH
+persona: Bea
+company: Bayanihan Life
+use_case: reminder
+turn_lexicon: tl
+demo_customer: ph-001
+
+# Preference order; the ASR bake-off (sim/asr_bench.py) decides the final order.
+stt:
+  - {provider: azure, language: fil-PH, keyterms: [premium, policy, grace period, lapse, beneficiary, rider, coverage, GCash, Maya, Bayad Center, auto-debit, Kalayaan, Bayanihan]}
+  - {provider: gladia, languages: [tl, en]}
+  - {provider: deepgram, model: nova-3, language: multi}
+
+tts:
+  - {provider: azure, voice: fil-PH-BlessicaNeural, language: fil-PH}
+  - {provider: deepgram, voice: aura-2-luna-en, language: en}
+
+llm: {}
+
+extraction_hints: >
+  The customer may speak Filipino, English or Taglish. "opo/oo/sige" = yes, "hindi po/ayoko" = no.
+  "sa sweldo/sa kinsenas/sa a-kinse" = on payday (the 15th); "katapusan" = end of month.
+  Map payment channels: GCash->gcash, Maya/PayMaya->maya, "sa bangko/sa branch"->branch,
+  "online/app ng bangko"->online_banking, "auto-debit/ADA"->auto_debit, "Bayad Center"->bayad_center.
+  Dates may be said like "sa 15", "sa Biyernes", "next week" — keep them as said.

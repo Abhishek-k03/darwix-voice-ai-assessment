@@ -1,0 +1,190 @@
+[
+  {
+    "t": 1.8,
+    "role": "agent",
+    "text": "Hello, this is Mira, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 14.41,
+    "role": "customer",
+    "text": "sure"
+  },
+  {
+    "t": 14.41,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 20.67,
+    "role": "customer",
+    "text": "raj"
+  },
+  {
+    "t": 20.67,
+    "role": "agent",
+    "text": "Nice to meet you, Raj. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 26.84,
+    "role": "customer",
+    "text": "27"
+  },
+  {
+    "t": 26.84,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 31.87,
+    "role": "customer",
+    "text": "sonipat"
+  },
+  {
+    "t": 33.55,
+    "role": "agent",
+    "text": "Sorry, did you say Sonipat?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 36.92,
+    "role": "customer",
+    "text": "yes"
+  },
+  {
+    "t": 38.05,
+    "role": "agent",
+    "text": "Thanks, Raj ji. Could you let me know who you’d like to cover with the health plan – just yourself, yourself and your spouse, your whole family including children, or also your parents?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 50.02,
+    "role": "customer",
+    "text": "whole family"
+  },
+  {
+    "t": 51.38,
+    "role": "agent",
+    "text": "Got it. Could you tell me your spouse’s age, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 56.63,
+    "role": "customer",
+    "text": "25"
+  },
+  {
+    "t": 56.64,
+    "role": "agent",
+    "text": "Great, thanks. How many children would you like to cover?",
+    "kind": "quick"
+  },
+  {
+    "t": 63.57,
+    "role": "customer",
+    "text": "all"
+  },
+  {
+    "t": 65.71,
+    "role": "agent",
+    "text": "Sure, Raj ji, could you let me know the number of children you’d like to include in the coverage?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 72.62,
+    "role": "customer",
+    "text": "2"
+  },
+  {
+    "t": 72.62,
+    "role": "agent",
+    "text": "Got it, thank you. Does anyone to be covered have a pre-existing condition, such as diabetes, blood pressure or heart problems?",
+    "kind": "quick"
+  },
+  {
+    "t": 86.73,
+    "role": "customer",
+    "text": "no nothing lile that"
+  },
+  {
+    "t": 87.7,
+    "role": "agent",
+    "text": "Understood, thank you. Do any of the family members you plan to cover use tobacco or smoke in any form?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 96.9,
+    "role": "customer",
+    "text": "no one"
+  },
+  {
+    "t": 96.9,
+    "role": "agent",
+    "text": "Great, thanks. Do you already have any health insurance, either personal or through your employer?",
+    "kind": "quick"
+  },
+  {
+    "t": 104.64,
+    "role": "customer",
+    "text": "no"
+  },
+  {
+    "t": 104.64,
+    "role": "agent",
+    "text": "Thank you. Roughly how much would you like to spend on the premium each year?",
+    "kind": "quick"
+  },
+  {
+    "t": 110.89,
+    "role": "customer",
+    "text": "not sure"
+  },
+  {
+    "t": 111.45,
+    "role": "agent",
+    "text": "No problem, you don't need an exact figure. Before I share prices: Plans have a 30-day initial waiting period, with accidents covered from day one, and pre-existing conditions are covered after 24 months. Prithvi FamilyShield comes in a few sizes: the first is a five lakh cover at about nine thousand four hundred rupees a year; the second is a twenty-five lakh cover at about eighteen thousand nine hundred rupees a year; or the third is a fifty lakh cover at about twenty four thousand six hundred rupees a year. Which one would you like to try?",
+    "kind": "script"
+  },
+  {
+    "t": 145.75,
+    "role": "customer",
+    "text": "third"
+  },
+  {
+    "t": 146.35,
+    "role": "agent",
+    "text": "Great, Raj ji. The Prithvi FamilyShield with fifty lakh sum insured has an indicative premium of twenty four thousand six hundred rupees per year, subject to underwriting, and will require medical tests. Would you like a licensed advisor to call you back to complete the application?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 164.66,
+    "role": "customer",
+    "text": "okay"
+  },
+  {
+    "t": 164.66,
+    "role": "agent",
+    "text": "Great. What day and time would suit you for the advisor's call?",
+    "kind": "quick"
+  },
+  {
+    "t": 174.64,
+    "role": "customer",
+    "text": "tomorrow 8 pm"
+  },
+  {
+    "t": 175.39,
+    "role": "agent",
+    "text": "Done, a licensed advisor will call you tomorrow 8 PM. Thank you for your time, and take care.",
+    "kind": "script"
+  }
+]

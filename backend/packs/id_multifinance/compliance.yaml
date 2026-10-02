@@ -1,0 +1,5 @@
+required_disclosures:
+  - {id: identify_and_record, description: "Name, company and purpose at the start; call is recorded", patterns: ["record|rekam"], deadline_s: 30}
+  - {id: holder_only, description: "Discuss the contract only with the account holder (no third-party disclosure)"}
+prohibited: ["threats", "repossession talk", "police", "shaming", "contacting family/employer", "personal-account payments"]
+call_window: "Senin-Sabtu 08.00-20.00 waktu setempat, kecuali hari libur nasional (POJK 22/2023)"

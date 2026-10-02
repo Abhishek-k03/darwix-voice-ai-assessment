@@ -1,0 +1,175 @@
+[
+  {
+    "t": 1.26,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 23.4,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 35.49,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 39.78,
+    "role": "customer",
+    "text": "yes"
+  },
+  {
+    "t": 40.72,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 46.41,
+    "role": "customer",
+    "text": "Abhishek"
+  },
+  {
+    "t": 46.41,
+    "role": "agent",
+    "text": "Nice to meet you, Abhishek. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 52.66,
+    "role": "customer",
+    "text": "21"
+  },
+  {
+    "t": 52.66,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 59.27,
+    "role": "customer",
+    "text": "Delhi"
+  },
+  {
+    "t": 59.27,
+    "role": "agent",
+    "text": "Thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 65.92,
+    "role": "customer",
+    "text": "Me and my wife"
+  },
+  {
+    "t": 67.26,
+    "role": "agent",
+    "text": "Understood, Abhishek ji. Could you tell me your wife's age, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 76.16,
+    "role": "customer",
+    "text": "29"
+  },
+  {
+    "t": 76.16,
+    "role": "agent",
+    "text": "Thanks, Abhishek. Does anyone to be covered have a pre-existing condition, such as diabetes, blood pressure or heart problems?",
+    "kind": "quick"
+  },
+  {
+    "t": 90.92,
+    "role": "customer",
+    "text": "Me, i have diabetes"
+  },
+  {
+    "t": 92.0,
+    "role": "agent",
+    "text": "Got it, Abhishek ji. Thank you for letting me know about your diabetes. Does anyone to be covered use tobacco or smoke in any form?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 102.23,
+    "role": "customer",
+    "text": "NO"
+  },
+  {
+    "t": 102.24,
+    "role": "agent",
+    "text": "Thank you. Do you already have any health insurance, either personal or through your employer?",
+    "kind": "quick"
+  },
+  {
+    "t": 116.08,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 116.31,
+    "role": "customer",
+    "text": "Through my employer"
+  },
+  {
+    "t": 117.98,
+    "role": "agent",
+    "text": "Understood, Abhishek ji. Finally, could you let me know roughly how much you would like to spend per year on premium?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 133.19,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 145.29,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 153.38,
+    "role": "customer",
+    "text": "total budget 5 lakh and otherwise 15000"
+  },
+  {
+    "t": 154.88,
+    "role": "agent",
+    "text": "There is a thirty‑day initial waiting period, with accidents covered from day one, and pre‑existing conditions like diabetes are covered after twenty‑four months. Based on your details, the Prithvi FamilyShield with ten lakh cover has an indicative premium of about twelve thousand nine hundred rupees per year. Would you like a licensed advisor to call you back to complete the application?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 179.57,
+    "role": "customer",
+    "text": "yes"
+  },
+  {
+    "t": 179.57,
+    "role": "agent",
+    "text": "Great. What day and time would suit you for the advisor's call?",
+    "kind": "quick"
+  },
+  {
+    "t": 189.56,
+    "role": "customer",
+    "text": "weekend, evening"
+  },
+  {
+    "t": 190.2,
+    "role": "agent",
+    "text": "Done, a licensed advisor will call you weekend, evening. Thank you for your time, and take care.",
+    "kind": "script"
+  }
+]

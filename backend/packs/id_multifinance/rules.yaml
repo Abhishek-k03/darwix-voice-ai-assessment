@@ -1,0 +1,32 @@
+fields:
+  - {name: third_party, type: bool, description: "true if the person says they are NOT the account holder (istri/suami/anak/saudara)"}
+  - {name: identity_confirmed, type: bool, ask: "to confirm they are the account holder", quick: confirm,
+     cues: [berbicara, benar],
+     description: "true if the person confirms they are the account holder"}
+  - {name: payment_intent, type: enum, values: [will_pay, need_time, cannot_pay, already_paid, dispute],
+     ask: "whether they can pay the installment by the due date",
+     description: "will_pay = by due date; need_time = will pay but late; cannot_pay = financial difficulty; already_paid; dispute = disagrees with the bill"}
+  - {name: promised_date, type: str, ask: "on what date they plan to pay", description: "date or day they will pay, as said (e.g. 'tanggal 10', 'pas gajian')"}
+  - {name: payment_channel, type: enum, values: [virtual_account, indomaret, alfamart, app, ewallet, kantor_pos, branch],
+     ask: "which payment channel they will use (virtual account, Indomaret, Alfamart, the MajuKu app, or e-wallet)",
+     description: "payment channel"}
+  - {name: reason, type: str, ask: "gently, what difficulty they are facing", description: "reason for delay or difficulty"}
+  - {name: wants_restructuring, type: bool, description: "true if they want the restructuring team to contact them"}
+  - {name: callback_time, type: str, description: "when they want a callback, as said"}
+  - {name: callback_consent, type: bool, description: "true if they agreed to a callback"}
+
+verification: name
+max_verify_attempts: 2
+channel_names:
+  virtual_account: virtual account
+  indomaret: Indomaret
+  alfamart: Alfamart
+  app: aplikasi MajuKu
+  ewallet: dompet digital
+  kantor_pos: Kantor Pos
+  branch: kantor cabang
+
+escalation:
+  max_fallbacks: 2
+  negative_turns: 2
+  max_field_attempts: 2

@@ -1,0 +1,22 @@
+id: collection_ethics
+pack: id_multifinance
+description: Indonesian reminder call; customer has hardship (PHK), the agent ignores it and then threatens repossession.
+voices:
+  agent: [{provider: azure, voice: id-ID-GadisNeural, language: id-ID}, {provider: deepgram, voice: aura-2-luna-en}]
+  customer: [{provider: azure, voice: jv-ID-DimasNeural, language: jv-ID}, {provider: azure, voice: id-ID-ArdiNeural, language: id-ID}]
+lines:
+  - [agent, "Selamat siang, saya Rina dari Maju Bersama Finance, panggilan ini direkam. Apakah benar dengan Bapak Budi?"]
+  - [customer, "Nggih, betul, saya Budi."]
+  - [agent, "Pak, angsuran motornya jatuh tempo tanggal sepuluh, sebesar satu juta dua ratus lima puluh ribu rupiah."]
+  - [customer, "Waduh Mbak, saya baru kena PHK bulan lalu, belum ada pemasukan sama sekali."]
+  - [agent, "Iya Pak, tapi pembayaran tetap harus tepat waktu ya."]
+  - [customer, "Saya ngerti Mbak, tapi beneran lagi susah ini."]
+  - [agent, "Kalau sampai telat, motornya nanti kami tarik ya Pak."]
+  - [customer, "Lho kok gitu sih Mbak, dari tadi saya sudah bilang lagi susah."]
+  - [agent, "Baik Pak, nanti saya catat dulu."]
+expected:
+  - {nudge: payment_difficulty, line: 4}
+  - {nudge: restructuring_offer, line: 4, optional: true}
+  - {nudge: missed_opportunity, line: 7, within_s: 15}
+  - {nudge: collection_ethics, line: 7}
+  - {nudge: frustration, line: 8, optional: true}

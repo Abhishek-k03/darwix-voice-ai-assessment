@@ -1,0 +1,71 @@
+# Business rules for health-insurance lead qualification (source: eligibility_rules.xlsx v2025, rate table 2025).
+# Field order = question order. quick/cues: expected-answer fast path (voice/quick.py).
+fields:
+  - {name: good_time, type: bool, quick: consent, on_no: busy, cues: [good time, talk],
+     description: "true if now is a good time to talk; false if they are busy"}
+  - {name: name, type: str, required: true, known: names.txt, quick: name, cues: [name], ask: "the customer's first name", description: "customer's first name"}
+  - {name: age, type: int, required: true, min: 18, max: 99, quick: number, cues: [age, old], ask: "the customer's age", description: "customer's own age in years"}
+  - {name: city, type: str, required: true, known: zones, quick: city, cues: [city, live, based, reside, stay], ask: "which city they live in", description: "city of residence in India"}
+  - {name: cover_for, type: enum, required: true, values: [self, self_spouse, family, parents],
+     widening: [self, self_spouse, family],
+     ask: "who they want to cover: just themselves, with their spouse, the whole family with children, or their parents",
+     description: "self = only the customer; self_spouse = customer and spouse; family = customer, spouse and children; parents = the customer's parents"}
+  - {name: spouse_age, type: int, min: 18, max: 99, required_if: {cover_for: [self_spouse, family]}, ask: "the spouse's age",
+     quick: number, cues: [age, old],
+     description: "spouse's age in years"}
+  - {name: children_count, type: int, min: 1, max: 5, required_if: {cover_for: [family]}, ask: "how many children to cover",
+     quick: number, cues: [children, child, kids],
+     description: "number of children to insure"}
+  - {name: parents_ages, type: list_int, required_if: {cover_for: [parents]}, ask: "the parents' ages",
+     description: "list of ages of the parents to insure"}
+  - {name: pre_existing, type: bool, required: true, quick: yesno,
+     cues: [pre-existing, condition, diabetes, blood pressure, heart, medical],
+     ask: "whether anyone to be covered has a pre-existing condition such as diabetes, blood pressure or heart problems",
+     description: "true if any person to be insured has a known pre-existing medical condition"}
+  - {name: pre_existing_details, type: str, description: "which conditions, if mentioned"}
+  - {name: serious_treatment, type: bool,
+     description: "true if anyone is currently under cancer treatment, on dialysis, or awaiting an organ transplant"}
+  - {name: tobacco, type: bool, required: true, quick: yesno, cues: [tobacco, smoke, smoker, chew, gutka],
+     ask: "whether anyone to be covered smokes or uses tobacco in any form",
+     description: "true if any person to be insured smokes or uses tobacco (cigarettes, bidi, gutka, chewing tobacco)"}
+  - {name: existing_cover, type: bool, required: true, quick: yesno,
+     cues: [insurance, cover, coverage, policy, employer, health], ask: "whether they already have any health insurance, including from an employer",
+     description: "true if they already have health insurance (personal or employer)"}
+  - {name: existing_sum_insured_lakh, type: number, description: "sum insured of existing cover in lakh rupees"}
+  - {name: budget_annual_inr, type: int, required: true, min: 1000, max: 500000, soft_max: 100000, quick: amount,
+     cues: [spend, budget, premium],
+     ask: "roughly how much they would like to spend per year on premium",
+     description: "what they would pay per YEAR in premium, in rupees (convert lakh/thousand/hazaar; monthly x 12). Not the cover amount or an overall budget: if they give two amounts, take the yearly premium one"}
+  - {name: preferred_sum_insured_lakh, type: number, description: "sum insured they want, in lakh rupees"}
+  - {name: timeline, type: enum, values: [immediate, within_30_days, later, not_interested],
+     description: "when they want to buy: immediate (this week), within_30_days, later, or not_interested"}
+  - {name: callback_time, type: str, description: "when they want the advisor callback, as said (e.g. 'tomorrow 6 pm')"}
+  - {name: callback_consent, type: bool, quick: consent, cues: [call, advisor],
+     description: "true if they agreed to an advisor callback; false if they declined one ('no callback for now', 'I'll think about it')"}
+
+products:
+  Prithvi Secure: {min_age: 18, max_age: 65, sum_insured_lakh: [3, 5, 10, 25]}
+  Prithvi FamilyShield: {min_age: 18, max_age: 65, sum_insured_lakh: [5, 10, 25, 50], max_children: 3, parents_max_age: 65}
+  Prithvi Silver: {min_age: 60, max_age: 75, sum_insured_lakh: [3, 5, 10]}
+
+zones:
+  A: {cities: [mumbai, delhi, new delhi, noida, gurgaon, gurugram, bengaluru, bangalore, chennai, hyderabad, kolkata, pune, ahmedabad], factor: 1.0, min_sum_insured_lakh: 10}
+  B: {cities: [jaipur, lucknow, chandigarh, indore, kochi, cochin, coimbatore, nagpur, surat, bhopal, visakhapatnam, vizag], factor: 0.9, min_sum_insured_lakh: 5}
+  C: {cities: [], factor: 0.8, min_sum_insured_lakh: 5}
+
+rates_csv: in_health/tables/premium_rates_2025.csv
+budget_tolerance: 1.15
+medical_tests: {min_age: 46, min_sum_insured_lakh: 25, if_pre_existing: true}
+co_payment: {"Prithvi Secure": {min_entry_age: 61, percent: 10}, "Prithvi Silver": {percent: 20}}
+
+# Disclosures the agent must make before quoting (also checked live by the Q4 copilot)
+pre_quote_disclosure: >-
+  plans have a 30-day initial waiting period (accidents covered from day one) and pre-existing conditions are covered after 24 months
+
+escalation:
+  max_fallbacks: 2          # unanswerable questions in a row before offering a human
+  negative_turns: 2         # consecutive frustrated turns before offering a human
+  max_field_attempts: 2     # times a question may be re-asked before offering a callback
+
+# A plain decline of the advisor callback closes politely (no second push; IRDAI discourages pressure selling).
+callback_decline: '\bno call ?backs?\b|\bnot (?:right )?now\b|\bi''?ll think (?:about it|it over)\b|\bmaybe later\b|\bno,? thanks?\b|\bno thank you\b|\bnot interested\b|\bdon''?t call\b'

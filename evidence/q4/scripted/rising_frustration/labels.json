@@ -1,0 +1,122 @@
+{
+  "id": "rising_frustration",
+  "pack": "in_health",
+  "description": "The agent keeps re-asking answered questions; the customer gets increasingly frustrated.",
+  "voices": {
+    "agent": "deepgram:aura-2-orion-en",
+    "customer": "deepgram:aura-2-luna-en"
+  },
+  "noise": null,
+  "duration_s": 52.92,
+  "lines": [
+    {
+      "line": 1,
+      "speaker": "agent",
+      "text": "Hello, this is Karan from Prithvi Health Insurance, this call is recorded. Is this a good time to talk?",
+      "start_s": 0.5,
+      "end_s": 6.86
+    },
+    {
+      "line": 2,
+      "speaker": "customer",
+      "text": "Yes, I filled the form for health insurance.",
+      "start_s": 7.59,
+      "end_s": 10.47
+    },
+    {
+      "line": 3,
+      "speaker": "agent",
+      "text": "Great. Can I have your age please?",
+      "start_s": 11.33,
+      "end_s": 13.45
+    },
+    {
+      "line": 4,
+      "speaker": "customer",
+      "text": "Forty two.",
+      "start_s": 14.24,
+      "end_s": 15.16
+    },
+    {
+      "line": 5,
+      "speaker": "agent",
+      "text": "And which city do you live in?",
+      "start_s": 15.72,
+      "end_s": 17.52
+    },
+    {
+      "line": 6,
+      "speaker": "customer",
+      "text": "Bangalore.",
+      "start_s": 18.1,
+      "end_s": 19.06
+    },
+    {
+      "line": 7,
+      "speaker": "agent",
+      "text": "Sorry, could you tell me your age once again?",
+      "start_s": 19.9,
+      "end_s": 22.5
+    },
+    {
+      "line": 8,
+      "speaker": "customer",
+      "text": "I already told you, forty two.",
+      "start_s": 22.96,
+      "end_s": 24.76
+    },
+    {
+      "line": 9,
+      "speaker": "agent",
+      "text": "Okay. And which city are you in?",
+      "start_s": 25.58,
+      "end_s": 28.1
+    },
+    {
+      "line": 10,
+      "speaker": "customer",
+      "text": "Bangalore! How many times do I have to repeat this? This is a waste of my time.",
+      "start_s": 28.9,
+      "end_s": 32.66
+    },
+    {
+      "line": 11,
+      "speaker": "agent",
+      "text": "Do you have any existing medical conditions?",
+      "start_s": 33.32,
+      "end_s": 35.6
+    },
+    {
+      "line": 12,
+      "speaker": "customer",
+      "text": "I said no. Just tell me the price, this is ridiculous.",
+      "start_s": 36.19,
+      "end_s": 39.79
+    },
+    {
+      "line": 13,
+      "speaker": "agent",
+      "text": "I'm sorry about that. For ten lakh cover, after a thirty day waiting period, the premium is about eleven thousand rupees a year.",
+      "start_s": 40.37,
+      "end_s": 49.37
+    },
+    {
+      "line": 14,
+      "speaker": "customer",
+      "text": "Fine. Email it to me.",
+      "start_s": 49.93,
+      "end_s": 51.77
+    }
+  ],
+  "expected": [
+    {
+      "nudge": "frustration",
+      "line": 10,
+      "within_s": 10,
+      "window_s": [
+        32.66,
+        42.66
+      ]
+    }
+  ]
+}

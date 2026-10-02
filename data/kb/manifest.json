@@ -1,0 +1,712 @@
+{
+  "kb_version": "1.0.0",
+  "built_at": "2026-10-01T11:50:12+00:00",
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "records": {
+    "id_collection_ethics|id_multifinance/internal/etika_penagihan.md||Identitas|0": {
+      "record_id": "kb_id_compliance_001",
+      "content_hash": "555b9d2afd24a29f",
+      "version": "1.0"
+    },
+    "id_collection_ethics|id_multifinance/internal/etika_penagihan.md||Larangan|0": {
+      "record_id": "kb_id_compliance_002",
+      "content_hash": "9cea88fe3d1c40ee",
+      "version": "1.0"
+    },
+    "id_collection_ethics|id_multifinance/internal/etika_penagihan.md||Waktu penagihan|0": {
+      "record_id": "kb_id_compliance_003",
+      "content_hash": "0871aef9b2deb74a",
+      "version": "1.0"
+    },
+    "id_collection_ethics|id_multifinance/internal/etika_penagihan.md|||0": {
+      "record_id": "kb_id_compliance_004",
+      "content_hash": "b20f1f397f97da55",
+      "version": "1.0"
+    },
+    "id_objection_playbook|id_multifinance/internal/objection_playbook_id.md||Keberatan: \"Belum gajian, Mbak/Mas\"|0": {
+      "record_id": "kb_id_objection_001",
+      "content_hash": "3a4d84e9fc73a498",
+      "version": "1.0"
+    },
+    "id_objection_playbook|id_multifinance/internal/objection_playbook_id.md||Keberatan: \"Ini penipuan ya?\"|0": {
+      "record_id": "kb_id_objection_002",
+      "content_hash": "01e44df847a14548",
+      "version": "1.0"
+    },
+    "id_objection_playbook|id_multifinance/internal/objection_playbook_id.md||Keberatan: \"Lagi susah, usaha lagi sepi\" / \"Saya baru kena PHK\"|0": {
+      "record_id": "kb_id_objection_003",
+      "content_hash": "fccfafc8c87b2cad",
+      "version": "1.0"
+    },
+    "id_objection_playbook|id_multifinance/internal/objection_playbook_id.md||Keberatan: \"Nanti aja deh, kok ditelpon terus sih?\"|0": {
+      "record_id": "kb_id_objection_004",
+      "content_hash": "84cd245950dca1d4",
+      "version": "1.0"
+    },
+    "id_objection_playbook|id_multifinance/internal/objection_playbook_id.md||Keberatan: \"Saya udah bayar kok\"|0": {
+      "record_id": "kb_id_objection_005",
+      "content_hash": "6fbd5846a4df804d",
+      "version": "1.0"
+    },
+    "id_objection_playbook|id_multifinance/internal/objection_playbook_id.md|||0": {
+      "record_id": "kb_id_objection_006",
+      "content_hash": "a0fa016d32b72624",
+      "version": "1.0"
+    },
+    "id_restructuring_policy_2025|id_multifinance/docs/kebijakan_restrukturisasi_2025.pdf||Kriteria konsumen|0": {
+      "record_id": "kb_id_policy_001",
+      "content_hash": "a019954a397d7ea3",
+      "version": "1.0"
+    },
+    "id_restructuring_policy_2025|id_multifinance/docs/kebijakan_restrukturisasi_2025.pdf||Persyaratan dokumen|0": {
+      "record_id": "kb_id_policy_002",
+      "content_hash": "4995df83049e3af2",
+      "version": "1.0"
+    },
+    "id_restructuring_policy_2025|id_multifinance/docs/kebijakan_restrukturisasi_2025.pdf||Pilihan keringanan|0": {
+      "record_id": "kb_id_policy_003",
+      "content_hash": "145c51fa5a87952b",
+      "version": "1.0"
+    },
+    "id_restructuring_policy_2025|id_multifinance/docs/kebijakan_restrukturisasi_2025.pdf||Proses|0": {
+      "record_id": "kb_id_policy_004",
+      "content_hash": "2d58357cf45f855e",
+      "version": "1.0"
+    },
+    "id_restructuring_policy_2025|id_multifinance/docs/kebijakan_restrukturisasi_2025.pdf|||0": {
+      "record_id": "kb_id_policy_005",
+      "content_hash": "912d768c44b2121a",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/index.html|||0": {
+      "record_id": "kb_id_product_001",
+      "content_hash": "a2a7a3a6d7111590",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/kontak.html|||0": {
+      "record_id": "kb_id_contact_001",
+      "content_hash": "ca4236477c036cb6",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembayaran.html||Apakah saya boleh membayar melalui petugas atau rekening pribadi?|0": {
+      "record_id": "kb_id_faq_001",
+      "content_hash": "8ceec618640d4734",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembayaran.html||Bagaimana jika saya sudah membayar tetapi masih ditagih?|0": {
+      "record_id": "kb_id_faq_002",
+      "content_hash": "de5f40fd2bd861fe",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembayaran.html||Berapa denda keterlambatan?|0": {
+      "record_id": "kb_id_faq_003",
+      "content_hash": "9dda5a6813b36c14",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembayaran.html||Bolehkah saya mengubah tanggal jatuh tempo?|0": {
+      "record_id": "kb_id_faq_004",
+      "content_hash": "30f83a35c1adc936",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembayaran.html||Di mana saya bisa membayar angsuran?|0": {
+      "record_id": "kb_id_faq_005",
+      "content_hash": "99cb6cad8a963236",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembayaran.html||Kapan tanggal jatuh tempo angsuran saya?|0": {
+      "record_id": "kb_id_faq_006",
+      "content_hash": "baf8e617d93b51a2",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembiayaan-motor.html||Ketentuan pembiayaan|0": {
+      "record_id": "kb_id_product_002",
+      "content_hash": "4c28906158f1df97",
+      "version": "1.0"
+    },
+    "id_site|/id_multifinance/site/pembiayaan-motor.html||Pelunasan dipercepat|0": {
+      "record_id": "kb_id_product_003",
+      "content_hash": "03f94dedb6d04301",
+      "version": "1.0"
+    },
+    "in_brochure_2024|in_health/docs/brochure_familyshield_2024.pdf||Highlights|0": {
+      "record_id": "kb_in_marketing_001",
+      "content_hash": "4c4f7df770bf97a4",
+      "version": "1.0"
+    },
+    "in_brochure_2024|in_health/docs/brochure_familyshield_2024.pdf||Important|0": {
+      "record_id": "kb_in_marketing_002",
+      "content_hash": "0e6d7c8d4c5b4370",
+      "version": "1.0"
+    },
+    "in_brochure_2025|in_health/docs/brochure_familyshield_2025.pdf||Highlights|0": {
+      "record_id": "kb_in_marketing_003",
+      "content_hash": "68765bdf7c061820",
+      "version": "1.0"
+    },
+    "in_brochure_2025|in_health/docs/brochure_familyshield_2025.pdf||Important|0": {
+      "record_id": "kb_in_marketing_004",
+      "content_hash": "833f01396ea78009",
+      "version": "1.0"
+    },
+    "in_brochure_2025|in_health/docs/brochure_familyshield_2025.pdf||Why families choose FamilyShield|0": {
+      "record_id": "kb_in_marketing_005",
+      "content_hash": "a5dc56483893e9b9",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E01|0": {
+      "record_id": "kb_in_rule_001",
+      "content_hash": "1433be76500b2000",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E02|0": {
+      "record_id": "kb_in_rule_002",
+      "content_hash": "aa0fca4747674b22",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E03|0": {
+      "record_id": "kb_in_rule_003",
+      "content_hash": "8c3e28112d962e5a",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E04|0": {
+      "record_id": "kb_in_rule_004",
+      "content_hash": "e0d1684af3d66476",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E05|0": {
+      "record_id": "kb_in_rule_005",
+      "content_hash": "539f2192f62cedda",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E06|0": {
+      "record_id": "kb_in_rule_006",
+      "content_hash": "89f3bdd1be595f81",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E07|0": {
+      "record_id": "kb_in_rule_007",
+      "content_hash": "8b48ea83b011859d",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E08|0": {
+      "record_id": "kb_in_rule_008",
+      "content_hash": "6ca49e69440e7bdf",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E09|0": {
+      "record_id": "kb_in_rule_009",
+      "content_hash": "e7dc17ed8c453b9f",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E10|0": {
+      "record_id": "kb_in_rule_010",
+      "content_hash": "6fd5bb63bd06c7ab",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Eligibility E11|0": {
+      "record_id": "kb_in_rule_011",
+      "content_hash": "3a5b9f4636047234",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Lead grading|0": {
+      "record_id": "kb_in_rule_012",
+      "content_hash": "f3905f17eccdaa73",
+      "version": "1.0"
+    },
+    "in_eligibility_rules|in_health/tables/eligibility_rules.xlsx||Zones|0": {
+      "record_id": "kb_in_rule_013",
+      "content_hash": "78116b07bd8f3a8f",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"I already have insurance from my employer\"|0": {
+      "record_id": "kb_in_objection_001",
+      "content_hash": "d0cd16e08e725455",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"I have a pre-existing condition, you will reject me\"|0": {
+      "record_id": "kb_in_objection_002",
+      "content_hash": "2473a358352c12d3",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"I need to discuss with my family first\"|0": {
+      "record_id": "kb_in_objection_003",
+      "content_hash": "d4adbc49d0de8b21",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"I'm young and healthy, I don't need it now\"|0": {
+      "record_id": "kb_in_objection_004",
+      "content_hash": "2ad65a0810277232",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"Insurance companies reject claims\"|0": {
+      "record_id": "kb_in_objection_005",
+      "content_hash": "145f759761ecae16",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"Is this call genuine? Is this a scam?\"|0": {
+      "record_id": "kb_in_objection_006",
+      "content_hash": "68f8ccff47ecca5c",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"It's too expensive\"|0": {
+      "record_id": "kb_in_objection_007",
+      "content_hash": "334912a2e96f4c64",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md||Objection: \"Send me the details, I'll think about it\"|0": {
+      "record_id": "kb_in_objection_008",
+      "content_hash": "cb0db02b17f74eee",
+      "version": "1.0"
+    },
+    "in_objection_playbook|in_health/internal/objection_playbook.md|||0": {
+      "record_id": "kb_in_objection_009",
+      "content_hash": "2e625438a492e721",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Claims Procedure|0": {
+      "record_id": "kb_in_policy_001",
+      "content_hash": "1ce1a60677a1f95e",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Coverage|0": {
+      "record_id": "kb_in_policy_002",
+      "content_hash": "4586f211c0f0764e",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Definitions|0": {
+      "record_id": "kb_in_policy_003",
+      "content_hash": "34c1b9e808cc3234",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Exclusions|0": {
+      "record_id": "kb_in_policy_004",
+      "content_hash": "2ed3d1b0345602f3",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Grievance Redressal|0": {
+      "record_id": "kb_in_policy_005",
+      "content_hash": "6973e133dd88aa93",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Preamble|0": {
+      "record_id": "kb_in_policy_006",
+      "content_hash": "172262a004a0991b",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Renewal, Portability and Free Look|0": {
+      "record_id": "kb_in_policy_007",
+      "content_hash": "4a26ca4de209d3c7",
+      "version": "1.0"
+    },
+    "in_policy_wording_2025|in_health/docs/policy_wording_2025.pdf||Waiting Periods|0": {
+      "record_id": "kb_in_policy_008",
+      "content_hash": "4ed832307b8d45bf",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi FamilyShield 18-25|6": {
+      "record_id": "kb_in_rates_001",
+      "content_hash": "213bfb677aa1802f",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi FamilyShield 26-35|7": {
+      "record_id": "kb_in_rates_002",
+      "content_hash": "d14314e83c1513de",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi FamilyShield 36-45|8": {
+      "record_id": "kb_in_rates_003",
+      "content_hash": "97f48c60f0658eb9",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi FamilyShield 46-55|9": {
+      "record_id": "kb_in_rates_004",
+      "content_hash": "6184e417ba301edc",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi FamilyShield 56-60|10": {
+      "record_id": "kb_in_rates_005",
+      "content_hash": "454b0a72127993df",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Secure 18-25|0": {
+      "record_id": "kb_in_rates_006",
+      "content_hash": "d6eac911afcf979b",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Secure 26-35|1": {
+      "record_id": "kb_in_rates_007",
+      "content_hash": "ff4bfac2e3d279e1",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Secure 36-45|2": {
+      "record_id": "kb_in_rates_008",
+      "content_hash": "c2c8b64b71332b32",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Secure 46-55|3": {
+      "record_id": "kb_in_rates_009",
+      "content_hash": "30a58696806bed6a",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Secure 56-60|4": {
+      "record_id": "kb_in_rates_010",
+      "content_hash": "7885dacfbb1d4baf",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Secure 61-65|5": {
+      "record_id": "kb_in_rates_011",
+      "content_hash": "bcf717960b7f0446",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Silver 60-65|11": {
+      "record_id": "kb_in_rates_012",
+      "content_hash": "395fe709e60e7a7f",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Silver 66-70|12": {
+      "record_id": "kb_in_rates_013",
+      "content_hash": "3d298ee2bad77850",
+      "version": "1.0"
+    },
+    "in_premium_rates_2025|in_health/tables/premium_rates_2025.csv||Prithvi Silver 71-75|13": {
+      "record_id": "kb_in_rates_014",
+      "content_hash": "bde4bd951f6a1a57",
+      "version": "1.0"
+    },
+    "in_proposal_form|in_health/docs/proposal_form.pdf||form schema|0": {
+      "record_id": "kb_in_form_001",
+      "content_hash": "3a04a6e281607325",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/blog/young-and-healthy.html|||0": {
+      "record_id": "kb_in_marketing_006",
+      "content_hash": "b5f6d51009cd58f5",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/claims.html||Cashless claims|0": {
+      "record_id": "kb_in_process_001",
+      "content_hash": "033465ee1fe3ff30",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/claims.html||Claim settlement timelines|0": {
+      "record_id": "kb_in_process_002",
+      "content_hash": "73c5ef4d3d98ab57",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/claims.html||Claims helpline|0": {
+      "record_id": "kb_in_process_003",
+      "content_hash": "c5478e8459fd1e78",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/claims.html||Reimbursement claims|0": {
+      "record_id": "kb_in_process_004",
+      "content_hash": "ae670c7449175c41",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/contact.html|||0": {
+      "record_id": "kb_in_contact_001",
+      "content_hash": "f3e22da757ba8af6",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Can I get tax benefits?|0": {
+      "record_id": "kb_in_faq_001",
+      "content_hash": "d14f4ad21463a1c7",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Can I pay my premium monthly?|0": {
+      "record_id": "kb_in_faq_002",
+      "content_hash": "98ee83bcdf1e8613",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Can I port my existing policy to Prithvi?|0": {
+      "record_id": "kb_in_faq_003",
+      "content_hash": "5aa52b7a0c4f24cc",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Do I need a medical test to buy a policy?|0": {
+      "record_id": "kb_in_faq_004",
+      "content_hash": "7f9f94e6088d2d72",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Does the policy cover COVID-19 and other infectious diseases?|0": {
+      "record_id": "kb_in_faq_005",
+      "content_hash": "2f64b51703d99b55",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Is OPD or dental treatment covered?|0": {
+      "record_id": "kb_in_faq_006",
+      "content_hash": "d4a89d5ba90c0d2d",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Is there an initial waiting period?|0": {
+      "record_id": "kb_in_faq_007",
+      "content_hash": "83f7e77dd53ffdab",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||What is the free look period?|0": {
+      "record_id": "kb_in_faq_008",
+      "content_hash": "31d1334043bac95b",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||What is the grace period for renewal?|0": {
+      "record_id": "kb_in_faq_009",
+      "content_hash": "3e8b14b93252ad58",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||What is the waiting period for pre-existing condition?|0": {
+      "record_id": "kb_in_faq_010",
+      "content_hash": "474e10159a44ab74",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Which illnesses have a specific waiting period?|0": {
+      "record_id": "kb_in_faq_011",
+      "content_hash": "878d838584e9a7bc",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/faq.html||Will Prithvi ever ask for my OTP or card PIN?|0": {
+      "record_id": "kb_in_faq_012",
+      "content_hash": "3bb65a22bafcf170",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/index.html||Why choose Prithvi|0": {
+      "record_id": "kb_in_product_001",
+      "content_hash": "aeafc82571a081c3",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/index.html|||0": {
+      "record_id": "kb_in_product_002",
+      "content_hash": "11e5d080c8860127",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/network-hospitals.html|||0": {
+      "record_id": "kb_in_product_003",
+      "content_hash": "fc6c8c13660c508f",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/partners.html||Commission and training|0": {
+      "record_id": "kb_in_product_004",
+      "content_hash": "c8146170ba3c10cc",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/partners.html||What partners receive|0": {
+      "record_id": "kb_in_product_005",
+      "content_hash": "7301d7121514ee70",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/partners.html|||0": {
+      "record_id": "kb_in_product_006",
+      "content_hash": "bd3470a359b486f2",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/familyshield.html||Maternity add-on|0": {
+      "record_id": "kb_in_product_007",
+      "content_hash": "81c687dda64671c0",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/familyshield.html||Parents above 65|0": {
+      "record_id": "kb_in_product_008",
+      "content_hash": "9cd1e35810cd2b9a",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/familyshield.html|||0": {
+      "record_id": "kb_in_product_009",
+      "content_hash": "cccd706caee8c6db",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/secure.html||Co-payment|0": {
+      "record_id": "kb_in_product_010",
+      "content_hash": "f625d1695579b9b8",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/secure.html||Key Benefits|0": {
+      "record_id": "kb_in_product_011",
+      "content_hash": "bb501942f79aca79",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/secure.html||Room rent|0": {
+      "record_id": "kb_in_product_012",
+      "content_hash": "c30ec9f964ac7b1b",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/secure.html||Who should buy|0": {
+      "record_id": "kb_in_product_013",
+      "content_hash": "104c82a72725c434",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/secure.html|||0": {
+      "record_id": "kb_in_product_014",
+      "content_hash": "b158c32c37c1bae7",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/products/silver.html|||0": {
+      "record_id": "kb_in_product_015",
+      "content_hash": "29df0de00ff7bab4",
+      "version": "1.0"
+    },
+    "in_site|/in_health/site/testimonials.html|||0": {
+      "record_id": "kb_in_testimonial_001",
+      "content_hash": "b938fd4246520ba5",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md||Objection: \"Bakit bangko ang nag-refer sa akin?\"|0": {
+      "record_id": "kb_ph_objection_001",
+      "content_hash": "df70218834ea3ac4",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md||Objection: \"Hindi ko na po kailangan yung insurance\"|0": {
+      "record_id": "kb_ph_objection_002",
+      "content_hash": "c3f773926e8b4f83",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md||Objection: \"Kakausapin ko muna po ang asawa ko\"|0": {
+      "record_id": "kb_ph_objection_003",
+      "content_hash": "8848e74daf051dbf",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md||Objection: \"Mas mabuti pa pong mag-ipon na lang sa bangko\"|0": {
+      "record_id": "kb_ph_objection_004",
+      "content_hash": "239d33bfe75f1d42",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md||Objection: \"Scam po ba ito?\"|0": {
+      "record_id": "kb_ph_objection_005",
+      "content_hash": "b7ac7a098f11d17c",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md||Objection: \"Wala pa po akong pera ngayon\"|0": {
+      "record_id": "kb_ph_objection_006",
+      "content_hash": "35096efda6011a61",
+      "version": "1.0"
+    },
+    "ph_objection_playbook|ph_life/internal/objection_playbook_ph.md|||0": {
+      "record_id": "kb_ph_objection_007",
+      "content_hash": "fa818ca5d52a33ed",
+      "version": "1.0"
+    },
+    "ph_servicing_guide_2025|ph_life/docs/policy_servicing_guide_2025.pdf||Bancassurance disclosure|0": {
+      "record_id": "kb_ph_policy_001",
+      "content_hash": "f85fad0591f16b36",
+      "version": "1.0"
+    },
+    "ph_servicing_guide_2025|ph_life/docs/policy_servicing_guide_2025.pdf||Data privacy|0": {
+      "record_id": "kb_ph_policy_002",
+      "content_hash": "43e8b2032a60ced5",
+      "version": "1.0"
+    },
+    "ph_servicing_guide_2025|ph_life/docs/policy_servicing_guide_2025.pdf||Lapse and reinstatement|0": {
+      "record_id": "kb_ph_policy_003",
+      "content_hash": "9c082ca06d0cf560",
+      "version": "1.0"
+    },
+    "ph_servicing_guide_2025|ph_life/docs/policy_servicing_guide_2025.pdf||Premium reminders|0": {
+      "record_id": "kb_ph_policy_004",
+      "content_hash": "6ab8032d1fbc8402",
+      "version": "1.0"
+    },
+    "ph_servicing_guide_2025|ph_life/docs/policy_servicing_guide_2025.pdf|||0": {
+      "record_id": "kb_ph_policy_005",
+      "content_hash": "369a74720f3ad907",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/contact.html|||0": {
+      "record_id": "kb_ph_contact_001",
+      "content_hash": "9b0ac99d41d566a6",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/familycare.html||Optional riders|0": {
+      "record_id": "kb_ph_product_001",
+      "content_hash": "878a370bd43aef1c",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/familycare.html||Premium modes|0": {
+      "record_id": "kb_ph_product_002",
+      "content_hash": "702c2348d7a7b589",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/familycare.html|||0": {
+      "record_id": "kb_ph_product_003",
+      "content_hash": "5607aae99cd3b6d1",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/index.html|||0": {
+      "record_id": "kb_ph_product_004",
+      "content_hash": "6d3c1631a264b830",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/premium-payments.html||Can I change my payment mode?|0": {
+      "record_id": "kb_ph_faq_001",
+      "content_hash": "d419b334d0ed1710",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/premium-payments.html||Can I reinstate a lapsed policy?|0": {
+      "record_id": "kb_ph_faq_002",
+      "content_hash": "7b11d620fa8124aa",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/premium-payments.html||What happens if I don't pay within the grace period?|0": {
+      "record_id": "kb_ph_faq_003",
+      "content_hash": "7f5e7529ec3c0f05",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/premium-payments.html||What is the grace period?|0": {
+      "record_id": "kb_ph_faq_004",
+      "content_hash": "161de2951035517b",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/premium-payments.html||When is my premium due?|0": {
+      "record_id": "kb_ph_faq_005",
+      "content_hash": "35cd0271f5a6e607",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/premium-payments.html||Where can I pay?|0": {
+      "record_id": "kb_ph_faq_006",
+      "content_hash": "31a7fe538ab5bc2f",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/servicing.html||How do I change my beneficiary?|0": {
+      "record_id": "kb_ph_faq_007",
+      "content_hash": "13fa706cb8cfaa10",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/servicing.html||How do I update my contact details?|0": {
+      "record_id": "kb_ph_faq_008",
+      "content_hash": "8f560551cf36ec1b",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/servicing.html||What is the contestability period?|0": {
+      "record_id": "kb_ph_faq_009",
+      "content_hash": "7de7e3acc2af67af",
+      "version": "1.0"
+    },
+    "ph_site|/ph_life/site/servicing.html||What is the free look period?|0": {
+      "record_id": "kb_ph_faq_010",
+      "content_hash": "ce010d9cb2fd3bb8",
+      "version": "1.0"
+    }
+  },
+  "counters": {
+    "kb_id_compliance": 4,
+    "kb_id_objection": 6,
+    "kb_id_policy": 5,
+    "kb_id_product": 3,
+    "kb_id_contact": 1,
+    "kb_id_faq": 6,
+    "kb_in_marketing": 6,
+    "kb_in_rule": 13,
+    "kb_in_objection": 9,
+    "kb_in_policy": 8,
+    "kb_in_rates": 14,
+    "kb_in_form": 1,
+    "kb_in_process": 4,
+    "kb_in_contact": 1,
+    "kb_in_faq": 12,
+    "kb_in_product": 15,
+    "kb_in_testimonial": 1,
+    "kb_ph_objection": 7,
+    "kb_ph_policy": 5,
+    "kb_ph_contact": 1,
+    "kb_ph_product": 4,
+    "kb_ph_faq": 10
+  },
+  "collection": "kb-1.0.0"
+}

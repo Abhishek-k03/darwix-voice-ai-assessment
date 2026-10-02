@@ -1,0 +1,51 @@
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: backend/Dockerfile
+  env_file: [.env]
+  environment:
+    BACKEND_URL: http://backend:8000
+  volumes:
+    - ./evidence:/app/evidence
+    - models:/app/data/models
+  restart: unless-stopped
+
+services:
+  backend:
+    <<: *backend
+    ports: ["8000:8000"]
+    environment:
+      BACKEND_URL: http://backend:8000
+      CORS_ORIGINS: http://localhost:3000
+    volumes:
+      - ./evidence:/app/evidence
+      - models:/app/data/models
+      - crm:/app/backend/data
+
+  voice-agent:
+    <<: *backend
+    command: python -m livekit.agents start agent.py
+    depends_on: [backend]
+
+  copilot:
+    <<: *backend
+    command: python -m livekit.agents start copilot/worker.py
+    depends_on: [backend]
+
+  sim-caller:
+    <<: *backend
+    command: python -m livekit.agents start sim/caller_bot.py
+    depends_on: [backend]
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        NEXT_PUBLIC_BACKEND_URL: http://localhost:8000
+    ports: ["3000:3000"]
+    depends_on: [backend]
+    restart: unless-stopped
+
+volumes:
+  models:
+  crm:

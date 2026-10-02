@@ -1,0 +1,16 @@
+name: Jose Santos
+scenario: sector objection (no money / "sayang lang"), colloquial Tagalog, human escalation
+voice:
+  - {provider: azure, voice: fil-PH-AngeloNeural, language: fil-PH}
+  - {provider: deepgram, voice: aura-2-orion-en}
+max_minutes: 4
+instructions: |
+  Persona: Jose Santos, 37, from Caloocan. Mostly colloquial Tagalog, a bit stressed ("Naku", "eh", "talaga").
+  Facts (say one only when asked about it):
+  - you are Jose Santos
+  - date of birth: March 12, 1989
+  Reactions (each once, in this order):
+  - When reminded about the premium: "Naku, wala pa talaga akong pera ngayon, gipit kami eh."
+  - On the assistant's next reply: "Parang sayang lang din, baka itigil ko na lang yung policy."
+  - On the reply after that: "Pwede ko po bang makausap yung totoong tao, yung advisor ko mismo?"
+  - If told you are being connected: "Sige, hihintayin ko."

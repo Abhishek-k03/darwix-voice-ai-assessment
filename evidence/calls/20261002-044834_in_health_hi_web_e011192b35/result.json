@@ -1,0 +1,93 @@
+{
+  "call_id": "e011192b35",
+  "room": "call-in-health-hi-ca859f",
+  "pack": "in_health_hi",
+  "market": "in_health",
+  "duration_s": 31.4,
+  "stage": "QUALIFICATION",
+  "outcome": "incomplete",
+  "grade": null,
+  "product": null,
+  "premium_inr": null,
+  "fields": {
+    "good_time": true,
+    "name": "Abhishek"
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {},
+  "callback": null,
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": false,
+  "customer": {},
+  "lead_id": "lead-4611274e",
+  "end_reason": "customer_hung_up",
+  "mode": "web",
+  "scenario": null,
+  "tts": "sarvam",
+  "tts_voice": "ritu",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "hi"
+  },
+  "events": [
+    {
+      "t": 16.66,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "good_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 16.66,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.7,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 23.07,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 23.07,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    }
+  ],
+  "started_at": "2026-10-02T04:48:34",
+  "audio_seconds": 31.6
+}

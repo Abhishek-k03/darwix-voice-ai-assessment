@@ -1,0 +1,80 @@
+# Topic taxonomy. Category = highest keyword score (title x3 + content x1); ties -> doc_type default.
+# Keywords are multilingual (EN / TL / ID) and matched case-insensitively as substrings.
+categories:
+  waiting_periods: [waiting period, initial waiting, specific illness, months of continuous]
+  exclusions: [exclusion, not covered, not liable, not payable]
+  eligibility: [eligib, entry age, aged, residency, underwrit, medical test, zone]
+  lead_qualification: [lead grading, hot, warm, cold, not_eligible]
+  premium_and_payment: [premium, payment mode, monthly, loading, pay, bayar, hulog, gcash, maya, virtual account]
+  coverage_benefits: [cover, benefit, restore, no-claim bonus, room rent, ambulance, ayush, day-care, maternity, rider, face amount]
+  claims: [claim, cashless, reimbursement, pre-authorisation, intimat]
+  renewal_portability: [renewal, renewable, port, grace period, free look]
+  tax_benefits: [80d, tax]
+  network_hospitals: [network hospital, hospital list]
+  partnership_benefits: [partner, commission, branch partner]
+  objection_handling: [objection, keberatan]
+  compliance_disclosure: [compliance, solicitation, not a bank deposit, pdic, etika, ancaman, otp, data privacy, ombudsman, grievance]
+  customer_support: [helpline, hotline, contact, e-mail, halo maju]
+  testimonials: [customer says, testimonial]
+  lapse_reinstatement: [lapse, reinstat]
+  beneficiary: [beneficiary]
+  late_fees: [denda, terlambat, late fee]
+  restructuring: [restrukturisasi, keringanan, perpanjangan tenor]
+  loan_terms: [tenor, uang muka, angsuran, pelunasan, bpkb, jatuh tempo]
+  form_fields: [form, field, proposal]
+  product_overview: [plan, product, offers, pembiayaan]
+
+# Structured sources whose topic is known from the doc type (not keyword-guessed)
+fixed_doc_types: [premium_table, qualification_rule, objection, form_field, testimonial, contact, compliance]
+
+doc_type_default_category:
+  faq: product_overview
+  product_info: product_overview
+  policy_rule: coverage_benefits
+  qualification_rule: eligibility
+  premium_table: premium_and_payment
+  objection: objection_handling
+  form_field: form_fields
+  process: claims
+  contact: customer_support
+  marketing: product_overview
+  testimonial: testimonials
+  compliance: compliance_disclosure
+  reference: product_overview
+
+# Facts checked for cross-source conflicts. value group 1 = number, group 2 = unit (optional).
+facts:
+  in_health:
+    ped_waiting_period_months:
+      unit: months
+      patterns:
+        - "pre-existing conditions? (?:are |is )?covered after (?:only |a waiting period of )?(\\d+) ?(months?|years?)"
+        - "pre-existing conditions? [^.|]{0,40}?waiting period of (\\d+) ?(months?|years?)"
+        - "pre-existing conditions?[^.]{0,80}?covered after (\\d+) ?(months?|years?) of continuous"
+        - "waiting period: pre-existing conditions? \\| duration: (\\d+) ?(months?|years?)"
+    initial_waiting_period_days:
+      unit: days
+      patterns:
+        - "initial waiting period \\| duration: (\\d+) ?(days?)"
+        - "claims in the first (\\d+) ?(days?)"
+    grace_period_days:
+      unit: days
+      patterns:
+        - "grace period (?:of |means )?(\\d+) ?(days?)"
+        - "within (\\d+) ?(days?) after the due date"
+    free_look_days:
+      unit: days
+      patterns:
+        - "free look period[^.]{0,20}?(\\d+) ?(days?)"
+        - "you get (\\d+) ?(days?) from receipt of the policy"
+  ph_life:
+    grace_period_days:
+      unit: days
+      patterns: ["grace period of (\\d+) ?(days?)", "(\\d+)-day grace period"]
+    reinstatement_years:
+      unit: years
+      patterns: ["within (\\d+) ?(years?) from (?:the )?lapse"]
+  id_multifinance:
+    late_fee_percent_per_day:
+      unit: percent
+      patterns: ["denda keterlambatan sebesar (\\d+(?:,\\d+)?)% per hari", "denda (\\d+(?:,\\d+)?)% per hari"]

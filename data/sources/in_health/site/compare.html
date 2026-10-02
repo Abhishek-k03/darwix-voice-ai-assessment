@@ -1,0 +1,4 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Compare plans | Prithvi Health Insurance</title></head>
+<body><div id="root"></div><noscript>Please enable JavaScript to compare plans.</noscript>
+<script>fetch('/api/plans').then(r=>r.json()).then(d=>{document.getElementById('root').innerHTML=d.html})</script>
+</body></html>

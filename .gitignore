@@ -1,0 +1,48 @@
+# Local-only instructions / task tracking
+CLAUDE.md
+User_task.md
+Design_decisions.md
+
+# Environments & keys
+.env
+.env.*
+!.env.example
+backend/.venv/
+**/__pycache__/
+*.pyc
+
+# Reference material & source archives (not part of the submission)
+_reference/
+*.zip
+ai_assignment.pdf
+docs/*.pdf
+docs/video_script.md
+
+# Video-take copilot runs (recreated on every take; not in the reports)
+evidence/q4/events/demo-*.jsonl
+evidence/q4/metrics/demo-*.jsonl
+
+# Build outputs / caches
+data/kb/index/
+data/models/
+data/tts_cache/
+backend/data/
+backend/chroma_data/
+evidence/**/_raw/
+.*.log
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/next-env.d.ts
+# Re-added by `next dev`; create-next-app boilerplate (unused)
+frontend/AGENTS.md
+frontend/README.md
+frontend/public/*.svg
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+data/voice_samples/

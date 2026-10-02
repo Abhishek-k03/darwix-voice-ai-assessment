@@ -1,0 +1,496 @@
+{
+  "call_id": "b86a89303a",
+  "room": "call-in-health-1ee449",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 178.4,
+  "stage": "CLOSE",
+  "outcome": "callback_scheduled",
+  "grade": "hot",
+  "product": "Prithvi Secure",
+  "premium_inr": 10920,
+  "fields": {
+    "good_time": true,
+    "name": "Abhi",
+    "age": 21,
+    "city": "Gurugram",
+    "cover_for": "self",
+    "pre_existing": false,
+    "tobacco": true,
+    "existing_cover": false,
+    "preferred_sum_insured_lakh": 25.0,
+    "budget_annual_inr": 10920,
+    "callback_consent": true,
+    "callback_time": "sunday 3pm"
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {
+    "eligible": true,
+    "grade": "hot",
+    "product": "Prithvi Secure",
+    "members": "1 adult",
+    "age_band": "18-25",
+    "zone": "A",
+    "sum_insured_lakh": 25,
+    "sum_insured_spoken": "twenty-five lakh",
+    "indicative_premium_inr": 10920,
+    "premium_spoken": "ten thousand nine hundred rupees",
+    "medical_tests_required": true,
+    "co_payment_percent": null,
+    "rate_record": "Indicative annual premium — Prithvi Secure, age band 18-25",
+    "reasons": [
+      "tobacco use noted: advisor to confirm any premium loading"
+    ]
+  },
+  "callback": {
+    "when": "sunday 3pm"
+  },
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": true,
+  "customer": {},
+  "lead_id": "lead-7710b281",
+  "end_reason": "script_close",
+  "mode": "web",
+  "scenario": null,
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 18.95,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "good_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 18.95,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.5,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 24.19,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 24.19,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": false
+    },
+    {
+      "t": 36.77,
+      "turn": 3,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "same"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 36.77,
+      "turn": 3,
+      "kind": "trace",
+      "extract_ms": 623.5,
+      "kb_ms": 16.9,
+      "kb_status": "no_match",
+      "pre_llm_ms": 623.8,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 37.0,
+      "turn": 3,
+      "kind": "llm_metrics",
+      "ttft_ms": 188.3,
+      "duration_ms": 217.9
+    },
+    {
+      "t": 44.56,
+      "turn": 4,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 44.56,
+      "turn": 4,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.4,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 49.57,
+      "turn": 5,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "city": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 49.57,
+      "turn": 5,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.1,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 61.75,
+      "turn": 6,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "cover_for": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 61.75,
+      "turn": 6,
+      "kind": "trace",
+      "extract_ms": 953.9,
+      "kb_ms": 16.0,
+      "kb_status": "no_match",
+      "pre_llm_ms": 954.6,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 62.38,
+      "turn": 6,
+      "kind": "llm_metrics",
+      "ttft_ms": 572.6,
+      "duration_ms": 632.2
+    },
+    {
+      "t": 70.29,
+      "turn": 7,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "pre_existing": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 70.29,
+      "turn": 7,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 80.24,
+      "turn": 8,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "tobacco": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 80.24,
+      "turn": 8,
+      "kind": "trace",
+      "extract_ms": 298.5,
+      "kb_ms": 15.3,
+      "kb_status": "no_match",
+      "pre_llm_ms": 298.8,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 80.56,
+      "turn": 8,
+      "kind": "llm_metrics",
+      "ttft_ms": 227.5,
+      "duration_ms": 319.4
+    },
+    {
+      "t": 90.49,
+      "turn": 9,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 90.49,
+      "turn": 9,
+      "kind": "trace",
+      "extract_ms": 781.2,
+      "kb_ms": 14.3,
+      "kb_status": "no_match",
+      "pre_llm_ms": 781.4,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 91.11,
+      "turn": 9,
+      "kind": "llm_metrics",
+      "ttft_ms": 573.3,
+      "duration_ms": 610.6
+    },
+    {
+      "t": 100.08,
+      "turn": 10,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "existing_cover": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 100.08,
+      "turn": 10,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.3,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 110.52,
+      "turn": 11,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 110.52,
+      "turn": 11,
+      "kind": "budget_options_offered",
+      "options": [
+        10,
+        25
+      ]
+    },
+    {
+      "t": 110.52,
+      "turn": 11,
+      "kind": "trace",
+      "extract_ms": 613.6,
+      "kb_ms": 14.2,
+      "kb_status": "no_match",
+      "pre_llm_ms": 616.5,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 145.06,
+      "turn": 12,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "preferred_sum_insured_lakh": "set",
+        "budget_annual_inr": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 145.06,
+      "turn": 12,
+      "kind": "eligibility",
+      "eligible": true,
+      "grade": "hot",
+      "product": "Prithvi Secure",
+      "members": "1 adult",
+      "age_band": "18-25",
+      "zone": "A",
+      "sum_insured_lakh": 25,
+      "sum_insured_spoken": "twenty-five lakh",
+      "indicative_premium_inr": 10920,
+      "premium_spoken": "ten thousand nine hundred rupees",
+      "medical_tests_required": true,
+      "co_payment_percent": null,
+      "rate_record": "Indicative annual premium — Prithvi Secure, age band 18-25",
+      "reasons": [
+        "tobacco use noted: advisor to confirm any premium loading"
+      ]
+    },
+    {
+      "t": 145.06,
+      "turn": 12,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 1.9,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": false
+    },
+    {
+      "t": 145.84,
+      "turn": 12,
+      "kind": "llm_metrics",
+      "ttft_ms": 653.8,
+      "duration_ms": 776.3
+    },
+    {
+      "t": 163.22,
+      "turn": 13,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "callback_consent": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 163.22,
+      "turn": 13,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.3,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 169.95,
+      "turn": 14,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "callback_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 169.95,
+      "turn": 14,
+      "kind": "trace",
+      "extract_ms": 640.7,
+      "kb_ms": 15.2,
+      "kb_status": "no_match",
+      "pre_llm_ms": 640.8,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    }
+  ],
+  "started_at": "2026-10-02T03:59:19",
+  "audio_seconds": 178.7
+}

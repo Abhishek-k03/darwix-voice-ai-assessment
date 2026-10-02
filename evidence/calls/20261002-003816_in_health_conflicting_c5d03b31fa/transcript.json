@@ -1,0 +1,135 @@
+[
+  {
+    "t": 1.82,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 22.26,
+    "role": "customer",
+    "text": "Yeah. Sure. I'm a bit busy. But go ahead."
+  },
+  {
+    "t": 23.76,
+    "role": "agent",
+    "text": "Sure, could you please tell me your first name?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 34.22,
+    "role": "customer",
+    "text": "Argin."
+  },
+  {
+    "t": 34.22,
+    "role": "agent",
+    "text": "Nice to meet you, Argin. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 46.72,
+    "role": "customer",
+    "text": "Thirty four"
+  },
+  {
+    "t": 46.72,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 58.17,
+    "role": "customer",
+    "text": "Lucknow."
+  },
+  {
+    "t": 58.17,
+    "role": "agent",
+    "text": "Thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 74.39,
+    "role": "customer",
+    "text": "Me, and my wife."
+  },
+  {
+    "t": 75.55,
+    "role": "agent",
+    "text": "Got it. Could you tell me your wife's age, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 87.03,
+    "role": "customer",
+    "text": "She's 39. And sorry. I'm actually 43. Not 34."
+  },
+  {
+    "t": 88.47,
+    "role": "agent",
+    "text": "Thank you for confirming, Argin ji. Does either you or your wife have any pre‑existing conditions such as diabetes, blood pressure or heart problems?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 105.3,
+    "role": "customer",
+    "text": "I think my wife has thyroid. Not sure."
+  },
+  {
+    "t": 107.15,
+    "role": "agent",
+    "text": "Understood. Do you already have any health insurance coverage, either personal or through an employer, for yourself or your wife?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 121.63,
+    "role": "customer",
+    "text": "No."
+  },
+  {
+    "t": 121.63,
+    "role": "agent",
+    "text": "Thank you. Roughly how much would you like to spend on the premium each year?",
+    "kind": "quick"
+  },
+  {
+    "t": 133.71,
+    "role": "customer",
+    "text": "No idea really."
+  },
+  {
+    "t": 134.93,
+    "role": "agent",
+    "text": "That’s okay, Argin ji. Could you give me an approximate range you’re comfortable with for an annual premium, even if it’s just a ballpark figure?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 148.26,
+    "role": "customer",
+    "text": "I really can't say."
+  },
+  {
+    "t": 149.99,
+    "role": "agent",
+    "text": "Our FamilyShield plan has a thirty‑day initial waiting period, with accidents covered from day one, and pre‑existing conditions like thyroid are covered after twenty‑four months. For you and your wife, the plan offers a five lakh sum insured with an indicative premium of about eleven thousand five hundred rupees per year, subject to underwriting. Would you like a licensed advisor to call you back to complete the application?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 183.42,
+    "role": "customer",
+    "text": "Day after tomorrow, morning."
+  },
+  {
+    "t": 184.13,
+    "role": "agent",
+    "text": "Done, a licensed advisor will call you Day after tomorrow, morning. Thank you for your time, and take care.",
+    "kind": "script"
+  }
+]

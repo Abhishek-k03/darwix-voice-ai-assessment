@@ -1,0 +1,28 @@
+market: id_multifinance
+display_name: "Maju Bersama Finance — pengingat angsuran (Indonesia, Bahasa formal/santai)"
+language: id
+locale: id-ID
+persona: Sari
+greeting_awaits: identity_confirmed
+company: Maju Bersama Finance
+use_case: reminder
+turn_lexicon: id
+demo_customer: id-001
+
+stt:
+  - {provider: deepgram, model: nova-3, language: id, keyterms: [angsuran, cicilan, tenor, denda, DP, jatuh tempo, pembiayaan, MajuKu, Indomaret, Alfamart, virtual account, restrukturisasi]}
+  - {provider: azure, language: id-ID, keyterms: [angsuran, cicilan, tenor, denda, jatuh tempo, MajuKu, virtual account]}
+  - {provider: gladia, languages: [id, en]}
+
+tts:
+  - {provider: azure, voice: id-ID-GadisNeural, language: id-ID}
+  - {provider: deepgram, voice: aura-2-luna-en, language: en}
+
+llm: {}
+
+extraction_hints: >
+  Customer may speak formal or colloquial Indonesian with English loanwords, sometimes Javanese/Sundanese words:
+  "iya/nggih/inggih/he eh" = yes, "nggak/gak/mboten/teu" = no, "udah/sampun" = already, "gajian" = payday,
+  "tanggal muda" = early in the month, "bulan depan" = next month. Channels: "VA/virtual account/transfer BCA"->virtual_account,
+  Indomaret->indomaret, Alfamart->alfamart, "aplikasi/MajuKu"->app, GoPay/OVO/DANA/ShopeePay->ewallet, "kantor pos"->kantor_pos.
+  Keep dates as said ("tanggal 25", "Jumat", "minggu depan").

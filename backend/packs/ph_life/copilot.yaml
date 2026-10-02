@@ -1,0 +1,51 @@
+# Q4 copilot config for Taglish premium-reminder calls (human agent or bot).
+signals:
+  quote: {speaker: agent, patterns: ["pesos|premium (?:ninyo|mo|nyo)? ?(?:ay|is)"]}
+  waiting_disclosed: {speaker: agent, patterns: ["grace period"]}
+  recording_disclosed: {speaker: agent, patterns: ["record"]}
+  risky_guaranteed: {speaker: agent, nudge: guaranteed_claim, confidence: 0.9,
+    patterns: ["guaranteed (?:na )?(?:ma-?approve|bayad|claim)|siguradong (?:ma-?approve|babayaran)|walang (?:problema|tanong) sa claim"]}
+  risky_deposit: {speaker: agent, nudge: deposit_confusion, confidence: 0.85,
+    patterns: ["(?:parang|same as|katulad ng) (?:savings|deposit)|insured (?:ng|by) pdic|protected ng pdic"]}
+  risky_otp: {speaker: agent, nudge: credentials_request, confidence: 0.95, patterns: ["\\botp\\b|card number|\\bpin\\b|password"]}
+  risky_threat: {speaker: agent, nudge: pressure_tactic, confidence: 0.9,
+    patterns: ["kakasuhan|ipapa-?blacklist|wala na kayong (?:proteksyon|coverage) habambuhay|huli na (?:po )?ang lahat"]}
+  rider_opportunity: {speaker: customer, nudge: cross_sell_rider, confidence: 0.75, opportunity: true,
+    patterns: ["(?:na-)?ospital|nagkasakit|critical illness|aksidente|accident"],
+    resolve_patterns: ["rider|critical illness|accidental"]}
+  buying: {speaker: customer, nudge: buying_signal, confidence: 0.8,
+    patterns: ["(?:paano|saan) (?:po )?(?:magbayad|mag-?bayad)|i-?send (?:nyo|ninyo|mo) (?:po )?(?:ang )?link|babayaran ko (?:na )?(?:ngayon|today)"]}
+  payment_difficulty: {speaker: customer, nudge: payment_difficulty, confidence: 0.8,
+    patterns: ["wala (?:pa )?(?:po )?(?:akong |kaming )?pera|gipit|walang (?:pambayad|budget)|nawalan (?:ng|ako ng) trabaho|delayed? (?:ang )?sweldo|hirap (?:po )?(?:kami|ako)|can'?t afford"]}
+  callback: {speaker: customer, nudge: callback_need, confidence: 0.8,
+    patterns: ["tawag(?:an)? (?:nyo|ninyo|mo) (?:na )?lang (?:po )?(?:ako )?(?:ulit|bukas|mamaya)|busy (?:po )?ako|nagmamaneho|call (?:me )?back"]}
+  human: {speaker: customer, nudge: human_request, confidence: 0.85,
+    patterns: ["(?:makausap|kausapin) (?:ang |ko ang |po ang )?(?:tao|agent|advisor|supervisor|manager)|real person|totoong tao"]}
+  lapse_risk: {speaker: customer, nudge: lapse_risk, confidence: 0.75,
+    patterns: ["hindi ko na (?:kailangan|itutuloy)|ipapa-?cancel|ititigil ko na|sayang lang|mas (?:okay|mabuti) (?:pa )?mag-?ipon"],
+    resolve_patterns: ["lapse|coverage|beneficiary|proteksyon"]}
+
+frustration:
+  lexicon: ["paulit-ulit", "kanina ko pa sinabi", "sinabi ko na", "nakakainis", "ang kulit", "sayang oras", "tama na",
+            "already told you", "how many times", "bwisit", "nakakairita"]
+  threshold: 0.45
+  ema_alpha: 0.5
+
+missed_opportunity: {agent_turns: 2, seconds: 30}
+compliance: {recording_deadline_s: 30}
+
+nudges:
+  waiting_period_before_quote: {priority: 1, title: "Mention the grace period", text: "Explain the 31-day grace period and that coverage continues within it.", ttl_s: 40, topic: compliance, kb_query: "grace period ng premium"}
+  recording_missing: {priority: 1, title: "Recording disclosure missing", text: "Sabihin po na naka-record ang tawag (and identify yourself and the company).", ttl_s: 40, topic: compliance}
+  guaranteed_claim: {priority: 1, title: "Correct the risky statement", text: "Claims are subject to policy terms and contestability. Do not promise approval.", ttl_s: 45, topic: compliance}
+  deposit_confusion: {priority: 1, title: "Not a bank deposit", text: "Clarify: insurance is not a bank deposit and is not insured by PDIC.", ttl_s: 45, topic: compliance, kb_query: "not a bank deposit PDIC"}
+  credentials_request: {priority: 1, title: "Never ask for OTP/PIN", text: "Stop: never collect OTPs, card numbers or PINs. Use official channels only.", ttl_s: 45, topic: compliance}
+  pressure_tactic: {priority: 1, title: "No pressure tactics", text: "Avoid threats or guilt; state lapse consequences factually, once.", ttl_s: 45, topic: compliance}
+  cross_sell_rider: {priority: 3, title: "Rider opportunity", text: "Customer mentioned illness/accident. Check whether riders (CI/ADB) are active and explain.", ttl_s: 60, topic: cross_sell, kb_query: "optional riders critical illness"}
+  missed_opportunity: {priority: 2, title: "Missed opportunity", text: "Customer mentioned {what} and it hasn't been addressed yet.", ttl_s: 60, topic: cross_sell}
+  frustration: {priority: 2, title: "Rising frustration", text: "Acknowledge first (\"Pasensya na po...\"); don't repeat questions already answered.", ttl_s: 30, topic: sentiment}
+  payment_difficulty: {priority: 2, title: "Payment difficulty", text: "Empathise. Remind about the 31-day grace period; offer monthly auto-debit at anniversary or an advisor callback.", ttl_s: 45, topic: objection, kb_query: "wala pa akong pera objection"}
+  buying_signal: {priority: 3, title: "Ready to pay", text: "Give the official channels: GCash, Maya, Kalayaan branch/online banking, Bayad Center.", ttl_s: 45, topic: closing, kb_query: "saan pwedeng magbayad"}
+  callback_need: {priority: 3, title: "Offer a callback", text: "Propose a specific callback time and log it.", ttl_s: 45, topic: closing}
+  human_request: {priority: 2, title: "Customer wants a person", text: "Offer transfer to a licensed advisor now.", ttl_s: 30, topic: escalation}
+  lapse_risk: {priority: 2, title: "Lapse risk", text: "Customer may let the policy lapse. Explain coverage/beneficiary impact once, factually; offer options.", ttl_s: 45, topic: retention, kb_query: "hindi ko na kailangan objection"}

@@ -1,0 +1,10 @@
+{
+  "room": "replay-clean_compliant-on",
+  "pack": "in_health",
+  "source": "..\\evidence\\q4\\scripted\\clean_compliant\\stereo.wav",
+  "start_ms": 1790888673401.339,
+  "controls": true,
+  "llm": true,
+  "chunk_ms": 100,
+  "labels": "..\\evidence\\q4\\scripted\\clean_compliant\\labels.json"
+}

@@ -1,0 +1,374 @@
+{
+  "call_id": "2fb5b84103",
+  "room": "sim-in-health-cooperative-1305",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 179.6,
+  "stage": "CLOSE",
+  "outcome": "callback_scheduled",
+  "grade": "hot",
+  "product": "Prithvi FamilyShield",
+  "premium_inr": 14920,
+  "fields": {
+    "good_time": true,
+    "name": "Ravi",
+    "age": 34,
+    "city": "Pune",
+    "cover_for": "family",
+    "children_count": 1,
+    "spouse_age": 31,
+    "pre_existing": false,
+    "existing_cover": true,
+    "existing_sum_insured_lakh": 3.0,
+    "budget_annual_inr": 20000,
+    "callback_consent": true,
+    "callback_time": "tomorrow evening at six"
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {
+    "eligible": true,
+    "grade": "hot",
+    "product": "Prithvi FamilyShield",
+    "members": "2 adults + 1 child",
+    "age_band": "26-35",
+    "zone": "A",
+    "sum_insured_lakh": 10,
+    "sum_insured_spoken": "ten lakh",
+    "indicative_premium_inr": 14920,
+    "premium_spoken": "fourteen thousand nine hundred rupees",
+    "medical_tests_required": false,
+    "co_payment_percent": null,
+    "rate_record": "Indicative annual premium — Prithvi FamilyShield, age band 26-35",
+    "reasons": []
+  },
+  "callback": {
+    "when": "tomorrow evening at six"
+  },
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": true,
+  "customer": {},
+  "lead_id": "lead-f056b182",
+  "end_reason": "script_close",
+  "mode": "sim",
+  "scenario": "cooperative",
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 23.19,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "good_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 23.19,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.6,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 35.16,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 35.16,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 45.35,
+      "turn": 3,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 45.35,
+      "turn": 3,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 54.65,
+      "turn": 4,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "city": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 54.65,
+      "turn": 4,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.1,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 74.36,
+      "turn": 5,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "cover_for": "set",
+        "children_count": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 74.36,
+      "turn": 5,
+      "kind": "trace",
+      "extract_ms": 1026.5,
+      "kb_ms": 17.4,
+      "kb_status": "no_match",
+      "pre_llm_ms": 1026.6,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 74.87,
+      "turn": 5,
+      "kind": "llm_metrics",
+      "ttft_ms": 466.2,
+      "duration_ms": 505.8
+    },
+    {
+      "t": 89.14,
+      "turn": 6,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "spouse_age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 89.14,
+      "turn": 6,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 105.06,
+      "turn": 7,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "pre_existing": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 105.06,
+      "turn": 7,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 118.69,
+      "turn": 8,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "existing_cover": "set",
+        "existing_sum_insured_lakh": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 118.69,
+      "turn": 8,
+      "kind": "trace",
+      "extract_ms": 725.0,
+      "kb_ms": 18.6,
+      "kb_status": "ok",
+      "pre_llm_ms": 725.3,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 119.14,
+      "turn": 8,
+      "kind": "llm_metrics",
+      "ttft_ms": 397.2,
+      "duration_ms": 443.2
+    },
+    {
+      "t": 134.07,
+      "turn": 9,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "budget_annual_inr": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 134.07,
+      "turn": 9,
+      "kind": "eligibility",
+      "eligible": true,
+      "grade": "hot",
+      "product": "Prithvi FamilyShield",
+      "members": "2 adults + 1 child",
+      "age_band": "26-35",
+      "zone": "A",
+      "sum_insured_lakh": 10,
+      "sum_insured_spoken": "ten lakh",
+      "indicative_premium_inr": 14920,
+      "premium_spoken": "fourteen thousand nine hundred rupees",
+      "medical_tests_required": false,
+      "co_payment_percent": null,
+      "rate_record": "Indicative annual premium — Prithvi FamilyShield, age band 26-35",
+      "reasons": []
+    },
+    {
+      "t": 134.07,
+      "turn": 9,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 1.6,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": false
+    },
+    {
+      "t": 134.91,
+      "turn": 9,
+      "kind": "llm_metrics",
+      "ttft_ms": 574.2,
+      "duration_ms": 743.0
+    },
+    {
+      "t": 171.18,
+      "turn": 10,
+      "kind": "turn",
+      "intents": [
+        "answer",
+        "callback_request"
+      ],
+      "updates": {
+        "callback_consent": "set",
+        "callback_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 171.18,
+      "turn": 10,
+      "kind": "trace",
+      "extract_ms": 934.0,
+      "kb_ms": 14.3,
+      "kb_status": "no_match",
+      "pre_llm_ms": 934.8,
+      "intents": [
+        "answer",
+        "callback_request"
+      ],
+      "quick": false,
+      "fast_reply": false
+    }
+  ],
+  "started_at": "2026-10-02T00:23:50",
+  "audio_seconds": 179.6
+}

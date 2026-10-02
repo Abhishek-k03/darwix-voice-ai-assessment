@@ -1,0 +1,19 @@
+name: Kiran Rao
+scenario: out-of-scope and unsupported questions
+voice:
+  - {provider: azure, voice: en-IN-PrabhatNeural, language: en-IN}
+  - {provider: deepgram, voice: aura-2-hermes-en}
+max_minutes: 4
+instructions: |
+  Persona: Kiran Rao, 41, from Hyderabad, curious and chatty.
+  Facts (say one only when asked about it):
+  - first name: Kiran; age: 41; city: Hyderabad; cover: only yourself
+  - pre-existing conditions: high blood pressure
+  - smoking or tobacco: no
+  - existing insurance: none; yearly budget: 15,000 rupees
+  If the assistant can't answer something, accept it. If offered a callback: "Saturday 11 am."
+# Scripted probes: appended to the caller's Nth reply so the scenario always exercises them.
+probes:
+  3: "By the way, do you also do car insurance? My car policy is due."
+  5: "Also, which mutual fund should I invest in for my retirement?"
+  7: "And does the policy cover treatment if I go to the US for surgery?"

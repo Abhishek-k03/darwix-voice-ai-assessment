@@ -1,0 +1,25 @@
+id: compliance_risky
+pack: in_health
+description: No recording disclosure, premium quoted before the waiting-period disclosure, then two risky statements.
+voices:
+  agent: [{provider: azure, voice: en-IN-NeerjaNeural, language: en-IN}, {provider: deepgram, voice: aura-2-thalia-en}]
+  customer: [{provider: azure, voice: en-IN-AnanyaNeural, language: en-IN}, {provider: deepgram, voice: aura-2-luna-en}]
+lines:
+  - [agent, "Hi, this is Neha from Prithvi Health. Am I speaking with Miss Kapoor?"]
+  - [customer, "Yes, that's me."]
+  - [agent, "You wanted a family health plan, right? Who all should be covered?"]
+  - [customer, "Me, my husband and our son, he is six."]
+  - [agent, "Perfect, our family floater FamilyShield is ideal. With ten lakh cover the premium comes to about twenty three thousand rupees a year."]
+  - [customer, "Hmm. My husband has diabetes, will that be covered?"]
+  - [agent, "Don't worry, diabetes is covered from day one, and with us claims are guaranteed to be approved."]
+  - [customer, "Oh, that's good to hear."]
+  - [agent, "So shall I go ahead and create the proposal for you today?"]
+  - [customer, "Let me think about it. Can you call me back tomorrow evening?"]
+  - [agent, "Sure, I will call you tomorrow. Thank you."]
+expected:
+  - {nudge: waiting_period_before_quote, line: 5}
+  - {nudge: no_waiting_claim, line: 7}
+  - {nudge: guaranteed_claim, line: 7}
+  - {nudge: recording_missing, line: 5, within_s: 30}
+  - {nudge: pre_existing_declare, line: 6, optional: true}
+  - {nudge: callback_need, line: 10, optional: true}

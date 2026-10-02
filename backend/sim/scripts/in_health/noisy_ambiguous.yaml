@@ -1,0 +1,21 @@
+id: noisy_ambiguous
+pack: in_health
+description: Benign, compliant call full of hesitations and backchannels, under heavy babble noise. Expect no nudges.
+noise: {type: babble, snr_db: 5}
+voices:
+  agent: [{provider: azure, voice: en-IN-PrabhatNeural, language: en-IN}, {provider: deepgram, voice: aura-2-hermes-en}]
+  customer: [{provider: azure, voice: en-IN-AnanyaNeural, language: en-IN}, {provider: deepgram, voice: aura-2-luna-en}]
+lines:
+  - [agent, "Hello, this is Amit from Prithvi Health, this call is recorded. Is this a good time?"]
+  - [customer, "Hmm... yeah, okay, go on."]
+  - [agent, "You asked about health insurance for yourself?"]
+  - [customer, "Uh, yes, yes. Just for me."]
+  - [agent, "May I know your age?"]
+  - [customer, "Thirty... thirty one."]
+  - [agent, "Thanks. Any existing cover?"]
+  - [customer, "No... no, nothing like that. Mm-hmm."]
+  - [agent, "Okay. There's a thirty day initial waiting period, and pre-existing conditions are covered after twenty four months. For five lakh the premium is around six thousand four hundred rupees a year."]
+  - [customer, "Okay... okay. Hmm. Let me see."]
+  - [agent, "No problem, I'll email you the details."]
+  - [customer, "Yeah, fine. Thanks."]
+expected: []

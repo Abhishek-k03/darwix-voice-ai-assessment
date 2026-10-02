@@ -1,0 +1,33 @@
+market: in_health
+display_name: "Prithvi Health — health-insurance lead qualification (India, English/Hinglish)"
+language: en
+locale: en-IN
+persona: Mira
+greeting_awaits: good_time
+company: Prithvi Health Insurance
+use_case: lead_qualification
+turn_lexicon: en
+
+stt:
+  provider: deepgram
+  model: nova-3
+  language: en-IN
+  keyterms: [Prithvi, FamilyShield, floater, sum insured, pre-existing, co-payment, lakh, cashless, Silver, maternity,
+             Pune, Mumbai, Delhi, Bengaluru, Hyderabad, Chennai, Kolkata, Ahmedabad, Jaipur, Lucknow, Kochi, Nagpur,
+             Abhishek, Rahul, Priya, Amit, Neha, Rohit, Pooja, Sanjay, Anita, Vikas, Sunita, Rajesh, Kavita, Kiran, Ankit,
+             Deepak, Manoj, Suresh, Ravi, Anjali, Sneha, Nikhil, Arun, Vijay, Divya, Meera, Karan, Aman, Shreya, Mohit]
+
+# Preference order; the first provider with credentials configured is used.
+tts:
+  - {provider: azure, voice: en-IN-NeerjaNeural, language: en-IN}
+  - {provider: deepgram, voice: aura-2-thalia-en, language: en}
+
+llm: {}
+
+extraction_hints: >
+  Indian customers may use Hinglish ("haan", "nahi", "ji", "bas", "theek hai") and lakh/crore amounts
+  ("15 hazaar" = 15000, "2 lakh" = 200000). Ages and amounts can be spoken in words.
+  A budget that mixes a total and a yearly figure ("total budget 5 lakh, otherwise 15000") is the yearly premium: 15000.
+  children_count counts only people called son, daughter, child or kid; a name right after "my wife" / "my husband"
+  is the spouse's name, and repeating the same child does not add one. Adding members widens cover_for
+  (e.g. self_spouse -> family) and is not a correction.

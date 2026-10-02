@@ -1,0 +1,108 @@
+{
+  "id": "clean_compliant",
+  "pack": "in_health",
+  "description": "Well-run call (disclosures made, family mentioned and immediately addressed). Measures false positives.",
+  "voices": {
+    "agent": "deepgram:aura-2-thalia-en",
+    "customer": "deepgram:aura-2-arcas-en"
+  },
+  "noise": null,
+  "duration_s": 61.23,
+  "lines": [
+    {
+      "line": 1,
+      "speaker": "agent",
+      "text": "Good morning, this is Priya, an AI assistant from Prithvi Health Insurance. This call is recorded. Is now a good time?",
+      "start_s": 0.5,
+      "end_s": 7.9
+    },
+    {
+      "line": 2,
+      "speaker": "customer",
+      "text": "Yes, sure.",
+      "start_s": 8.63,
+      "end_s": 10.03
+    },
+    {
+      "line": 3,
+      "speaker": "agent",
+      "text": "Who would you like to cover, just yourself or your family too?",
+      "start_s": 10.89,
+      "end_s": 14.97
+    },
+    {
+      "line": 4,
+      "speaker": "customer",
+      "text": "Me, my wife and our two kids.",
+      "start_s": 15.76,
+      "end_s": 17.68
+    },
+    {
+      "line": 5,
+      "speaker": "agent",
+      "text": "Then our family floater, FamilyShield, fits well: one sum insured for all four of you. May I know your age and your wife's age?",
+      "start_s": 18.24,
+      "end_s": 28.92
+    },
+    {
+      "line": 6,
+      "speaker": "customer",
+      "text": "I'm thirty six and she is thirty three.",
+      "start_s": 29.5,
+      "end_s": 31.62
+    },
+    {
+      "line": 7,
+      "speaker": "agent",
+      "text": "Thank you. Any pre-existing conditions in the family?",
+      "start_s": 32.46,
+      "end_s": 35.62
+    },
+    {
+      "line": 8,
+      "speaker": "customer",
+      "text": "No, everyone is healthy.",
+      "start_s": 36.08,
+      "end_s": 37.68
+    },
+    {
+      "line": 9,
+      "speaker": "agent",
+      "text": "Great. There is a thirty day initial waiting period, and pre-existing conditions would be covered after twenty four months. For ten lakh cover the premium is about twenty two thousand rupees a year, indicative and subject to underwriting.",
+      "start_s": 38.5,
+      "end_s": 51.98
+    },
+    {
+      "line": 10,
+      "speaker": "customer",
+      "text": "That works. How do I pay?",
+      "start_s": 52.78,
+      "end_s": 54.22
+    },
+    {
+      "line": 11,
+      "speaker": "agent",
+      "text": "I'll send the official payment link to your registered email now.",
+      "start_s": 54.88,
+      "end_s": 58.0
+    },
+    {
+      "line": 12,
+      "speaker": "customer",
+      "text": "Perfect, thank you.",
+      "start_s": 58.59,
+      "end_s": 60.15
+    }
+  ],
+  "expected": [
+    {
+      "nudge": "buying_signal",
+      "line": 10,
+      "optional": true,
+      "window_s": [
+        54.22,
+        64.22
+      ]
+    }
+  ]
+}

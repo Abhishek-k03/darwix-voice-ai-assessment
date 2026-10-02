@@ -1,0 +1,58 @@
+# Retrieval test set. expect: all conditions must hold for a hit to count as relevant.
+# any_of: list of condition sets (one must hold). no_match: query must be rejected (out of scope).
+# Conditions: title_contains / content_contains (all, case-insensitive), doc_type (one of), not_needs_review.
+queries:
+  - {id: q01, type: product, market: in_health, question: "What sum insured options are available in the family floater plan?",
+     expect: {content_contains: ["50 lakh"], title_contains: ["FamilyShield"]}}
+  - {id: q02, type: policy, market: in_health, question: "How long is the waiting period for pre-existing diseases?",
+     expect: {content_contains: ["24 months"], not_needs_review: true}}
+  - {id: q03, type: qualification, market: in_health, question: "Can I add my 68 year old mother to the family floater?",
+     any_of: [{title_contains: ["E05"]}, {title_contains: ["Parents above 65"]}, {content_contains: ["parents", "entry age 65"]}]}
+  - {id: q04, type: qualification, market: in_health, question: "Do I need a medical test if I am 50 years old?",
+     any_of: [{title_contains: ["medical test"]}, {title_contains: ["E09"]}]}
+  - {id: q05, type: faq, market: in_health, question: "Can I pay the premium every month instead of yearly?",
+     expect: {content_contains: ["monthly", "2%"]}}
+  - {id: q06, type: faq, market: in_health, question: "If I don't like the policy can I cancel and get my money back?",
+     expect: {content_contains: ["30 days"], any_text: ["free look"]}}
+  - {id: q07, type: objection, market: in_health, question: "The customer says health insurance is too expensive for them",
+     expect: {doc_type: [objection], title_contains: ["too expensive"]}}
+  - {id: q08, type: objection, market: in_health, question: "I already get health cover from my employer, why buy another policy?",
+     expect: {doc_type: [objection], title_contains: ["employer"]}}
+  - {id: q09, type: faq, market: in_health, question: "How do I get cashless treatment for a planned surgery?",
+     expect: {content_contains: ["48 hours"]}}
+  - {id: q10, type: qualification, market: in_health, question: "What is the premium for a 30 year old for 10 lakh cover?",
+     expect: {title_contains: ["Prithvi Secure", "26-35"]}}
+  - {id: q11, type: product, market: in_health, question: "Is there a co-payment in the senior citizen plan?",
+     expect: {content_contains: ["20%"], title_contains: ["Silver"]}}
+  - {id: q12, type: product, market: in_health, question: "What support do branch partners get?",
+     expect: {content_contains: ["operational, marketing and technology support"]}}
+  - {id: q13, type: policy, market: in_health, question: "Is cosmetic surgery covered?",
+     expect: {content_contains: ["cosmetic"]}}
+  - {id: q14, type: negative, market: in_health, question: "What is the capital of France?", no_match: true}
+  - {id: q15, type: negative, market: in_health, question: "Can you book me a flight to Goa next week?", no_match: true}
+  - {id: q16, type: negative, market: in_health, question: "What's the best mutual fund to invest in right now?", no_match: true}
+  - {id: q17, type: faq, market: ph_life, question: "Ilang araw ang grace period bago ma-lapse yung policy ko?",
+     expect: {content_contains: ["31 days"]}}
+  - {id: q18, type: policy, market: ph_life, question: "Pwede ko pa bang ibalik yung na-lapse kong policy?",
+     expect: {any_text: ["reinstat"]}}
+  - {id: q19, type: objection, market: ph_life, question: "Wala pa po akong pera pambayad ng premium ngayon",
+     expect: {doc_type: [objection], title_contains: ["Wala pa"]}}
+  - {id: q20, type: faq, market: ph_life, question: "Saan po ako pwedeng magbayad, pwede ba sa GCash?",
+     expect: {content_contains: ["GCash"]}}
+  - {id: q21, type: faq, market: id_multifinance, question: "Kalau telat bayar cicilan kena denda berapa?",
+     expect: {content_contains: ["0,2%"]}}
+  - {id: q22, type: policy, market: id_multifinance, question: "Saya baru kena PHK, apa ada keringanan angsuran?",
+     any_of: [{any_text: ["restrukturisasi"]}]}
+  - {id: q23, type: faq, market: id_multifinance, question: "Bisa bayar angsuran lewat Indomaret nggak?",
+     expect: {content_contains: ["Indomaret"]}}
+  - {id: q24, type: policy, market: id_multifinance, question: "Bolehkah petugas menagih jam 10 malam?",
+     expect: {content_contains: ["08.00"]}}
+  - {id: q25, type: negative, market: id_multifinance, question: "Berapa harga tiket pesawat ke Bali bulan depan?", no_match: true}
+  # Held-out (added after threshold calibration; not used for tuning)
+  - {id: h01, type: policy, market: in_health, question: "My father has sugar, how long before it gets covered?",
+     expect: {content_contains: ["24 months"], not_needs_review: true}}
+  - {id: h02, type: faq, market: in_health, question: "Kya claim ke liye OTP dena padega?",
+     expect: {any_text: ["otp"]}}
+  - {id: h03, type: negative, market: in_health, question: "Do you sell motorcycle insurance?", no_match: true}
+  - {id: h04, type: faq, market: ph_life, question: "Paano magpalit ng beneficiary sa policy ko?",
+     expect: {title_contains: ["beneficiary"]}}

@@ -1,0 +1,86 @@
+[
+  {
+    "t": 1.77,
+    "role": "agent",
+    "text": "Hello, this is Mira, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 18.55,
+    "role": "customer",
+    "text": "Yes."
+  },
+  {
+    "t": 18.56,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 25.17,
+    "role": "customer",
+    "text": "raj"
+  },
+  {
+    "t": 25.17,
+    "role": "agent",
+    "text": "Nice to meet you, Raj. Could you tell me your age, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 35.79,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 39.15,
+    "role": "customer",
+    "text": "29"
+  },
+  {
+    "t": 39.73,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 44.48,
+    "role": "customer",
+    "text": "pune"
+  },
+  {
+    "t": 44.49,
+    "role": "agent",
+    "text": "Thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 52.15,
+    "role": "customer",
+    "text": "me and my wife"
+  },
+  {
+    "t": 52.79,
+    "role": "agent",
+    "text": "Got it, thank you. May I know your spouse's age?",
+    "kind": "quick"
+  },
+  {
+    "t": 63.4,
+    "role": "customer",
+    "text": "can i just talk to a real person"
+  },
+  {
+    "t": 63.98,
+    "role": "agent",
+    "text": "Sure, I'm connecting you to a licensed advisor now. Please stay on the line, they will have all the details we discussed.",
+    "kind": "script"
+  },
+  {
+    "t": 81.82,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  }
+]

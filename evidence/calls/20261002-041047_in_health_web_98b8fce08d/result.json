@@ -1,0 +1,182 @@
+{
+  "call_id": "98b8fce08d",
+  "room": "call-in-health-2ee6d9",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 47.5,
+  "stage": "QUALIFICATION",
+  "outcome": "incomplete",
+  "grade": null,
+  "product": null,
+  "premium_inr": null,
+  "fields": {
+    "age": 38,
+    "parents_ages": [
+      64,
+      67
+    ],
+    "cover_for": "parents"
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [
+    "has_employer_cover"
+  ],
+  "eligibility": {},
+  "callback": null,
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": false,
+  "customer": {},
+  "lead_id": "lead-e276ef75",
+  "end_reason": "customer_hung_up",
+  "mode": "web",
+  "scenario": null,
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 22.2,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 22.2,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 554.1,
+      "kb_ms": 14.8,
+      "kb_status": "no_match",
+      "pre_llm_ms": 554.8,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 22.59,
+      "turn": 1,
+      "kind": "llm_metrics",
+      "ttft_ms": 342.2,
+      "duration_ms": 384.7
+    },
+    {
+      "t": 32.78,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "parents_ages": "set",
+        "cover_for": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 32.78,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 1187.3,
+      "kb_ms": 16.4,
+      "kb_status": "no_match",
+      "pre_llm_ms": 1187.6,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 33.35,
+      "turn": 2,
+      "kind": "llm_metrics",
+      "ttft_ms": 504.8,
+      "duration_ms": 566.6
+    },
+    {
+      "t": 37.48,
+      "turn": 3,
+      "kind": "turn",
+      "intents": [
+        "objection"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 37.48,
+      "turn": 3,
+      "kind": "field_skipped",
+      "field": "name"
+    },
+    {
+      "t": 37.48,
+      "turn": 3,
+      "kind": "trace",
+      "extract_ms": 502.8,
+      "kb_ms": 13.4,
+      "kb_status": "no_match",
+      "pre_llm_ms": 503.1,
+      "intents": [
+        "objection"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 38.06,
+      "turn": 3,
+      "kind": "llm_metrics",
+      "ttft_ms": 531.8,
+      "duration_ms": 580.5
+    },
+    {
+      "t": 38.67,
+      "turn": 4,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 38.67,
+      "turn": 4,
+      "kind": "trace",
+      "extract_ms": 466.3,
+      "kb_ms": 13.0,
+      "kb_status": "ok",
+      "pre_llm_ms": 466.5,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 39.26,
+      "turn": 4,
+      "kind": "llm_metrics",
+      "ttft_ms": 544.7,
+      "duration_ms": 583.2
+    }
+  ],
+  "started_at": "2026-10-02T04:10:47",
+  "audio_seconds": 46.5
+}

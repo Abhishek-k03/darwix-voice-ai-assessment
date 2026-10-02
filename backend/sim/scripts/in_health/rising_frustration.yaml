@@ -1,0 +1,23 @@
+id: rising_frustration
+pack: in_health
+description: The agent keeps re-asking answered questions; the customer gets increasingly frustrated.
+voices:
+  agent: [{provider: azure, voice: en-IN-AaravNeural, language: en-IN}, {provider: deepgram, voice: aura-2-orion-en}]
+  customer: [{provider: azure, voice: en-IN-KavyaNeural, language: en-IN}, {provider: deepgram, voice: aura-2-luna-en}]
+lines:
+  - [agent, "Hello, this is Karan from Prithvi Health Insurance, this call is recorded. Is this a good time to talk?"]
+  - [customer, "Yes, I filled the form for health insurance."]
+  - [agent, "Great. Can I have your age please?"]
+  - [customer, "Forty two."]
+  - [agent, "And which city do you live in?"]
+  - [customer, "Bangalore."]
+  - [agent, "Sorry, could you tell me your age once again?"]
+  - [customer, "I already told you, forty two."]
+  - [agent, "Okay. And which city are you in?"]
+  - [customer, "Bangalore! How many times do I have to repeat this? This is a waste of my time."]
+  - [agent, "Do you have any existing medical conditions?"]
+  - [customer, "I said no. Just tell me the price, this is ridiculous."]
+  - [agent, "I'm sorry about that. For ten lakh cover, after a thirty day waiting period, the premium is about eleven thousand rupees a year."]
+  - [customer, "Fine. Email it to me."]
+expected:
+  - {nudge: frustration, line: 10, within_s: 10}

@@ -1,0 +1,21 @@
+# Compliance checklist (used by the voice agent's script and by the Q4 live copilot).
+required_disclosures:
+  - id: ai_and_recording
+    description: Identify as an AI assistant and state the call is recorded
+    patterns: ["\\bai\\b|artificial intelligence|virtual assistant", "record"]
+    deadline_s: 30
+  - id: waiting_period_before_quote
+    description: State waiting periods before quoting a premium
+    patterns: ["waiting period|covered after"]
+    before: quote
+quote_patterns: ["rupees a year|per year|premium (?:is|would be|comes to)|lakh cover for about"]
+risky_statements:
+  - id: guaranteed_claim
+    patterns: ["guarantee[ds]? (?:claim|approval|payout)|claims? (?:are|is) always (?:paid|approved)|100% (?:claim|settlement)|never reject"]
+    nudge: "Correct this: claims are subject to policy terms; never promise guaranteed approval."
+  - id: no_waiting_period
+    patterns: ["no waiting period|covered from day one for (?:diabetes|pre-existing)"]
+    nudge: "Correct this: pre-existing conditions have a 24-month waiting period."
+  - id: asks_otp
+    patterns: ["\\botp\\b|card number|cvv|\\bpin\\b|net ?banking password"]
+    nudge: "Never ask for OTP, card or banking credentials."

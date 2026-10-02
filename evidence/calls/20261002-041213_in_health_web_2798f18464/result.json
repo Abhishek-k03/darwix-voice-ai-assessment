@@ -1,0 +1,152 @@
+{
+  "call_id": "2798f18464",
+  "room": "call-in-health-8e68d0",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 47.9,
+  "stage": "QUALIFICATION",
+  "outcome": "incomplete",
+  "grade": null,
+  "product": null,
+  "premium_inr": null,
+  "fields": {
+    "age": 38,
+    "parents_ages": [
+      64,
+      67
+    ],
+    "cover_for": "parents",
+    "existing_cover": true
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {},
+  "callback": null,
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": false,
+  "customer": {},
+  "lead_id": "lead-1710f322",
+  "end_reason": "customer_hung_up",
+  "mode": "web",
+  "scenario": null,
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 20.72,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 20.72,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 865.0,
+      "kb_ms": 13.7,
+      "kb_status": "no_match",
+      "pre_llm_ms": 865.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 21.44,
+      "turn": 1,
+      "kind": "llm_metrics",
+      "ttft_ms": 693.0,
+      "duration_ms": 718.9
+    },
+    {
+      "t": 30.6,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "parents_ages": "set",
+        "cover_for": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 30.6,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 596.9,
+      "kb_ms": 15.3,
+      "kb_status": "no_match",
+      "pre_llm_ms": 597.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 30.88,
+      "turn": 2,
+      "kind": "llm_metrics",
+      "ttft_ms": 199.0,
+      "duration_ms": 277.8
+    },
+    {
+      "t": 40.59,
+      "turn": 3,
+      "kind": "turn",
+      "intents": [
+        "other"
+      ],
+      "updates": {
+        "existing_cover": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 40.59,
+      "turn": 3,
+      "kind": "field_skipped",
+      "field": "name"
+    },
+    {
+      "t": 40.59,
+      "turn": 3,
+      "kind": "trace",
+      "extract_ms": 771.5,
+      "kb_ms": 15.9,
+      "kb_status": "ok",
+      "pre_llm_ms": 771.9,
+      "intents": [
+        "other"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 41.05,
+      "turn": 3,
+      "kind": "llm_metrics",
+      "ttft_ms": 414.8,
+      "duration_ms": 462.1
+    }
+  ],
+  "started_at": "2026-10-02T04:12:13",
+  "audio_seconds": 48.2
+}

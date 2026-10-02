@@ -1,0 +1,56 @@
+[
+  {
+    "t": 1.18,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 21.65,
+    "role": "customer",
+    "text": "Thirty eight."
+  },
+  {
+    "t": 22.59,
+    "role": "agent",
+    "text": "Got it, you’re 38 years old. May I have your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 31.59,
+    "role": "customer",
+    "text": "Actually, I'm also worried about my parents. They are 64 and 67. They have no insurance at all."
+  },
+  {
+    "t": 33.35,
+    "role": "agent",
+    "text": "I understand you’re looking to cover your parents, who are 64 and 67 years old. May I know your first name, please?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 36.98,
+    "role": "customer",
+    "text": "Only the company policy."
+  },
+  {
+    "t": 38.06,
+    "role": "agent",
+    "text": "I see you want a policy that includes your parents. Could you tell me which city you live in?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 38.2,
+    "role": "customer",
+    "text": "3 lakh."
+  },
+  {
+    "t": 39.26,
+    "role": "agent",
+    "text": "Sure, that’s fine. Could you tell me which city you live in?",
+    "citations": [],
+    "kind": "llm"
+  }
+]

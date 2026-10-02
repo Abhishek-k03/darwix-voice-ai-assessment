@@ -1,0 +1,10 @@
+{
+  "room": "replay-missed_cross_sell-on",
+  "pack": "in_health",
+  "source": "..\\evidence\\q4\\scripted\\missed_cross_sell\\stereo.wav",
+  "start_ms": 1790888802358.7126,
+  "controls": true,
+  "llm": true,
+  "chunk_ms": 100,
+  "labels": "..\\evidence\\q4\\scripted\\missed_cross_sell\\labels.json"
+}

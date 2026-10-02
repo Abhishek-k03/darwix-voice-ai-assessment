@@ -1,0 +1,22 @@
+# Hindi additions to the in_health copilot rules (patterns are added to the English ones, nudges stay in English for the advisor).
+# The STT returns Hindi in Devanagari and English words in Latin, so both are matched.
+signals:
+  quote: {speaker: agent, patterns: ["(?:प्रीमियम|premium)[^?]{0,60}(?:रुपये|रुपए|rupees)", "(?:रुपये|रुपए)\\s*(?:सालाना|प्रति वर्ष|हर साल)"]}
+  waiting_disclosed: {speaker: agent, patterns: ["वेटिंग पीरियड|प्रतीक्षा अवधि|इंतज़ार की अवधि|इंतजार की अवधि"]}
+  recording_disclosed: {speaker: agent, patterns: ["रिकॉर्ड"]}
+  risky_guaranteed: {speaker: agent, patterns: ["गारंटी.{0,30}(?:क्लेम|दावा|मंज़ूर|मंजूर|भुगतान)", "क्लेम (?:हमेशा|100%|ज़रूर|जरूर) (?:पास|मंज़ूर|मंजूर)|कभी (?:रिजेक्ट|खारिज)"]}
+  risky_no_waiting: {speaker: agent, patterns: ["कोई वेटिंग पीरियड नहीं|पहले दिन से (?:कवर|डायबिटीज़|डायबिटीज|शुगर)"]}
+  risky_otp: {speaker: agent, patterns: ["ओटीपी|कार्ड नंबर|सीवीवी|पिन नंबर"]}
+  cross_sell_parents: {speaker: customer, patterns: ["(?:मेरे|हमारे) (?:माता-पिता|मम्मी|पापा|माँ|पिता|सास|ससुर)|मम्मी[- ]पापा|mere (?:parents|mummy|papa)"],
+    resolve_patterns: ["सीनियर|माता-पिता|मम्मी|पापा"]}
+  cross_sell_family: {speaker: customer, patterns: ["(?:मेरी|मेरे) (?:पत्नी|पति|बीवी|बच्चे|बेटा|बेटी|बच्चा)|शादी (?:होने वाली|हो रही)|बच्चा होने वाला"],
+    resolve_patterns: ["फैमिली|परिवार|पत्नी|पति|बच्चे|मैटरनिटी"]}
+  buying: {speaker: customer, patterns: ["कैसे (?:ले|खरीद|आवेदन)|आज ही (?:ले|शुरू)|पेमेंट लिंक|कौन से (?:दस्तावेज़|दस्तावेज|डॉक्यूमेंट)|चलिए करते हैं|(?:ले लूँगा|ले लूंगा|ले लूँगी|ले लूंगी)"]}
+  payment_difficulty: {speaker: customer, patterns: ["बहुत महँगा|बहुत महंगा|बजट से बाहर|नौकरी (?:चली गई|छूट)|पैसे की तंगी|नहीं दे सकता|नहीं दे सकती|bahut (?:mehnga|mahnga)"]}
+  callback: {speaker: customer, patterns: ["बाद में (?:कॉल|फ़ोन|फोन)|कल (?:कॉल|फ़ोन|फोन)|अभी (?:व्यस्त|बिज़ी|बिजी)|अभी समय नहीं|मीटिंग में|गाड़ी चला रहा"]}
+  human: {speaker: customer, patterns: ["(?:किसी )?(?:असली )?(?:इंसान|मैनेजर|सुपरवाइज़र|सुपरवाइजर|एजेंट) से (?:बात|बात करा)|इंसान से बात|किसी इंसान"]}
+  pre_existing: {speaker: customer, patterns: ["डायबिटीज़|डायबिटीज|शुगर|ब्लड प्रेशर|बीपी|थायराइड|दिल की (?:बीमारी|समस्या)|अस्थमा|कोलेस्ट्रॉल"],
+    resolve_patterns: ["घोषित|वेटिंग पीरियड|24 महीने|चौबीस महीने"]}
+
+frustration:
+  lexicon: ["बताया तो था", "कितनी बार", "सुन नहीं रहे", "समय की बर्बादी", "बेकार", "तंग आ गया", "तंग आ गई"]

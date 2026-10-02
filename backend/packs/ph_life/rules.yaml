@@ -1,0 +1,30 @@
+fields:
+  - {name: third_party, type: bool, description: "true if the person says they are NOT the policyholder (e.g. spouse, child, helper)"}
+  - {name: dob_given, type: str, ask: "the policyholder's date of birth for verification",
+     description: "date of birth the customer states, normalised to YYYY-MM-DD"}
+  - {name: payment_intent, type: enum, values: [will_pay, need_time, cannot_pay, already_paid, refuse],
+     ask: "whether they can pay the premium by the due date",
+     description: "will_pay = will pay by due date; need_time = will pay but after the due date; cannot_pay = money problem; already_paid; refuse = does not want to continue the policy"}
+  - {name: promised_date, type: str, ask: "on what date they will pay", description: "date or day they promise to pay, as said (e.g. 'October 15', 'sa sweldo', 'Friday')"}
+  - {name: payment_channel, type: enum, values: [auto_debit, branch, online_banking, gcash, maya, bayad_center],
+     ask: "how they will pay (GCash, Maya, Kalayaan branch, online banking, Bayad Center or auto-debit)", description: "payment channel"}
+  - {name: reason, type: str, ask: "gently, what is making it difficult to pay", description: "reason for delay or inability to pay"}
+  - {name: wants_mode_change, type: bool, description: "true if they want to switch to monthly auto-debit"}
+  - {name: callback_time, type: str, description: "when they want a callback, as said"}
+  - {name: callback_consent, type: bool, description: "true if they agreed to an advisor callback"}
+
+verification: dob
+grace_period_days: 31
+max_verify_attempts: 2
+channel_names:
+  auto_debit: auto-debit sa Kalayaan account
+  branch: Kalayaan branch
+  online_banking: Kalayaan online banking
+  gcash: GCash
+  maya: Maya
+  bayad_center: Bayad Center
+
+escalation:
+  max_fallbacks: 2
+  negative_turns: 2
+  max_field_attempts: 2

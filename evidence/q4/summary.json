@@ -1,0 +1,484 @@
+{
+  "latency": {
+    "components": {
+      "asr_interim": {
+        "n": 756,
+        "p50": 488,
+        "p95": 1096,
+        "max": 4592
+      },
+      "asr_final": {
+        "n": 260,
+        "p50": 958,
+        "p95": 2413,
+        "max": 5569
+      },
+      "signal_rules": {
+        "n": 27,
+        "p50": 0.1,
+        "p95": 0.2,
+        "max": 0.5
+      },
+      "nudge_generation": {
+        "n": 28,
+        "p50": 0.0,
+        "p95": 0.1,
+        "max": 0.1
+      },
+      "e2e_pre_delivery": {
+        "n": 28,
+        "p50": 941.8,
+        "p95": 2373.4,
+        "max": 4438.6
+      },
+      "llm": {
+        "n": 54,
+        "p50": 564,
+        "p95": 1184,
+        "max": 1686
+      },
+      "signal_llm": {
+        "n": 1,
+        "p50": 570,
+        "p95": 570,
+        "max": 570
+      },
+      "delivery_hub": {
+        "n": 4,
+        "p50": 3.7,
+        "p95": 399.6,
+        "max": 399.6
+      },
+      "e2e_hub": {
+        "n": 4,
+        "p50": 945.5,
+        "p95": 2073.7,
+        "max": 2073.7
+      },
+      "delivery_display": {
+        "n": 8,
+        "p50": 4.4,
+        "p95": 5.3,
+        "max": 5.3
+      },
+      "e2e_display": {
+        "n": 8,
+        "p50": 1750.2,
+        "p95": 4441.6,
+        "max": 4441.6
+      }
+    },
+    "runs": [
+      {
+        "run": "replay-clean_compliant-on",
+        "kind": "replay",
+        "nudges": 1,
+        "asr_finals": 18,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-compliance_risky-off",
+        "kind": "replay",
+        "nudges": 7,
+        "asr_finals": 16,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-compliance_risky-on",
+        "kind": "replay",
+        "nudges": 5,
+        "asr_finals": 16,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-missed_cross_sell-off",
+        "kind": "replay",
+        "nudges": 2,
+        "asr_finals": 26,
+        "e2e_p50": 2073.7,
+        "e2e_p95": 2073.7
+      },
+      {
+        "run": "replay-missed_cross_sell-on",
+        "kind": "replay",
+        "nudges": 2,
+        "asr_finals": 27,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-noisy_ambiguous-off",
+        "kind": "replay",
+        "nudges": 0,
+        "asr_finals": 4,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-noisy_ambiguous-on",
+        "kind": "replay",
+        "nudges": 0,
+        "asr_finals": 4,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-q1-2fb5b84103",
+        "kind": "replay",
+        "nudges": 0,
+        "asr_finals": 35,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "replay-q1-6072ab07af",
+        "kind": "replay",
+        "nudges": 2,
+        "asr_finals": 26,
+        "e2e_p50": 945.5,
+        "e2e_p95": 945.5
+      },
+      {
+        "run": "replay-rising_frustration-on",
+        "kind": "replay",
+        "nudges": 1,
+        "asr_finals": 19,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "live-compliance_risky",
+        "kind": "live",
+        "nudges": 5,
+        "asr_finals": 16,
+        "e2e_p50": 1154.0,
+        "e2e_p95": 4441.6
+      },
+      {
+        "run": "live-missed_cross_sell",
+        "kind": "live",
+        "nudges": 2,
+        "asr_finals": 25,
+        "e2e_p50": 2378.0,
+        "e2e_p95": 2378.0
+      },
+      {
+        "run": "live-noisy_ambiguous",
+        "kind": "live",
+        "nudges": 0,
+        "asr_finals": 9,
+        "e2e_p50": null,
+        "e2e_p95": null
+      },
+      {
+        "run": "live-rising_frustration",
+        "kind": "live",
+        "nudges": 1,
+        "asr_finals": 19,
+        "e2e_p50": 960.2,
+        "e2e_p95": 960.2
+      }
+    ]
+  },
+  "logic_ablation": [
+    {
+      "script": "collection_ethics",
+      "controls": "on",
+      "nudges": 3,
+      "tp": 3,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "global_rate_limit": 1,
+        "duplicate_active_refreshed": 2
+      }
+    },
+    {
+      "script": "collection_ethics",
+      "controls": "off",
+      "nudges": 6,
+      "tp": 4,
+      "fn": [],
+      "fp": [
+        "payment_difficulty @29.4s \u201clagi susah\u201d",
+        "payment_difficulty @38.9s \u201clagi susah\u201d"
+      ],
+      "suppressed": {}
+    },
+    {
+      "script": "clean_compliant",
+      "controls": "on",
+      "nudges": 1,
+      "tp": 1,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "clean_compliant",
+      "controls": "off",
+      "nudges": 1,
+      "tp": 1,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "compliance_risky",
+      "controls": "on",
+      "nudges": 5,
+      "tp": 5,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "max_active": 1
+      }
+    },
+    {
+      "script": "compliance_risky",
+      "controls": "off",
+      "nudges": 6,
+      "tp": 6,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "missed_cross_sell",
+      "controls": "on",
+      "nudges": 2,
+      "tp": 2,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "missed_cross_sell",
+      "controls": "off",
+      "nudges": 2,
+      "tp": 2,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "noisy_ambiguous",
+      "controls": "on",
+      "nudges": 0,
+      "tp": 0,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "noisy_ambiguous",
+      "controls": "off",
+      "nudges": 0,
+      "tp": 0,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "script": "rising_frustration",
+      "controls": "on",
+      "nudges": 1,
+      "tp": 1,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "duplicate_active_refreshed": 1
+      }
+    },
+    {
+      "script": "rising_frustration",
+      "controls": "off",
+      "nudges": 2,
+      "tp": 1,
+      "fn": [],
+      "fp": [
+        "frustration @47.0s \u201cI said\u201d"
+      ],
+      "suppressed": {}
+    }
+  ],
+  "audio_quality": [
+    {
+      "run": "replay-clean_compliant-on",
+      "mode": "replay",
+      "script": "clean_compliant",
+      "noise": null,
+      "controls": true,
+      "llm": true,
+      "nudges": 1,
+      "tp": 1,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "replay-compliance_risky-off",
+      "mode": "replay",
+      "script": "compliance_risky",
+      "noise": null,
+      "controls": false,
+      "llm": true,
+      "nudges": 7,
+      "tp": 6,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "replay-compliance_risky-on",
+      "mode": "replay",
+      "script": "compliance_risky",
+      "noise": null,
+      "controls": true,
+      "llm": true,
+      "nudges": 5,
+      "tp": 5,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "max_active": 2
+      }
+    },
+    {
+      "run": "replay-missed_cross_sell-off",
+      "mode": "replay",
+      "script": "missed_cross_sell",
+      "noise": null,
+      "controls": false,
+      "llm": true,
+      "nudges": 2,
+      "tp": 2,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "replay-missed_cross_sell-on",
+      "mode": "replay",
+      "script": "missed_cross_sell",
+      "noise": null,
+      "controls": true,
+      "llm": true,
+      "nudges": 2,
+      "tp": 2,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "replay-noisy_ambiguous-off",
+      "mode": "replay",
+      "script": "noisy_ambiguous",
+      "noise": {
+        "type": "babble",
+        "snr_db": 5
+      },
+      "controls": false,
+      "llm": true,
+      "nudges": 0,
+      "tp": 0,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "replay-noisy_ambiguous-on",
+      "mode": "replay",
+      "script": "noisy_ambiguous",
+      "noise": {
+        "type": "babble",
+        "snr_db": 5
+      },
+      "controls": true,
+      "llm": true,
+      "nudges": 0,
+      "tp": 0,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "replay-rising_frustration-on",
+      "mode": "replay",
+      "script": "rising_frustration",
+      "noise": null,
+      "controls": true,
+      "llm": true,
+      "nudges": 1,
+      "tp": 1,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "duplicate_active_refreshed": 3
+      }
+    },
+    {
+      "run": "live-compliance_risky",
+      "mode": "live room",
+      "script": "compliance_risky",
+      "noise": null,
+      "controls": null,
+      "llm": null,
+      "nudges": 5,
+      "tp": 5,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "max_active": 2
+      }
+    },
+    {
+      "run": "live-missed_cross_sell",
+      "mode": "live room",
+      "script": "missed_cross_sell",
+      "noise": null,
+      "controls": null,
+      "llm": null,
+      "nudges": 2,
+      "tp": 2,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "live-noisy_ambiguous",
+      "mode": "live room",
+      "script": "noisy_ambiguous",
+      "noise": {
+        "type": "babble",
+        "snr_db": 5
+      },
+      "controls": null,
+      "llm": null,
+      "nudges": 0,
+      "tp": 0,
+      "fn": [],
+      "fp": [],
+      "suppressed": {}
+    },
+    {
+      "run": "live-rising_frustration",
+      "mode": "live room",
+      "script": "rising_frustration",
+      "noise": null,
+      "controls": null,
+      "llm": null,
+      "nudges": 1,
+      "tp": 1,
+      "fn": [],
+      "fp": [],
+      "suppressed": {
+        "low_confidence": 1,
+        "duplicate_active_refreshed": 3
+      }
+    }
+  ]
+}

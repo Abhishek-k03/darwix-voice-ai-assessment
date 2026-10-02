@@ -1,0 +1,20 @@
+[
+  {
+    "t": 1.38,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 24.47,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 38.54,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  }
+]

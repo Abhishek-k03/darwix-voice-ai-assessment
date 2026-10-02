@@ -1,0 +1,35 @@
+[
+  {
+    "t": 1.51,
+    "role": "agent",
+    "text": "Hello, this is Mira, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 4.1,
+    "role": "customer",
+    "text": "Another situation."
+  },
+  {
+    "t": 4.65,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 7.31,
+    "role": "customer",
+    "text": "For human"
+  },
+  {
+    "t": 7.32,
+    "role": "agent",
+    "text": "Sorry, did I get your name right, For Human?",
+    "kind": "script"
+  },
+  {
+    "t": 14.42,
+    "role": "customer",
+    "text": "When this"
+  }
+]

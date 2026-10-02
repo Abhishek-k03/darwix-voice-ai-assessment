@@ -1,0 +1,568 @@
+{
+  "call_id": "d7c6fc5297",
+  "room": "call-in-health-478022",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 183.4,
+  "stage": "CLOSE",
+  "outcome": "callback_scheduled",
+  "grade": "hot",
+  "product": "Prithvi FamilyShield",
+  "premium_inr": 24560,
+  "fields": {
+    "good_time": true,
+    "name": "Raj",
+    "age": 27,
+    "city": "Sonipat",
+    "cover_for": "family",
+    "spouse_age": 25,
+    "children_count": 2,
+    "pre_existing": false,
+    "tobacco": false,
+    "existing_cover": false,
+    "preferred_sum_insured_lakh": 50.0,
+    "budget_annual_inr": 24560,
+    "callback_consent": true,
+    "callback_time": "tomorrow 8 pm"
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {
+    "eligible": true,
+    "grade": "hot",
+    "product": "Prithvi FamilyShield",
+    "members": "2 adults + 2 children",
+    "age_band": "26-35",
+    "zone": "C",
+    "sum_insured_lakh": 50,
+    "sum_insured_spoken": "fifty lakh",
+    "indicative_premium_inr": 24560,
+    "premium_spoken": "twenty four thousand six hundred rupees",
+    "medical_tests_required": true,
+    "co_payment_percent": null,
+    "rate_record": "Indicative annual premium — Prithvi FamilyShield, age band 26-35",
+    "reasons": []
+  },
+  "callback": {
+    "when": "tomorrow 8 pm"
+  },
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": true,
+  "customer": {},
+  "lead_id": "lead-ad986e58",
+  "end_reason": "script_close",
+  "mode": "web",
+  "scenario": null,
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 14.41,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "good_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 14.41,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.7,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 20.67,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 20.67,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 26.84,
+      "turn": 3,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 26.84,
+      "turn": 3,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 32.96,
+      "turn": 4,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "city": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 32.96,
+      "turn": 4,
+      "kind": "trace",
+      "extract_ms": 1086.2,
+      "kb_ms": 19.9,
+      "kb_status": "no_match",
+      "pre_llm_ms": 1086.4,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 33.55,
+      "turn": 4,
+      "kind": "llm_metrics",
+      "ttft_ms": 507.0,
+      "duration_ms": 528.2
+    },
+    {
+      "t": 37.51,
+      "turn": 5,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "city": "same"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 37.51,
+      "turn": 5,
+      "kind": "trace",
+      "extract_ms": 582.6,
+      "kb_ms": 16.8,
+      "kb_status": "no_match",
+      "pre_llm_ms": 582.9,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 38.06,
+      "turn": 5,
+      "kind": "llm_metrics",
+      "ttft_ms": 457.3,
+      "duration_ms": 543.8
+    },
+    {
+      "t": 50.79,
+      "turn": 6,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "cover_for": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 50.79,
+      "turn": 6,
+      "kind": "trace",
+      "extract_ms": 761.3,
+      "kb_ms": 21.2,
+      "kb_status": "ok",
+      "pre_llm_ms": 761.5,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 51.38,
+      "turn": 6,
+      "kind": "llm_metrics",
+      "ttft_ms": 556.1,
+      "duration_ms": 586.1
+    },
+    {
+      "t": 56.64,
+      "turn": 7,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "spouse_age": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 56.64,
+      "turn": 7,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 65.08,
+      "turn": 8,
+      "kind": "turn",
+      "intents": [
+        "other"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 65.08,
+      "turn": 8,
+      "kind": "trace",
+      "extract_ms": 1509.3,
+      "kb_ms": 14.7,
+      "kb_status": "no_match",
+      "pre_llm_ms": 1509.8,
+      "intents": [
+        "other"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 65.23,
+      "turn": 8,
+      "kind": "late_extract",
+      "updates": {}
+    },
+    {
+      "t": 65.71,
+      "turn": 8,
+      "kind": "llm_metrics",
+      "ttft_ms": 572.8,
+      "duration_ms": 626.5
+    },
+    {
+      "t": 72.62,
+      "turn": 9,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "children_count": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 72.62,
+      "turn": 9,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 87.05,
+      "turn": 10,
+      "kind": "invalid_value",
+      "field": "pre_existing_details",
+      "raw": ""
+    },
+    {
+      "t": 87.05,
+      "turn": 10,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "pre_existing": "set",
+        "pre_existing_details": "invalid"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 87.05,
+      "turn": 10,
+      "kind": "trace",
+      "extract_ms": 315.9,
+      "kb_ms": 16.8,
+      "kb_status": "no_match",
+      "pre_llm_ms": 316.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 87.7,
+      "turn": 10,
+      "kind": "llm_metrics",
+      "ttft_ms": 590.4,
+      "duration_ms": 642.1
+    },
+    {
+      "t": 96.9,
+      "turn": 11,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "tobacco": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 96.9,
+      "turn": 11,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.3,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 104.64,
+      "turn": 12,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "existing_cover": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 104.64,
+      "turn": 12,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 111.44,
+      "turn": 13,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 111.44,
+      "turn": 13,
+      "kind": "budget_options_offered",
+      "options": [
+        5,
+        25,
+        50
+      ]
+    },
+    {
+      "t": 111.44,
+      "turn": 13,
+      "kind": "trace",
+      "extract_ms": 543.8,
+      "kb_ms": 14.2,
+      "kb_status": "no_match",
+      "pre_llm_ms": 547.4,
+      "intents": [
+        "answer"
+      ],
+      "quick": false,
+      "fast_reply": false
+    },
+    {
+      "t": 145.75,
+      "turn": 14,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "preferred_sum_insured_lakh": "set",
+        "budget_annual_inr": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 145.75,
+      "turn": 14,
+      "kind": "eligibility",
+      "eligible": true,
+      "grade": "hot",
+      "product": "Prithvi FamilyShield",
+      "members": "2 adults + 2 children",
+      "age_band": "26-35",
+      "zone": "C",
+      "sum_insured_lakh": 50,
+      "sum_insured_spoken": "fifty lakh",
+      "indicative_premium_inr": 24560,
+      "premium_spoken": "twenty four thousand six hundred rupees",
+      "medical_tests_required": true,
+      "co_payment_percent": null,
+      "rate_record": "Indicative annual premium — Prithvi FamilyShield, age band 26-35",
+      "reasons": []
+    },
+    {
+      "t": 145.75,
+      "turn": 14,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 2.8,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": false
+    },
+    {
+      "t": 146.35,
+      "turn": 14,
+      "kind": "llm_metrics",
+      "ttft_ms": 469.0,
+      "duration_ms": 589.4
+    },
+    {
+      "t": 164.66,
+      "turn": 15,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "callback_consent": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 164.66,
+      "turn": 15,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.3,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": true
+    },
+    {
+      "t": 175.38,
+      "turn": 16,
+      "kind": "turn",
+      "intents": [
+        "callback_request"
+      ],
+      "updates": {
+        "callback_time": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 175.38,
+      "turn": 16,
+      "kind": "trace",
+      "extract_ms": 743.9,
+      "kb_ms": 26.2,
+      "kb_status": "ok",
+      "pre_llm_ms": 745.0,
+      "intents": [
+        "callback_request"
+      ],
+      "quick": false,
+      "fast_reply": false
+    }
+  ],
+  "started_at": "2026-10-02T04:24:00",
+  "audio_seconds": 183.8
+}

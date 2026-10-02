@@ -1,0 +1,44 @@
+# Native Indonesian lines (written for the market, not translated). {salutation} = Selamat pagi/siang/sore/malam (WIB).
+greeting: >-
+  {salutation}, mohon maaf mengganggu waktunya. Saya {persona}, asisten virtual dari {company}. Panggilan ini direkam
+  untuk menjaga kualitas layanan. Apakah saya berbicara dengan {title} {name}?
+verify_ask: >-
+  Mohon maaf, apakah benar saya berbicara dengan {title} {name}?
+verify_fail: >-
+  Baik, mohon maaf atas ketidaknyamanannya. Petugas kami akan menghubungi kembali. Terima kasih.
+third_party: >-
+  Baik, terima kasih. Mohon maaf, karena menyangkut data pribadi, informasinya hanya bisa saya sampaikan langsung kepada
+  {title} {name}. Kira-kira kapan beliau bisa dihubungi?
+fallback: >-
+  Mohon maaf, untuk hal tersebut saya belum memiliki informasinya. Akan saya catat agar petugas kami dapat menjelaskannya kepada Bapak/Ibu.
+out_of_scope: >-
+  Mohon maaf, hal itu di luar yang bisa saya bantu di panggilan ini. Panggilan ini terkait angsuran pembiayaan motor.
+escalation: >-
+  Baik, saya sambungkan ke petugas kami sekarang. Mohon ditunggu sebentar, ringkasan pembicaraan kita sudah saya teruskan.
+escalation_unavailable: >-
+  Mohon maaf, petugas kami sedang sibuk. Saya sudah jadwalkan agar petugas menghubungi kembali dalam dua jam. Terima kasih atas kesabarannya.
+dnc: >-
+  Baik, saya sudah mencatat permintaan tersebut. Mohon maaf atas ketidaknyamanannya. Selamat beraktivitas kembali.
+callback_confirm: >-
+  Baik, petugas kami akan menghubungi {when}. Terima kasih, selamat beraktivitas.
+promise_confirm: >-
+  Terima kasih, {title}. Saya catat pembayaran angsuran {date} melalui {channel}. Pembayaran terkonfirmasi otomatis paling
+  lambat satu kali dua puluh empat jam. Selamat beraktivitas.
+paid_confirm: >-
+  Terima kasih sudah membayar, {title}. Pembayaran terkonfirmasi paling lambat satu kali dua puluh empat jam. Mohon simpan bukti bayarnya ya. Terima kasih.
+restructuring_confirm: >-
+  Baik, saya sudah ajukan agar tim restrukturisasi menghubungi dalam tiga hari kerja. Programnya tanpa biaya, dan mohon
+  jangan membayar ke rekening pribadi siapa pun. Terima kasih, {title}.
+refused_close: >-
+  Baik, {title}, saya catat. Sekadar mengingatkan, denda keterlambatan berlaku sejak hari setelah jatuh tempo. Kalau ada kendala, silakan hubungi Halo Maju. Terima kasih.
+not_interested_close: >-
+  Baik, terima kasih atas waktunya. Selamat beraktivitas.
+closing: >-
+  Terima kasih atas waktunya, {title}. Selamat beraktivitas.
+reconfirm: >-
+  Mohon maaf, supaya tidak salah: tadi saya dengar {old}, sekarang {new}. Yang benar yang mana?
+reprompt: >-
+  Halo, {title}? Mohon maaf, apakah masih tersambung?
+# While waiting for the human advisor after an escalation (said once, then the bot stays quiet).
+escalation_hold: >-
+  Terima kasih sudah menunggu, {title}. Petugas kami akan segera bergabung.

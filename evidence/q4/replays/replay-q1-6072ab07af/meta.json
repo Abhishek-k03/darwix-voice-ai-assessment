@@ -1,0 +1,10 @@
+{
+  "room": "replay-q1-6072ab07af",
+  "pack": "in_health",
+  "source": "..\\evidence\\calls\\20261002-010709_in_health_human_request_6072ab07af\\stereo.flac",
+  "start_ms": 1790889399507.8374,
+  "controls": true,
+  "llm": true,
+  "chunk_ms": 100,
+  "labels": "..\\evidence\\calls\\20261002-010709_in_health_human_request_6072ab07af\\labels.json"
+}

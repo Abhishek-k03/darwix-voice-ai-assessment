@@ -1,0 +1,87 @@
+# Terminology: canonical -> variants (longest variants matched first, word-bounded, case-insensitive
+# unless the variant is all-caps, which is matched case-sensitively). Variants are kept as record tags for lexical recall.
+terminology:
+  in_health:
+    pre-existing condition: [pre-existing illnesses, pre-existing illness, pre-existing diseases, pre-existing disease, existing conditions, PED]
+    sum insured: [cover amount, sum assured, SI]
+    cashless: [cash-less]
+    hospitalisation: [hospitalization]
+    network hospitals: [network hospital list]
+    co-payment: [co-pay, copay]
+  ph_life:
+    auto-debit arrangement: [auto debit arrangement, ADA]
+    face amount: [coverage amount]
+  id_multifinance:
+    angsuran: [cicilan]
+    uang muka (DP): [down payment, DP]
+
+# Query-side expansion only (canonical term appended when a variant appears in the user's question)
+query_synonyms:
+  parents: [mother, father, mom, dad, mum, in-laws, mother-in-law, father-in-law, magulang, nanay, tatay, orang tua]
+  spouse: [wife, husband, partner, asawa, istri, suami]
+  children: [son, daughter, kids, kid, baby, anak]
+  cancel: [money back, refund, return the policy]
+  reinstatement: [ibalik, i-reinstate, reactivate, revive]
+  grace period: [palugit, extension to pay]
+  pre-existing condition: [diabetes, diabetic, sugar, bp, blood pressure, hypertension, thyroid, asthma, heart problem, heart condition]
+  waiting period: [how long before, how soon, when will it be covered, kitne din, kab se]
+
+# Heading synonyms (lower-case match after numbering is stripped)
+headings:
+  what is not covered: Exclusions
+  key benefits: Key Benefits
+  highlights: Highlights
+
+# Canonical form-field names for proposal / application forms
+form_fields:
+  proposer_full_name: ["full name", "proposer'?s name", "name of proposer"]
+  date_of_birth: ["d\\.?o\\.?b", "date of birth"]
+  gender: ["gender", "sex"]
+  pan_number: ["pan( no\\.?| number)?"]
+  aadhaar_number: ["aadhaar"]
+  mobile_number: ["mobile", "phone"]
+  email: ["e-?mail"]
+  residential_address: ["address"]
+  occupation: ["occupation"]
+  nominee_name_relationship: ["nominee"]
+
+# Glyph artifacts produced by PDF fonts lacking the rupee sign (regex -> replacement; counted in the report).
+# pypdf renders the missing glyph as '■', pdfplumber as a stray 'n' glued to the amount ("n2,000").
+glyph_repairs:
+  "[■�](?=\\s?\\d)": "₹"
+  "(?<![A-Za-z])n(?=\\d[\\d,]*(?:\\s?lakh|\\b))": "₹"
+
+# PII: values that look like PII but are public corporate/brand data
+pii_allow_list:
+  - Prithvi
+  - Prithvi Health
+  - Prithvi Secure
+  - Prithvi FamilyShield
+  - Prithvi Silver
+  - Bima Bharosa
+  - Sanjeevani
+  - Ganga Care
+  - Bayanihan
+  - Kalayaan
+  - Maju Bersama
+  - MajuKu
+  - Halo Maju
+  - "1800-000-1234"
+  - "(02) 8000-5555"
+  - "1500-123"
+  - care@prithvihealth.example
+  - claims@prithvihealth.example
+  - gro@prithvihealth.example
+  - care@bayanihanlife.example
+  - halo@majubersama.example
+
+# Product detection (first match per record)
+products:
+  in_health:
+    Prithvi Silver: [silver, senior citizen]
+    Prithvi FamilyShield: [familyshield, family floater, floater]
+    Prithvi Secure: [prithvi secure, individual health insurance plan]
+  ph_life:
+    Bayanihan FamilyCare Life: [familycare, term life]
+  id_multifinance:
+    Pembiayaan Motor: [motor, kendaraan]

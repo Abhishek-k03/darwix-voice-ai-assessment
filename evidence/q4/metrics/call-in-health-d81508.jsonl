@@ -1,0 +1,15 @@
+{"at": 1790896893638.85, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 604, "confidence": 0.82, "words": 1, "end_s": 1.84}
+{"at": 1790896894144.0884, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 871, "confidence": 0.898, "words": 1, "end_s": 2.08}
+{"at": 1790896895096.993, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 464, "confidence": 0.997, "words": 5, "end_s": 3.44}
+{"at": 1790896896094.8442, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 422, "confidence": 0.999, "words": 8, "end_s": 4.48}
+{"at": 1790896896690.7944, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 427, "confidence": 0.998, "words": 10, "end_s": 5.07}
+{"at": 1790896897703.336, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 880, "confidence": 0.997, "words": 11, "end_s": 5.63}
+{"at": 1790896898715.4873, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 452, "confidence": 0.998, "words": 15, "end_s": 7.07}
+{"at": 1790896899714.319, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 411, "confidence": 1.0, "words": 18, "end_s": 8.11}
+{"at": 1790896900718.389, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 1576, "confidence": 1.0, "words": 17, "end_s": 7.95}
+{"at": 1790896900718.821, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 515, "confidence": 1.0, "words": 3, "end_s": 9.01}
+{"at": 1790896901705.5657, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 382, "confidence": 1.0, "words": 7, "end_s": 10.13}
+{"at": 1790896902613.351, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 810, "confidence": 1.0, "words": 8, "end_s": 10.61}
+{"at": 1790896903614.299, "kind": "asr", "speaker": "agent", "final": false, "asr_latency_ms": 451, "confidence": 1.0, "words": 14, "end_s": 11.97}
+{"at": 1790896904573.9893, "kind": "asr", "speaker": "agent", "final": true, "asr_latency_ms": 610, "confidence": 1.0, "words": 19, "end_s": 12.77}
+{"at": 1790896922355.657, "kind": "summary", "decisions": 0, "emitted": 0}

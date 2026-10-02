@@ -1,0 +1,57 @@
+# Canned lines (pre-approved). {persona} and {company} are filled in automatically.
+greeting: >-
+  Hello, this is {persona}, an AI assistant from {company}. This call is recorded for quality and training.
+  You recently asked about health insurance, is this a good time to talk for a few minutes?
+fallback: >-
+  I'm sorry, I don't have the exact details on that right now. I'll note it so the licensed advisor covers it with you.
+out_of_scope: >-
+  That's outside what I can help with on this call. I can help with health insurance plans, eligibility and premiums.
+escalation: >-
+  Sure, I'm connecting you to a licensed advisor now. Please stay on the line, they will have all the details we discussed.
+escalation_unavailable: >-
+  Our advisors are busy at the moment, so I've arranged a priority callback within two hours. Thank you for your patience.
+dnc: >-
+  Understood, I've noted that you don't want further calls from us. Sorry for the trouble, and have a good day.
+callback_confirm: >-
+  Done, a licensed advisor will call you {when}. Thank you for your time, and take care.
+not_interested_close: >-
+  No problem at all, thank you for your time. If you need health cover later, you can call us on our toll-free number. Have a good day.
+closing: >-
+  Thank you for your time. Have a good day.
+reconfirm: >-
+  Just to confirm, earlier I noted {field} as {old}, and now I heard {new}. Which one is correct?
+reprompt: >-
+  Sorry, I didn't catch that. Are you still there?
+
+# Fast replies: spoken without the LLM when the customer's turn was a plain answer and the next step is the next
+# question. Lists are variants (rotated); a variant needing {name} is used only once the name is known.
+ack: ["Thank you.", "Got it, thank you.", "Thanks, {name}.", "Great, thanks."]
+ack_good_time: ["Great, thank you."]
+disclosure: "Plans have a 30-day initial waiting period, with accidents covered from day one, and pre-existing conditions are covered after 24 months."
+lowest_option: "Thank you. Before I share prices: {disclosure} The lowest option available for you is a {si} cover at about {premium} a year, which is a little above the budget you mentioned. Would you like to go with that one?"
+budget_options: "No problem, you don't need an exact figure. Before I share prices: {disclosure} {product} comes in a few sizes: {options}. Which one would you like to try?"
+option_item: "{ord} is a {si} cover at about {premium} a year"
+option_join: "or"
+ordinals: ["the first", "the second", "the third"]
+confirm_budget_annual_inr: ["Just to confirm, you would like to spend about {budget_annual_inr} a year on the premium, is that right?"]
+out_of_market: "I am sorry, Prithvi Health Insurance currently serves customers in India only, so I cannot help from there. Thank you for your time, and have a good day."
+reask_good_time: "Hello! This is {persona}. Is this a good time to talk for a few minutes?"
+confirm_city: ["Sorry, did you say {city}?"]
+confirm_name: ["Sorry, did I get your name right, {name}?"]
+ack_name: ["Nice to meet you, {name}.", "Thank you, {name}."]
+ack_pre_existing: ["Thank you for sharing that.", "Thanks, noted."]
+ack_callback_consent: ["Great."]
+ask_name: ["May I have your first name, please?"]
+ask_age: ["Could you tell me your age, please?", "May I know your age?"]
+ask_city: ["Which city do you live in?", "And which city are you based in?"]
+ask_cover_for: ["Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?"]
+ask_spouse_age: ["And how old is your spouse?", "May I know your spouse's age?"]
+ask_children_count: ["How many children would you like to cover?"]
+ask_pre_existing: ["Does anyone to be covered have a pre-existing condition, such as diabetes, blood pressure or heart problems?"]
+ask_tobacco: ["Does anyone to be covered smoke or use tobacco in any form?"]
+ask_existing_cover: ["Do you already have any health insurance, either personal or through your employer?"]
+ask_budget_annual_inr: ["Roughly how much would you like to spend on the premium each year?"]
+ask_callback_time: ["What day and time would suit you for the advisor's call?"]
+# While waiting for the human advisor after an escalation (said once, then the bot stays quiet).
+escalation_hold: >-
+  Thank you, please stay on the line. The advisor will join you shortly.

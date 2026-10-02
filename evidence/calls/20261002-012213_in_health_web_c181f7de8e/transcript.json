@@ -1,0 +1,119 @@
+[
+  {
+    "t": 1.42,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 18.27,
+    "role": "customer",
+    "text": "Yes."
+  },
+  {
+    "t": 18.27,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  },
+  {
+    "t": 32.44,
+    "role": "agent",
+    "text": "Sorry, I didn't catch that. Are you still there?",
+    "kind": "reprompt"
+  },
+  {
+    "t": 43.1,
+    "role": "customer",
+    "text": "Yes. My name is Abhishek."
+  },
+  {
+    "t": 44.54,
+    "role": "agent",
+    "text": "Nice to meet you, Abhishek ji. Could you tell me how old you are?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 52.6,
+    "role": "customer",
+    "text": "21."
+  },
+  {
+    "t": 52.6,
+    "role": "agent",
+    "text": "Great, thanks. And which city are you based in?",
+    "kind": "quick"
+  },
+  {
+    "t": 59.85,
+    "role": "customer",
+    "text": "Delhi."
+  },
+  {
+    "t": 59.85,
+    "role": "agent",
+    "text": "Thank you. Who would you like the cover for: just yourself, you and your spouse, your whole family with children, or your parents?",
+    "kind": "quick"
+  },
+  {
+    "t": 71.72,
+    "role": "customer",
+    "text": "Just myself."
+  },
+  {
+    "t": 72.86,
+    "role": "agent",
+    "text": "Understood, Abhishek ji. Do you have any pre‑existing conditions such as diabetes, high blood pressure, or heart problems?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 90.45,
+    "role": "customer",
+    "text": "Yes. I have. I... BP."
+  },
+  {
+    "t": 91.9,
+    "role": "agent",
+    "text": "Got it, Abhishek ji, you have high blood pressure. Do you currently have any health insurance coverage, perhaps through an employer or another policy?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 108.05,
+    "role": "customer",
+    "text": "Yes. Through him."
+  },
+  {
+    "t": 109.21,
+    "role": "agent",
+    "text": "Understood. Finally, could you let me know roughly how much you would like to spend on a yearly premium?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 120.3,
+    "role": "customer",
+    "text": "30,000."
+  },
+  {
+    "t": 120.87,
+    "role": "agent",
+    "text": "There is a 30‑day initial waiting period, with accidents covered from day one, and pre‑existing conditions like BP are covered after 24 months. Based on what you’ve shared, Prithvi Secure with a ten lakh sum insured fits you, and the indicative premium is about seven thousand five hundred rupees per year, subject to underwriting. Would you like a licensed advisor to call you back to complete the application?",
+    "citations": [],
+    "kind": "llm"
+  },
+  {
+    "t": 151.93,
+    "role": "customer",
+    "text": "Yes. Tomorrow evening."
+  },
+  {
+    "t": 156.87,
+    "role": "agent",
+    "text": "Sure! Your callback scheduled — a licensed licensed *​*​* *​* ​**…………​…**** **……** **...​...… **…​**… ** …... ... **...  …​ …​…​** …… **... …​… ​ ** **…** ...……​**…… ... ** …​ **…​ **…**​ ** ……**​  **** ** **** ** ** **... **...** …...​…​** …** …​**...​**…​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​**​****​**​**​**​**​****​**​**​**​**​**​**​**​**​**​****​**​**​**​**​**​**​**​**​**​**​**​****​****​****​**​**​**​​**​**​**​**​**​​​",
+    "citations": [],
+    "kind": "llm"
+  }
+]

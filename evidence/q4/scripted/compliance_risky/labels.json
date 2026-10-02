@@ -1,0 +1,143 @@
+{
+  "id": "compliance_risky",
+  "pack": "in_health",
+  "description": "No recording disclosure, premium quoted before the waiting-period disclosure, then two risky statements.",
+  "voices": {
+    "agent": "deepgram:aura-2-thalia-en",
+    "customer": "deepgram:aura-2-luna-en"
+  },
+  "noise": null,
+  "duration_s": 50.45,
+  "lines": [
+    {
+      "line": 1,
+      "speaker": "agent",
+      "text": "Hi, this is Neha from Prithvi Health. Am I speaking with Miss Kapoor?",
+      "start_s": 0.5,
+      "end_s": 5.06
+    },
+    {
+      "line": 2,
+      "speaker": "customer",
+      "text": "Yes, that's me.",
+      "start_s": 5.79,
+      "end_s": 7.39
+    },
+    {
+      "line": 3,
+      "speaker": "agent",
+      "text": "You wanted a family health plan, right? Who all should be covered?",
+      "start_s": 8.25,
+      "end_s": 12.21
+    },
+    {
+      "line": 4,
+      "speaker": "customer",
+      "text": "Me, my husband and our son, he is six.",
+      "start_s": 13.0,
+      "end_s": 16.08
+    },
+    {
+      "line": 5,
+      "speaker": "agent",
+      "text": "Perfect, our family floater FamilyShield is ideal. With ten lakh cover the premium comes to about twenty three thousand rupees a year.",
+      "start_s": 16.64,
+      "end_s": 25.72
+    },
+    {
+      "line": 6,
+      "speaker": "customer",
+      "text": "Hmm. My husband has diabetes, will that be covered?",
+      "start_s": 26.3,
+      "end_s": 28.94
+    },
+    {
+      "line": 7,
+      "speaker": "agent",
+      "text": "Don't worry, diabetes is covered from day one, and with us claims are guaranteed to be approved.",
+      "start_s": 29.78,
+      "end_s": 35.9
+    },
+    {
+      "line": 8,
+      "speaker": "customer",
+      "text": "Oh, that's good to hear.",
+      "start_s": 36.36,
+      "end_s": 37.72
+    },
+    {
+      "line": 9,
+      "speaker": "agent",
+      "text": "So shall I go ahead and create the proposal for you today?",
+      "start_s": 38.54,
+      "end_s": 41.74
+    },
+    {
+      "line": 10,
+      "speaker": "customer",
+      "text": "Let me think about it. Can you call me back tomorrow evening?",
+      "start_s": 42.54,
+      "end_s": 45.9
+    },
+    {
+      "line": 11,
+      "speaker": "agent",
+      "text": "Sure, I will call you tomorrow. Thank you.",
+      "start_s": 46.56,
+      "end_s": 49.36
+    }
+  ],
+  "expected": [
+    {
+      "nudge": "waiting_period_before_quote",
+      "line": 5,
+      "window_s": [
+        25.72,
+        35.72
+      ]
+    },
+    {
+      "nudge": "no_waiting_claim",
+      "line": 7,
+      "window_s": [
+        35.9,
+        45.9
+      ]
+    },
+    {
+      "nudge": "guaranteed_claim",
+      "line": 7,
+      "window_s": [
+        35.9,
+        45.9
+      ]
+    },
+    {
+      "nudge": "recording_missing",
+      "line": 5,
+      "within_s": 30,
+      "window_s": [
+        25.72,
+        55.72
+      ]
+    },
+    {
+      "nudge": "pre_existing_declare",
+      "line": 6,
+      "optional": true,
+      "window_s": [
+        28.94,
+        38.94
+      ]
+    },
+    {
+      "nudge": "callback_need",
+      "line": 10,
+      "optional": true,
+      "window_s": [
+        45.9,
+        55.9
+      ]
+    }
+  ]
+}

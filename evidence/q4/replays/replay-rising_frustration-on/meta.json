@@ -1,0 +1,10 @@
+{
+  "room": "replay-rising_frustration-on",
+  "pack": "in_health",
+  "source": "..\\evidence\\q4\\scripted\\rising_frustration\\stereo.wav",
+  "start_ms": 1790888947395.516,
+  "controls": true,
+  "llm": true,
+  "chunk_ms": 100,
+  "labels": "..\\evidence\\q4\\scripted\\rising_frustration\\labels.json"
+}

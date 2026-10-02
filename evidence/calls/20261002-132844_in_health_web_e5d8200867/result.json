@@ -1,0 +1,90 @@
+{
+  "call_id": "e5d8200867",
+  "room": "call-in-health-bb19d8",
+  "pack": "in_health",
+  "market": "in_health",
+  "duration_s": 22.3,
+  "stage": "QUALIFICATION",
+  "outcome": "incomplete",
+  "grade": null,
+  "product": null,
+  "premium_inr": null,
+  "fields": {
+    "name": "For Human"
+  },
+  "conflicts_resolved": [],
+  "open_conflicts": [],
+  "objections": [],
+  "eligibility": {},
+  "callback": null,
+  "escalated": false,
+  "dnc": false,
+  "disclosed_waiting_period": false,
+  "customer": {},
+  "lead_id": "lead-3fb4ac0b",
+  "end_reason": "customer_hung_up",
+  "mode": "web",
+  "scenario": null,
+  "tts": "deepgram",
+  "tts_voice": "aura-2-thalia-en",
+  "llm": "openai/gpt-oss-120b",
+  "stt": {
+    "provider": "deepgram",
+    "model": "nova-3",
+    "language": "en-IN"
+  },
+  "events": [
+    {
+      "t": 4.65,
+      "turn": 1,
+      "kind": "turn",
+      "intents": [
+        "other"
+      ],
+      "updates": {},
+      "sentiment": 0.0
+    },
+    {
+      "t": 4.65,
+      "turn": 1,
+      "kind": "trace",
+      "extract_ms": 552.6,
+      "kb_ms": 16.5,
+      "kb_status": "no_match",
+      "pre_llm_ms": 552.9,
+      "intents": [
+        "other"
+      ],
+      "quick": false,
+      "fast_reply": true
+    },
+    {
+      "t": 7.31,
+      "turn": 2,
+      "kind": "turn",
+      "intents": [
+        "answer"
+      ],
+      "updates": {
+        "name": "set"
+      },
+      "sentiment": 0.0
+    },
+    {
+      "t": 7.31,
+      "turn": 2,
+      "kind": "trace",
+      "extract_ms": 0.0,
+      "kb_ms": 0.0,
+      "kb_status": "skipped",
+      "pre_llm_ms": 0.2,
+      "intents": [
+        "answer"
+      ],
+      "quick": true,
+      "fast_reply": false
+    }
+  ],
+  "started_at": "2026-10-02T13:28:44",
+  "audio_seconds": 21.1
+}

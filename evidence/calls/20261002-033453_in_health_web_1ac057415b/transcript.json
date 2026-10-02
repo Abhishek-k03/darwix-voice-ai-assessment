@@ -1,0 +1,19 @@
+[
+  {
+    "t": 1.27,
+    "role": "agent",
+    "text": "Hello, this is Asha, an AI assistant from Prithvi Health Insurance. This call is recorded for quality and training. You recently asked about health insurance, is this a good time to talk for a few minutes?",
+    "kind": "greeting"
+  },
+  {
+    "t": 2.43,
+    "role": "customer",
+    "text": "Yes, this is a good time."
+  },
+  {
+    "t": 2.43,
+    "role": "agent",
+    "text": "Great, thank you. May I have your first name, please?",
+    "kind": "quick"
+  }
+]
