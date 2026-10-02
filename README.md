@@ -2,6 +2,8 @@
 
 A knowledge-grounded voice agent (Q1) powered by a production-style knowledge base (Q2). The same worker serves native-language bots for the Philippines and Indonesia (Q3), and a silent copilot in the same live call produces real-time nudges (Q4). A Hindi/Hinglish variant of the Q1 agent is included as an extra.
 
+> **⚡ Fast replies.** When a customer simply answers the question the agent asked ("Pune.", "I'm 34.", "No, none of us."), the agent has its next line ready in **under 2 ms instead of roughly 1–1.5 s**, with no LLM call. Across all 27 recorded calls, **65 of 157 customer turns (41%) needed no LLM at all**, and **48% of LLM calls were avoided** (150 of 314). The LLM is still used for anything that needs judgement. See [Fast replies: the quick-answer path](#fast-replies-the-quick-answer-path).
+
 The base is the provided `livekit-voice-agent` project (LiveKit Agents, Deepgram STT, OpenAI-compatible LLM, persistent streaming TTS, semantic turn-taking, barge-in, Chroma RAG). That pipeline is kept intact. Real-time call-copilot patterns from `ai-ear` were adapted by hand, not merged:
 - silent per-speaker listener;
 - frame-arrival latency marks;
@@ -31,6 +33,55 @@ flowchart LR
   CP -->|signals + nudges| API -->|WS| B
   KB[("KB build v1.0.0<br/>records + Chroma")] --> API
 ```
+
+## Fast replies: the quick-answer path
+
+In a qualification call, most customer turns are short, direct answers to the question just asked: a name, an age, a city, a yes or a no. Sending each of these through an extraction LLM and then a reply LLM adds about a second of silence per turn and spends free-tier quota. The quick-answer path handles these turns deterministically.
+
+```mermaid
+flowchart LR
+  T["Customer turn"] --> Q{"quick.resolve():<br/>plain answer to the<br/>field just asked?"}
+  Q -- "yes (under 2 ms)" --> E["Flow engine<br/>merges the field"]
+  Q -- "no / unsure" --> X["Extraction LLM ∥ KB search<br/>(about 0.7 s)"] --> E
+  E --> N{"Next step is a<br/>plain question?"}
+  N -- yes --> A["Approved reply from script.yaml:<br/>ack + next question"] --> S["TTS"]
+  N -- "no (answer, recommendation,<br/>objection, conflict)" --> L["Main LLM phrases the reply<br/>(first token about 0.4–0.6 s)"] --> S
+```
+
+**How it works**
+1. **The engine knows the question it asked.** It records the field it is waiting for (`state.awaiting`), such as `city` or `pre_existing`.
+2. **Quick answers ([`voice/quick.py`](backend/voice/quick.py)).** If the utterance is a plain answer to that field, it is resolved locally, with no extraction LLM and no KB lookup. Each field declares its answer kind in the pack (`quick:` in `rules.yaml`). It recognizes:
+   - yes/no in English, Hindi (Devanagari and Roman), Tagalog and Indonesian/Javanese;
+   - numbers and ages;
+   - amounts ("1.5 lakh", "2000 a month" → ₹24,000 a year);
+   - known cities and names.
+3. **Fast replies.** If the next step is just the next plain question, the agent speaks a pre-approved acknowledgement plus that question from `script.yaml` ("Nice to meet you, Ravi. Could you tell me your age, please?"). The main LLM is skipped. Variants rotate by turn so the agent doesn't sound repetitive.
+
+**Built to be safe:** the resolver is strict. Anything it is not sure about returns nothing and takes the normal LLM path, so the worst case is the usual latency, never a wrong field. It refuses:
+- hedges ("I think so", "not sure");
+- contrasts ("no, but my father…");
+- extra facts next to a yes or no;
+- questions, unknown cities, and a "no" to an identity check.
+
+When the LLM itself worded the question, an answer is mapped only if that question contains the field's cue words. That way a "yes" to "are you still there?" is never stored as an answer.
+
+**Measured** (from `result.json` per-turn traces in `evidence/calls/`):
+
+| Step | Fast path | LLM path |
+| --- | --- | --- |
+| Understand the answer (P50 / P95) | **0.3 ms / 1.9 ms** (quick answer) | 696 ms / 1,188 ms (extraction LLM) |
+| Write the reply | **approved line, instant** | main LLM, first token about 0.4–0.6 s |
+
+| Across 157 customer turns in 27 calls | Count |
+| --- | --- |
+| Skipped the extraction LLM (quick answer) | **74 (47%)** |
+| Skipped the reply LLM (fast reply) | **76 (48%)** |
+| No LLM call at all | **65 (41%)** |
+| LLM calls avoided | **150 of 314 (48%)** |
+
+On the cooperative test call, 7 of 10 customer turns were quick answers and 6 got a fast reply. In its [transcript](evidence/calls/20261002-002350_in_health_cooperative_2fb5b84103/transcript.md), those agent lines have the same timestamp as the customer's answer, while the LLM-written lines come 0.85–1.5 s after it. Cutting LLM calls nearly in half also stretches the free-tier quota, which was the main operational risk.
+
+**Where:** [`voice/quick.py`](backend/voice/quick.py) (resolver), [`voice/engine.py`](backend/voice/engine.py) (`_fast_reply`), `packs/*/script.yaml` (`ack_*` / `ask_*` lines), [`tests/test_quick.py`](backend/tests/test_quick.py) (10 tests). Both parts can be switched off with `QUICK_ANSWERS=off` / `FAST_REPLIES=off` for comparison.
 
 ## Setup
 
@@ -71,7 +122,7 @@ All in `.env` (see `.env.example`); the defaults work.
 | Setting | Default | What it does |
 | --- | --- | --- |
 | `LLM_*`, `FAST_LLM_*`, `SIM_LLM_*` | none | Main reply model, fast model (extraction, copilot signals), simulated caller. Each has its own `…_FALLBACK_MODELS`; an entry `model@LLM_API_KEY2` uses the second key |
-| `QUICK_ANSWERS`, `FAST_REPLIES` | `on` | Plain answers to the question just asked skip the extraction LLM and get an approved reply |
+| `QUICK_ANSWERS`, `FAST_REPLIES` | `on` | [Fast replies](#fast-replies-the-quick-answer-path): plain answers to the question just asked skip the extraction LLM (`QUICK_ANSWERS`), and the next plain question is spoken from approved lines without the reply LLM (`FAST_REPLIES`) |
 | `TURN_ARBITER_LLM` | `off` | Extra LLM check in turn-taking (heuristics only when off) |
 | `REPROMPT_AFTER_S` | `10` | Seconds of silence before "are you still there?" (max two) |
 | `SARVAM_TTS` | `off` | Must be `on` for the Hindi pack to speak (limited free credits) |
@@ -93,7 +144,8 @@ uv run python -m copilot.report                       # latency P50/P95 + false-
 
 ## Results
 
-- **Q1.** Five recorded scenarios with a simulated caller (cooperative, objection, conflicting details, out-of-scope, human request), all in `evidence/q1/README.md` with transcripts, results and audio. In the cooperative call, 7 of 10 turns were resolved without the extraction LLM, and approved replies were ready in about 5 ms against about 1.1 s for LLM replies. Live web calls, including a Hindi one, are saved under `evidence/calls/`.
+- **Q1.** Five recorded scenarios with a simulated caller (cooperative, objection, conflicting details, out-of-scope, human request), all in `evidence/q1/README.md` with transcripts, results and audio. Live web calls, including a Hindi one, are saved under `evidence/calls/`.
+  - **Fast replies:** across 157 customer turns in 27 calls, 41% needed no LLM call at all and 48% of LLM calls were avoided. A quick answer resolves in 0.3 ms at P50, against 696 ms for the extraction LLM. On the cooperative call, 7 of 10 turns were quick answers.
 - **Q2 retrieval** (29 queries, three languages):
   - 24 correct, 3 partially correct, 2 incorrect;
   - hit@1 0.79, hit@3 0.92, MRR 0.85;
